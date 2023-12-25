@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,10 +10,12 @@ namespace EntityLayer.Concrete
 {
     public class ServiceTerrain
     {
+        [Key]
         public int ServiceTerrainID { get; set; }
         public string Baslik { get; set; }
         public string Gorsel { get; set; }
         public int Fiyat { get; set; }
+        public bool Status { get; set; }
         public string TapuDurumu { get; set; }
         public bool KatKarsiligi { get; set; }
         public bool KrediyeUygun { get; set; }
@@ -29,11 +32,15 @@ namespace EntityLayer.Concrete
         public int MaksimumBinaYuksekligi { get; set; }
         public string UzunAciklama { get; set; }
         public string KonumLink { get; set; }
-        public int KonumId { get; set; }
-        public int BilgiId { get; set; }
-        [ForeignKey("KonumId")]
-        public virtual Konum Konum { get; set; }
-        [ForeignKey("BilgiId")]
-        public virtual Bilgi Bilgi { get; set; }
+
+
+        public int ServiceMapId { get; set; }
+        [ForeignKey("ServiceMapId")]
+        public virtual ServiceMap ServiceMap { get; set; }
+
+
+        public int ServiceInfoId { get; set; }
+        [ForeignKey("ServiceInfoId")]
+        public virtual ServiceInfo ServiceInfo { get; set; }
     }
 }
