@@ -1,4 +1,4 @@
-﻿@model EntityLayer.Concrete.ServiceHousing
+﻿@model REstatePresentation.Models.ServiceHousingAddViewModel
 @{
     ViewData["Title"] = "AddServiceHousing";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,21 +9,21 @@
 <form method="post">
     <div class="form-group">
         @Html.Label("Başlık")
-        <input type="text" asp-for="Baslik" />
+        <input type="text" asp-for="Baslik" class="form-control"/>
     </div>
-    <div class="form-group">
+   @*  <div class="form-group">
         @Html.Label("Fotograf Yolu")
         <input type="text" asp-for="Gorsel" />
-    </div>
+    </div> *@
     <div class="form-group">
         @Html.Label("Fiyat")
-        <input type="number" asp-for="Fiyat" />
+        <input type="number" asp-for="Fiyat" class="form-control" />
     </div>
-    <div class="form-group">
+    @* <div class="form-group">
         @Html.Label("Aktif mi Pasif mi")
         <input type="checkbox" asp-for="Status" />
-    </div>
-    <div class="form-group">
+    </div> *@
+   @*  <div class="form-group">
         @Html.Label("TapuDurumu")
         <input type="text" asp-for="TapuDurumu" />
     </div>
@@ -98,12 +98,12 @@
     <div class="form-group">
         @Html.Label("Devren")
         <input type="checkbox" asp-for="Devren" />
-    </div>
+    </div> *@
     <div class="form-group">
         @Html.Label("UzunAciklama")
-        <input type="text" asp-for="UzunAciklama" />
+        <input type="text" asp-for="UzunAciklama" class="form-control" />
     </div>
-    <div class="form-group">
+    @* <div class="form-group">
         @Html.Label("KonumLink")
         <input type="text" asp-for="KonumLink" />
     </div>
@@ -142,7 +142,16 @@
     <div class="form-group">
         @Html.Label("ServiceInfoId")
         <input type="number" asp-for="ServiceInfoId" />
-    </div>
+    </div> *@
+
+
+
+
+   @*  <div class="form-group">
+        @Html.Label("Fotoğraf")
+        <input type="file" name="Fotograflar" multiple />
+    </div> *@
+
     <button class="btn btn-outline-info">Kaydet</button>
 </form>
 
