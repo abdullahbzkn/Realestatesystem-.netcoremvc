@@ -24,9 +24,17 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.AboutUs", b =>
                 {
+                    b.Property<int>("AboutUsID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AboutUsID"), 1L, 1);
+
                     b.Property<string>("HakkimizdaMetni")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AboutUsID");
 
                     b.ToTable("AboutUses");
                 });
@@ -90,15 +98,29 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.ContactUs", b =>
                 {
+                    b.Property<int>("ContactUsID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContactUsID"), 1L, 1);
+
                     b.Property<string>("IletisimMetni")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ContactUsID");
 
                     b.ToTable("ContactsUses");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Entrance", b =>
                 {
+                    b.Property<int>("EntranceID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EntranceID"), 1L, 1);
+
                     b.Property<string>("Aciklama1")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -111,14 +133,24 @@ namespace DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.HasKey("EntranceID");
+
                     b.ToTable("Entrances");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Gallery", b =>
                 {
+                    b.Property<int>("GalleryID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GalleryID"), 1L, 1);
+
                     b.Property<string>("IlanlarMetni")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("GalleryID");
 
                     b.ToTable("Galleries");
                 });
@@ -421,6 +453,12 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.WhatWeDo", b =>
                 {
+                    b.Property<int>("WhatWeDoID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WhatWeDoID"), 1L, 1);
+
                     b.Property<string>("Baslik")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -456,6 +494,8 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Metin4")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("WhatWeDoID");
 
                     b.ToTable("WhatWeDos");
                 });
