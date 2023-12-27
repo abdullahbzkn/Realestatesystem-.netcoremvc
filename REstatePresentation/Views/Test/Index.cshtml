@@ -1,0 +1,73 @@
+﻿@using EntityLayer.Concrete
+@model List<ServiceHousing>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Yeni Konut Ilan Listesi</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Fiyat</th>
+        <th>BinaKatSayisi</th>
+        <th>Gorsel</th>
+        <th>Status</th>
+        <th>TapuDurumu</th>
+        <th>YapininDurumu</th>
+        <th>Isitma</th>
+        <th>YapininCephesi</th>
+        <th>YapininSekli</th>
+        <th>TuvaletSayisi</th>
+        <th>BalkonSayisi</th>
+        <th>BanyoSayisi</th>
+        <th>SalonSayisi</th>
+        <th>OdaSayisi</th>
+        <th>KiraGetirisi</th>
+        <th>TakasYapilir</th>
+        <th>KullanimDurumu</th>
+        <th>YakitTipi</th>
+        <th>BulunduguKat</th>
+        <th>Aidat</th>
+        <th>KrediyeUygun</th>
+        <th>UzunAciklama</th>
+        <th>KonumLink</th>
+        <th>ServiceMapId</th>
+        <th>ServiceInfoId</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ServiceHousingID</td>
+            <td>@item.Baslik</td>
+            <td>@item.Fiyat</td>
+            <td>@item.BinaKatSayisi</td>
+            <td>@item.Gorsel</td>
+            <td>@item.Status</td>
+            <td>@item.TapuDurumu</td>
+            <td>@item.YapininDurumu</td>
+            <td>@item.Isitma</td>
+            <td>@item.YapininCephesi</td>
+            <td>@item.YapininSekli</td>
+            <td>@item.TuvaletSayisi</td>
+            <td>@item.BalkonSayisi</td>
+            <td>@item.BanyoSayisi</td>
+            <td>@item.SalonSayisi</td>
+            <td>@item.OdaSayisi</td>
+            <td>@item.KiraGetirisi</td>
+            <td>@item.TakasYapilir</td>
+            <td>@item.KullanimDurumu</td>
+            <td>@item.YakitTipi</td>
+            <td>@item.BulunduguKat</td>
+            <td>@item.Aidat</td>
+            <td>@item.KrediyeUygun</td>
+            <td>@item.Devren</td>
+            <td>@item.UzunAciklama</td>
+            <td>@item.KonumLink</td>
+            <td>@item.ServiceMapId</td>
+            <td>@item.ServiceInfoId</td>
+        </tr>
+    }
+</table>
+<a href="/Test/AddServiceHousing/" class="btn btn-outline-info">Yeni Ilan Girişi</a>
