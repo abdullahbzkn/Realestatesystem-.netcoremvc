@@ -53,5 +53,12 @@ namespace REstatePresentation.Controllers
             serviceHousingManager.Delete(values);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public IActionResult EditServiceHousing(int id)
+        {
+            var values = serviceHousingManager.GetById(id);
+            return RedirectToAction("Index");
+        }
+
     }
 }

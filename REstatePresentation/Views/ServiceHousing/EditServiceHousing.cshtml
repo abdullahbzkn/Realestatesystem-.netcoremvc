@@ -1,0 +1,157 @@
+﻿@model EntityLayer.Concrete.ServiceHousing
+@{
+    ViewData["Title"] = "EditServiceHousing";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>EditServiceHousing</h1>
+
+<form method="post">
+    @Html.HiddenFor(x=>x.ServiceHousingID)
+    <div class="form-group">
+        @Html.Label("Başlık")
+        <input type="text" asp-for="Baslik" class="form-control" />
+    </div>
+    @*  <div class="form-group">
+    @Html.Label("Fotograf Yolu")
+    <input type="text" asp-for="Gorsel" />
+    </div> *@
+    <div class="form-group">
+        @Html.Label("Fiyat")
+        <input type="number" asp-for="Fiyat" class="form-control" />
+    </div>
+    @* <div class="form-group">
+    @Html.Label("Aktif mi Pasif mi")
+    <input type="checkbox" asp-for="Status" />
+    </div> *@
+    @*  <div class="form-group">
+    @Html.Label("TapuDurumu")
+    <input type="text" asp-for="TapuDurumu" />
+    </div>
+    <div class="form-group">
+    @Html.Label("YapininDurumu")
+    <input type="text" asp-for="YapininDurumu" />
+    </div>
+    <div class="form-group">
+    @Html.Label("Isitma")
+    <input type="text" asp-for="Isitma" />
+    </div>
+    <div class="form-group">
+    @Html.Label("BinaKatSayisi")
+    <input type="number" asp-for="BinaKatSayisi" />
+    </div>
+    <div class="form-group">
+    @Html.Label("YapininCephesi")
+    <input type="text" asp-for="YapininCephesi" />
+    </div>
+    <div class="form-group">
+    @Html.Label("YapininSekli")
+    <input type="text" asp-for="YapininSekli" />
+    </div>
+    <div class="form-group">
+    @Html.Label("TuvaletSayisi")
+    <input type="number" asp-for="TuvaletSayisi" />
+    </div>
+    <div class="form-group">
+    @Html.Label("BalkonSayisi")
+    <input type="number" asp-for="BalkonSayisi" />
+    </div>
+    <div class="form-group">
+    @Html.Label("BanyoSayisi")
+    <input type="number" asp-for="BanyoSayisi" />
+    </div>
+    <div class="form-group">
+    @Html.Label("SalonSayisi")
+    <input type="number" asp-for="SalonSayisi" />
+    </div>
+    <div class="form-group">
+    @Html.Label("OdaSayisi")
+    <input type="number" asp-for="OdaSayisi" />
+    </div>
+    <div class="form-group">
+    @Html.Label("KiraGetirisi")
+    <input type="number" asp-for="KiraGetirisi" />
+    </div>
+    <div class="form-group">
+    @Html.Label("TakasYapilir")
+    <input type="checkbox" asp-for="TakasYapilir" />
+    </div>
+    <div class="form-group">
+    @Html.Label("KullanimDurumu")
+    <input type="text" asp-for="KullanimDurumu" />
+    </div>
+    <div class="form-group">
+    @Html.Label("YakitTipi")
+    <input type="text" asp-for="YakitTipi" />
+    </div>
+    <div class="form-group">
+    @Html.Label("BulunduguKat")
+    <input type="number" asp-for="BulunduguKat" />
+    </div>
+    <div class="form-group">
+    @Html.Label("Aidat")
+    <input type="number" asp-for="Aidat" />
+    </div>
+    <div class="form-group">
+    @Html.Label("KrediyeUygun")
+    <input type="checkbox" asp-for="KrediyeUygun" />
+    </div>
+    <div class="form-group">
+    @Html.Label("Devren")
+    <input type="checkbox" asp-for="Devren" />
+    </div> *@
+    <div class="form-group">
+        @Html.Label("UzunAciklama")
+        <input type="text" asp-for="UzunAciklama" class="form-control" />
+    </div>
+    @* <div class="form-group">
+    @Html.Label("KonumLink")
+    <input type="text" asp-for="KonumLink" />
+    </div>
+    <div class="form-group">
+    @Html.Label("Mahalle")
+    <input type="text" asp-for="ServiceMap.Mahalle" />
+    </div>
+    <div class="form-group">
+    @Html.Label("Koy")
+    <input type="text" asp-for="ServiceMap.Koy" />
+    </div>
+    <div class="form-group">
+    @Html.Label("Ilce")
+    <input type="text" asp-for="ServiceMap.Ilce" />
+    </div>
+    <div class="form-group">
+    @Html.Label("Il")
+    <input type="text" asp-for="ServiceMap.Il" />
+    </div>
+    <div class="form-group">
+    @Html.Label("EklenmeTarihi")
+    <input type="datetime" asp-for="ServiceInfo.EklenmeTarihi" />
+    </div>
+    <div class="form-group">
+    @Html.Label("GuncellenmeTarihi")
+    <input type="datetime" asp-for="ServiceInfo.GuncellenmeTarihi" />
+    </div>
+    <div class="form-group">
+    @Html.Label("KonumLink")
+    <input type="text" asp-for="KonumLink" />
+    </div>
+    <div class="form-group">
+    @Html.Label("ServiceMapId")
+    <input type="number" asp-for="ServiceMapId" />
+    </div>
+    <div class="form-group">
+    @Html.Label("ServiceInfoId")
+    <input type="number" asp-for="ServiceInfoId" />
+    </div> *@
+
+
+
+
+    @*  <div class="form-group">
+    @Html.Label("Fotoğraf")
+    <input type="file" name="Fotograflar" multiple />
+    </div> *@
+
+    <button class="btn btn-outline-info">Değişiklikleri Kaydet</button>
+</form>
