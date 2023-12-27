@@ -9,6 +9,7 @@
 <form method="post">
     <div class="form-group">
         @Html.Label("Başlık")
+        <span asp-validation-for="Baslik" class="text-danger"></span>
         <input type="text" asp-for="Baslik" class="form-control"/>
     </div>
    @*  <div class="form-group">
@@ -17,6 +18,7 @@
     </div> *@
     <div class="form-group">
         @Html.Label("Fiyat")
+        <span asp-validation-for="Fiyat" class="text-danger"></span>
         <input type="number" asp-for="Fiyat" class="form-control" />
     </div>
     @* <div class="form-group">
@@ -101,6 +103,7 @@
     </div> *@
     <div class="form-group">
         @Html.Label("UzunAciklama")
+        <span asp-validation-for="UzunAciklama" class="text-danger"></span>
         <input type="text" asp-for="UzunAciklama" class="form-control" />
     </div>
     @* <div class="form-group">

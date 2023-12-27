@@ -11,7 +11,7 @@
         <th>#</th>
         <th>Başlık</th>
         <th>Fiyat</th>
-        <th>BinaKatSayisi</th>
+       @*  <th>BinaKatSayisi</th>
         <th>Gorsel</th>
         <th>Status</th>
         <th>TapuDurumu</th>
@@ -34,7 +34,9 @@
         <th>UzunAciklama</th>
         <th>KonumLink</th>
         <th>ServiceMapId</th>
-        <th>ServiceInfoId</th>
+        <th>ServiceInfoId</th> *@
+        <th>Sil</th>
+        <th>Düzenle</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -42,7 +44,7 @@
             <td>@item.ServiceHousingID</td>
             <td>@item.Baslik</td>
             <td>@item.Fiyat</td>
-            <td>@item.BinaKatSayisi</td>
+           @*  <td>@item.BinaKatSayisi</td>
             <td>@item.Gorsel</td>
             <td>@item.Status</td>
             <td>@item.TapuDurumu</td>
@@ -66,8 +68,10 @@
             <td>@item.UzunAciklama</td>
             <td>@item.KonumLink</td>
             <td>@item.ServiceMapId</td>
-            <td>@item.ServiceInfoId</td>
+            <td>@item.ServiceInfoId</td> *@
+            <td><a href="/ServiceHousing/DeleteServiceHousing/@item.ServiceHousingID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/ServiceHousing/EditServiceHousing/@item.ServiceHousingID" class="btn btn-outline-warning">Düzenle</a></td>
         </tr>
     }
 </table>
-<a href="/Service/AddServiceHousing/" class="btn btn-outline-info">Yeni Ilan Girişi</a>
+<a href="/ServiceHousing/AddServiceHousing/" class="btn btn-outline-info">Yeni Ilan Girişi</a>
