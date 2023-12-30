@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.Contexts;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,12 @@ namespace BusinessLayer.Concrete
     public class ServiceMapManager: IServiceMapService
     {
         private readonly IServiceMapDal _serviceMapDal;
+        private readonly REstateContext _context;
 
-        public ServiceMapManager(IServiceMapDal serviceMapDal)
+        public ServiceMapManager(IServiceMapDal serviceMapDal, REstateContext context)
         {
             _serviceMapDal = serviceMapDal;
+            _context = context;
         }
 
         public void Delete(ServiceMap t)

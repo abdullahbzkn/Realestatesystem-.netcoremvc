@@ -9,5 +9,7 @@ namespace BusinessLayer.Abstract
 {
     public interface IServicePhotoService : IGenericService<ServicePhoto>
     {
+        ServicePhoto GetByServiceHousingId(int serviceHousingId);
+
     }
 }

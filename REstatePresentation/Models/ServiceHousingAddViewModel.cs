@@ -6,7 +6,8 @@ namespace REstatePresentation.Models
     public class ServiceHousingAddViewModel
     {
 
-        //public ServiceHousingAddViewModel() {
+        //public ServiceHousingAddViewModel()
+        //{
 
         //    ServiceHousing = new ServiceHousing();
         //    ServicePhoto = new ServicePhoto();
@@ -14,6 +15,7 @@ namespace REstatePresentation.Models
         //    ServiceInfo = new ServiceInfo();
 
         //}
+
         public ServiceHousing ServiceHousing { get; set; }
         public ServicePhoto ServicePhoto { get; set; }
         public ServiceMap ServiceMap { get; set; }

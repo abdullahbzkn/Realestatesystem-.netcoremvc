@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.Contexts;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,13 @@ namespace BusinessLayer.Concrete
     public class ServiceInfoManager: IServiceInfoService
     {
         private readonly IServiceInfoDal _serviceInfoDal;
+        private readonly REstateContext _context;
 
-        public ServiceInfoManager(IServiceInfoDal serviceInfoDal)
+
+        public ServiceInfoManager(IServiceInfoDal serviceInfoDal, REstateContext context)
         {
             _serviceInfoDal = serviceInfoDal;
+            _context = context;
         }
 
         public void Delete(ServiceInfo t)

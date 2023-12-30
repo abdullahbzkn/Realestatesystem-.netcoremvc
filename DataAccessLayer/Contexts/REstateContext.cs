@@ -28,5 +28,48 @@ namespace DataAccessLayer.Contexts
         public DbSet<ServicePhoto> ServicePhotos { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<WhatWeDo> WhatWeDos { get; set; }
+
+
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<ServiceHousing>()
+        //        .HasMany(sh => sh.ServicePhotos)
+        //        .WithOne(sp => sp.ServiceHousing)
+        //        .HasForeignKey(sp => sp.ServiceHousingId)
+        //        .OnDelete(DeleteBehavior.Cascade);
+
+        //    modelBuilder.Entity<ServiceHousing>()
+        //        .HasOne(sh => sh.ServiceMap)
+        //        .WithMany(sm => sm.ServiceHousings)
+        //        .HasForeignKey(sh => sh.ServiceMapId)
+        //        .OnDelete(DeleteBehavior.Cascade);
+
+        //    modelBuilder.Entity<ServiceHousing>()
+        //        .HasOne(sh => sh.ServiceInfo)
+        //        .WithMany(si => si.ServiceHousings)
+        //        .HasForeignKey(sh => sh.ServiceInfoId)
+        //        .OnDelete(DeleteBehavior.Cascade);
+
+        //    modelBuilder.Entity<ServiceTerrain>()
+        //        .HasMany(st => st.ServicePhotos)
+        //        .WithOne(sp => sp.ServiceTerrain)
+        //        .HasForeignKey(sp => sp.ServiceTerrainId)
+        //        .OnDelete(DeleteBehavior.Cascade);
+
+        //    modelBuilder.Entity<ServiceTerrain>()
+        //        .HasOne(st => st.ServiceMap)
+        //        .WithMany(sm => sm.ServiceTerrains)
+        //        .HasForeignKey(st => st.ServiceMapId)
+        //        .OnDelete(DeleteBehavior.Cascade);
+
+        //    modelBuilder.Entity<ServiceTerrain>()
+        //        .HasOne(st => st.ServiceInfo)
+        //        .WithMany(si => si.ServiceTerrains)
+        //        .HasForeignKey(st => st.ServiceInfoId)
+        //        .OnDelete(DeleteBehavior.Cascade);
+
+        //    base.OnModelCreating(modelBuilder);
+        //}
+
     }
 }

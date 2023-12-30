@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.Contexts;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,12 @@ namespace BusinessLayer.Concrete
     public class ServiceTerrainManager : IServiceTerrainService
     {
         private readonly IServiceTerrainDal _serviceTerrainDal;
+        private readonly REstateContext _context;
 
-        public ServiceTerrainManager(IServiceTerrainDal serviceTerrainDal)
+        public ServiceTerrainManager(IServiceTerrainDal serviceTerrainDal, REstateContext context)
         {
             _serviceTerrainDal = serviceTerrainDal;
+            _context = context;
         }
 
         public void Delete(ServiceTerrain t)

@@ -5,6 +5,7 @@ using DataAccessLayer.Concrete.EntityFramework;
 using DataAccessLayer.Contexts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -22,19 +23,22 @@ namespace REstatePresentation
 
         public void ConfigureServices(IServiceCollection services)
         {
+
+
             services.AddScoped<IServiceHousingService, ServiceHousingManager>();
             services.AddScoped<IServiceHousingDal, EfServiceHousingDal>();
-            services.AddScoped<IServicePhotoService, ServicePhotoManager>();
-            services.AddScoped<IServicePhotoDal, EfServicePhotoDal>();
-            services.AddScoped<IServiceMapService, ServiceMapManager>();
-            services.AddScoped<IServiceMapDal, EfServiceMapDal>();
-            services.AddScoped<IServiceInfoService, ServiceInfoManager>();
-            services.AddScoped<IServiceInfoDal, EfServiceInfoDal>();
             services.AddScoped<IServiceTerrainService, ServiceTerrainManager>();
             services.AddScoped<IServiceTerrainDal, EfServiceTerrainDal>();
+            services.AddScoped<IServiceMapService, ServiceMapManager>();
+            services.AddScoped<IServiceMapDal, EfServiceMapDal>();
+            services.AddScoped<IServicePhotoService, ServicePhotoManager>();
+            services.AddScoped<IServicePhotoDal, EfServicePhotoDal>();
+            services.AddScoped<IServiceInfoService, ServiceInfoManager>();
+            services.AddScoped<IServiceInfoDal, EfServiceInfoDal>();
             services.AddScoped<ITeamService, TeamManager>();
             services.AddScoped<ITeamDal, EfTeamDal>();
 
+            //services.AddScoped<ServicePhotoManager>();
 
             services.AddDbContext<REstateContext>();
             services.AddControllersWithViews();

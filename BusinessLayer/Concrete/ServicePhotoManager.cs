@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete.EntityFramework;
+using DataAccessLayer.Contexts;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,12 @@ namespace BusinessLayer.Concrete
     public class ServicePhotoManager: IServicePhotoService
     {
         private readonly IServicePhotoDal _servicePhotoDal;
+        private readonly REstateContext _context;
 
-        public ServicePhotoManager(IServicePhotoDal servicePhotoDal)
+        public ServicePhotoManager(IServicePhotoDal servicePhotoDal, REstateContext context)
         {
             _servicePhotoDal = servicePhotoDal;
+            _context = context;
         }
 
         public void Delete(ServicePhoto t)
@@ -43,5 +46,43 @@ namespace BusinessLayer.Concrete
         {
             _servicePhotoDal.Update(t);
         }
+
+        //public ServicePhoto GetByServiceHousingId(int serviceHousingId)
+        //{
+        //    try
+        //    {
+        //        if (serviceHousingId > 0)
+        //        {
+        //            var servicePhoto = _context.ServicePhotos.FirstOrDefault(x => x.ServiceHousingId == serviceHousingId);
+        //            if (servicePhoto != null)
+        //            {
+        //                return servicePhoto;
+        //            }
+        //            else
+        //            {
+        //                // Eğer servicePhoto null ise, null yerine başka bir değer ya da hata durumunu işleyebilirsiniz.
+        //                // Örneğin:
+        //                throw new InvalidOperationException($"ServicePhoto not found for ServiceHousingId: {serviceHousingId}");
+        //            }
+        //        }
+
+        //        return null;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine($"Hata Detayı: {ex.ToString()}");
+        //        throw;
+        //    }
+
+        //}
+
+
+        public ServicePhoto GetByServiceHousingId(int serviceHousingId)
+        {
+            return _servicePhotoDal.GetByServiceHousingId(serviceHousingId);
+        }
+
+
+
     }
 }
