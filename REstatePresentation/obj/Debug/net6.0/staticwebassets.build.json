@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UU3Dx3oI+e2ZieBu7j2Mahpc1j3J0EyWl0R0qHOrvDw=",
+  "Hash": "ZcgJxcOgzayH0SK6wnkNNYHLab+VfFom8fCtuKLa3+E=",
   "Source": "REstatePresentation",
   "BasePath": "_content/REstatePresentation",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\img\\housingimg1.jpg",
+      "SourceId": "REstatePresentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
+      "BasePath": "_content/REstatePresentation",
+      "RelativePath": "img/housingimg1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\housingimg1.jpg"
     },
     {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\js\\site.js",

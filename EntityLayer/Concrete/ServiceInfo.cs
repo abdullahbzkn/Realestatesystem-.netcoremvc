@@ -15,10 +15,8 @@ namespace EntityLayer.Concrete
         public int ServiceInfoID { get; set; }
         public DateTime EklenmeTarihi { get; set; }
         public DateTime GuncellenmeTarihi { get; set; }
-        public int IlanNo { get; set; }
 
         public virtual ICollection<ServiceHousing> ServiceHousings { get; set; }
         public virtual ICollection<ServiceTerrain> ServiceTerrains { get; set; }
-        public virtual ICollection<ServicePhoto> ServicePhotos { get; set; }
     }
 }

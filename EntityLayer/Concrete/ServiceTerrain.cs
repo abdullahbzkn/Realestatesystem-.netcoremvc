@@ -35,12 +35,12 @@ namespace EntityLayer.Concrete
 
 
         public int ServiceMapId { get; set; }
-        [ForeignKey("ServiceMapId")]
         public virtual ServiceMap ServiceMap { get; set; }
 
 
         public int ServiceInfoId { get; set; }
-        [ForeignKey("ServiceInfoId")]
         public virtual ServiceInfo ServiceInfo { get; set; }
+
+        public virtual ICollection<ServicePhoto> ServicePhotos { get; set; }
     }
 }

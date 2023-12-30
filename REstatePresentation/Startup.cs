@@ -24,6 +24,17 @@ namespace REstatePresentation
         {
             services.AddScoped<IServiceHousingService, ServiceHousingManager>();
             services.AddScoped<IServiceHousingDal, EfServiceHousingDal>();
+            services.AddScoped<IServicePhotoService, ServicePhotoManager>();
+            services.AddScoped<IServicePhotoDal, EfServicePhotoDal>();
+            services.AddScoped<IServiceMapService, ServiceMapManager>();
+            services.AddScoped<IServiceMapDal, EfServiceMapDal>();
+            services.AddScoped<IServiceInfoService, ServiceInfoManager>();
+            services.AddScoped<IServiceInfoDal, EfServiceInfoDal>();
+            services.AddScoped<IServiceTerrainService, ServiceTerrainManager>();
+            services.AddScoped<IServiceTerrainDal, EfServiceTerrainDal>();
+            services.AddScoped<ITeamService, TeamManager>();
+            services.AddScoped<ITeamDal, EfTeamDal>();
+
 
             services.AddDbContext<REstateContext>();
             services.AddControllersWithViews();

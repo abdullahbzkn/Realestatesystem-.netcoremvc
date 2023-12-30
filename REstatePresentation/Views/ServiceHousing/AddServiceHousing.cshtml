@@ -9,107 +9,141 @@
 <form method="post">
     <div class="form-group">
         @Html.Label("Başlık")
-        <span asp-validation-for="Baslik" class="text-danger"></span>
-        <input type="text" asp-for="Baslik" class="form-control"/>
-    </div>
-   @*  <div class="form-group">
+        <span asp-validation-for="ServiceHousing.Baslik" class="text-danger"></span>
+        <input type="text" asp-for="ServiceHousing.Baslik" class="form-control" />
+    </div><br />
+    <div class="form-group">
         @Html.Label("Fotograf Yolu")
-        <input type="text" asp-for="Gorsel" />
-    </div> *@
+        <span asp-validation-for="ServiceHousing.Gorsel" class="text-danger"></span>
+        <input type="text" asp-for="ServiceHousing.Gorsel" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("Fiyat")
-        <span asp-validation-for="Fiyat" class="text-danger"></span>
-        <input type="number" asp-for="Fiyat" class="form-control" />
-    </div>
-    @* <div class="form-group">
-        @Html.Label("Aktif mi Pasif mi")
-        <input type="checkbox" asp-for="Status" />
-    </div> *@
-   @*  <div class="form-group">
+        <span asp-validation-for="ServiceHousing.Fiyat" class="text-danger"></span>
+        <input type="number" asp-for="ServiceHousing.Fiyat" class="form-control" />
+    </div><br />
+    <div class="form-group">
         @Html.Label("TapuDurumu")
-        <input type="text" asp-for="TapuDurumu" />
-    </div>
+        <span asp-validation-for="ServiceHousing.TapuDurumu" class="text-danger"></span>
+        <input type="text" asp-for="ServiceHousing.TapuDurumu" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("YapininDurumu")
-        <input type="text" asp-for="YapininDurumu" />
-    </div>
+        <span asp-validation-for="ServiceHousing.YapininDurumu" class="text-danger"></span>
+        <input type="text" asp-for="ServiceHousing.YapininDurumu" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("Isitma")
-        <input type="text" asp-for="Isitma" />
-    </div>
+        <span asp-validation-for="ServiceHousing.Isitma" class="text-danger"></span>
+        <input type="text" asp-for="ServiceHousing.Isitma" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("BinaKatSayisi")
-        <input type="number" asp-for="BinaKatSayisi" />
-    </div>
+        <span asp-validation-for="ServiceHousing.BinaKatSayisi" class="text-danger"></span>
+        <input type="number" asp-for="ServiceHousing.BinaKatSayisi" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("YapininCephesi")
-        <input type="text" asp-for="YapininCephesi" />
-    </div>
+        <span asp-validation-for="ServiceHousing.YapininCephesi" class="text-danger"></span>
+        <input type="text" asp-for="ServiceHousing.YapininCephesi" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("YapininSekli")
-        <input type="text" asp-for="YapininSekli" />
-    </div>
+        <span asp-validation-for="ServiceHousing.YapininSekli" class="text-danger"></span>
+        <input type="text" asp-for="ServiceHousing.YapininSekli" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("TuvaletSayisi")
-        <input type="number" asp-for="TuvaletSayisi" />
-    </div>
+        <span asp-validation-for="ServiceHousing.TuvaletSayisi" class="text-danger"></span>
+        <input type="number" asp-for="ServiceHousing.TuvaletSayisi" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("BalkonSayisi")
-        <input type="number" asp-for="BalkonSayisi" />
-    </div>
+        <span asp-validation-for="ServiceHousing.BalkonSayisi" class="text-danger"></span>
+        <input type="number" asp-for="ServiceHousing.BalkonSayisi" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("BanyoSayisi")
-        <input type="number" asp-for="BanyoSayisi" />
-    </div>
+        <span asp-validation-for="ServiceHousing.BanyoSayisi" class="text-danger"></span>
+        <input type="number" asp-for="ServiceHousing.BanyoSayisi" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("SalonSayisi")
-        <input type="number" asp-for="SalonSayisi" />
-    </div>
+        <span asp-validation-for="ServiceHousing.SalonSayisi" class="text-danger"></span>
+        <input type="number" asp-for="ServiceHousing.SalonSayisi" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("OdaSayisi")
-        <input type="number" asp-for="OdaSayisi" />
-    </div>
+        <span asp-validation-for="ServiceHousing.OdaSayisi" class="text-danger"></span>
+        <input type="number" asp-for="ServiceHousing.OdaSayisi" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("KiraGetirisi")
-        <input type="number" asp-for="KiraGetirisi" />
-    </div>
-    <div class="form-group">
-        @Html.Label("TakasYapilir")
-        <input type="checkbox" asp-for="TakasYapilir" />
-    </div>
+        <span asp-validation-for="ServiceHousing.KiraGetirisi" class="text-danger"></span>
+        <input type="number" asp-for="ServiceHousing.KiraGetirisi" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("KullanimDurumu")
-        <input type="text" asp-for="KullanimDurumu" />
-    </div>
+        <span asp-validation-for="ServiceHousing.KullanimDurumu" class="text-danger"></span>
+        <input type="text" asp-for="ServiceHousing.KullanimDurumu" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("YakitTipi")
-        <input type="text" asp-for="YakitTipi" />
-    </div>
+        <span asp-validation-for="ServiceHousing.YakitTipi" class="text-danger"></span>
+        <input type="text" asp-for="ServiceHousing.YakitTipi" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("BulunduguKat")
-        <input type="number" asp-for="BulunduguKat" />
-    </div>
+        <span asp-validation-for="ServiceHousing.BulunduguKat" class="text-danger"></span>
+        <input type="number" asp-for="ServiceHousing.BulunduguKat" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("Aidat")
-        <input type="number" asp-for="Aidat" />
-    </div>
+        <span asp-validation-for="ServiceHousing.Aidat" class="text-danger"></span>
+        <input type="number" asp-for="ServiceHousing.Aidat" class="form-control" />
+    </div><br />
     <div class="form-group">
-        @Html.Label("KrediyeUygun")
-        <input type="checkbox" asp-for="KrediyeUygun" />
-    </div>
-    <div class="form-group">
-        @Html.Label("Devren")
-        <input type="checkbox" asp-for="Devren" />
-    </div> *@
+        @Html.Label("KonumLink")
+        <span asp-validation-for="ServiceHousing.KonumLink" class="text-danger"></span>
+        <input type="text" asp-for="ServiceHousing.KonumLink" class="form-control" />
+    </div><br />
     <div class="form-group">
         @Html.Label("UzunAciklama")
-        <span asp-validation-for="UzunAciklama" class="text-danger"></span>
-        <input type="text" asp-for="UzunAciklama" class="form-control" />
-    </div>
-    @* <div class="form-group">
-        @Html.Label("KonumLink")
-        <input type="text" asp-for="KonumLink" />
-    </div>
+        <span asp-validation-for="ServiceHousing.UzunAciklama" class="text-danger"></span>
+        <input type="text" asp-for="ServiceHousing.UzunAciklama" class="form-control" />
+    </div><br />
+    <div class="form-group">
+        @Html.Label("TakasYapilir")
+        <select asp-for="ServiceHousing.TakasYapilir" class="form-control">
+            <option value="">-- Select --</option>
+            <option value="True">Evet</option>
+            <option value="False">Hayır</option>
+        </select>
+    </div><br />
+    <div class="form-group">
+        @Html.Label("KrediyeUygun")
+        <select asp-for="ServiceHousing.KrediyeUygun" class="form-control">
+            <option value="">-- Select --</option>
+            <option value="True">Evet</option>
+            <option value="False">Hayır</option>
+        </select>
+    </div><br />
+    <div class="form-group">
+        @Html.Label("Devren")
+        <select asp-for="ServiceHousing.Devren" class="form-control">
+            <option value="">-- Select --</option>
+            <option value="True">Evet</option>
+            <option value="False">Hayır</option>
+        </select>
+    </div><br /> <div class="form-group">
+        @Html.Label("Status")
+        <select asp-for="ServiceHousing.Status" class="form-control">
+            <option value="">-- Select --</option>
+            <option value="True">Aktif</option>
+            <option value="False">Pasif</option>
+        </select>
+    </div><br />
+
     <div class="form-group">
         @Html.Label("Mahalle")
         <input type="text" asp-for="ServiceMap.Mahalle" />
@@ -134,25 +168,15 @@
         @Html.Label("GuncellenmeTarihi")
         <input type="datetime" asp-for="ServiceInfo.GuncellenmeTarihi" />
     </div>
+
     <div class="form-group">
-        @Html.Label("KonumLink")
-        <input type="text" asp-for="KonumLink" />
+        @Html.Label("FotografYolu")
+        <input type="text" asp-for="ServicePhoto.FotografYolu" />
     </div>
-    <div class="form-group">
-        @Html.Label("ServiceMapId")
-        <input type="number" asp-for="ServiceMapId" />
-    </div>
-    <div class="form-group">
-        @Html.Label("ServiceInfoId")
-        <input type="number" asp-for="ServiceInfoId" />
-    </div> *@
 
-
-
-
-   @*  <div class="form-group">
-        @Html.Label("Fotoğraf")
-        <input type="file" name="Fotograflar" multiple />
+    @*    <div class="form-group">
+    @Html.Label("Fotoğraf")
+    <input type="file" name="Fotograflar" multiple />
     </div> *@
 
     <button class="btn btn-outline-info">Kaydet</button>
