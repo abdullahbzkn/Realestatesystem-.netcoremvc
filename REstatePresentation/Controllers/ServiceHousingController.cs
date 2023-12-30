@@ -19,25 +19,25 @@ namespace REstatePresentation.Controllers
 
 
         //REstateContext rEstateContext = new REstateContext();
-        private readonly IServiceHousingService _serviceHousingService;
         private readonly IServiceMapService _serviceMapService;
-        private readonly IServicePhotoService _servicePhotoService;
         private readonly IServiceInfoService _serviceInfoService;
+        private readonly IServiceHousingService _serviceHousingService;
+        private readonly IServicePhotoService _servicePhotoService;
         private readonly REstateContext _context;
 
       
         public ServiceHousingController(
-            IServiceHousingService serviceHousingService,
             IServiceMapService serviceMapService,
-            IServicePhotoService servicePhotoService,
             IServiceInfoService serviceInfoService,
+            IServiceHousingService serviceHousingService,
+            IServicePhotoService servicePhotoService,
             REstateContext rEstateContext
             )
         {
-            _serviceHousingService = serviceHousingService;
             _serviceMapService = serviceMapService;
-            _servicePhotoService = servicePhotoService;
             _serviceInfoService = serviceInfoService;
+            _serviceHousingService = serviceHousingService;
+            _servicePhotoService = servicePhotoService;
             _context = rEstateContext;
         }
 

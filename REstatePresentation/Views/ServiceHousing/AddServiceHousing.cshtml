@@ -110,55 +110,55 @@
     <div class="form-group">
         @Html.Label("UzunAciklama")
         <span asp-validation-for="ServiceHousing.UzunAciklama" class="text-danger"></span>
-        <input type="text" asp-for="ServiceHousing.UzunAciklama" class="form-control" />
+        <textarea class="form-control" asp-for="ServiceHousing.UzunAciklama" rows="4"></textarea>
     </div><br />
     <div class="form-group">
         @Html.Label("TakasYapilir")
         <select asp-for="ServiceHousing.TakasYapilir" class="form-control">
             <option value="">-- Select --</option>
-            <option value="True" selected="@Model.ServiceHousing.TakasYapilir == true">Evet</option>
-            <option value="False" selected="@Model.ServiceHousing.TakasYapilir == false">Hayır</option>
+            <option value="True">Evet</option>
+            <option value="False">Hayır</option>
         </select>
     </div><br />
     <div class="form-group">
         @Html.Label("KrediyeUygun")
         <select asp-for="ServiceHousing.KrediyeUygun" class="form-control">
             <option value="">-- Select --</option>
-            <option value="True" selected="@Model.ServiceHousing.KrediyeUygun == true">Evet</option>
-            <option value="False" selected="@Model.ServiceHousing.KrediyeUygun == false">Hayır</option>
+            <option value="True">Evet</option>
+            <option value="False">Hayır</option>
         </select>
     </div><br />
     <div class="form-group">
         @Html.Label("Devren")
         <select asp-for="ServiceHousing.Devren" class="form-control">
             <option value="">-- Select --</option>
-            <option value="True" selected="@Model.ServiceHousing.Devren == true">Evet</option>
-            <option value="False" selected="@Model.ServiceHousing.Devren == false">Hayır</option>
+            <option value="True" >Evet</option>
+            <option value="False">Hayır</option>
         </select>
     </div><br /> <div class="form-group">
         @Html.Label("Status")
         <select asp-for="ServiceHousing.Status" class="form-control">
             <option value="">-- Select --</option>
-            <option value="True" selected="@Model.ServiceHousing.Status == true">Aktif</option>
-            <option value="False" selected="@Model.ServiceHousing.Status == false">Pasif</option>
+            <option value="True">Aktif</option>
+            <option value="False">Pasif</option>
         </select>
     </div><br />
 
     <div class="form-group">
         @Html.Label("Mahalle")
-        <input type="text" asp-for="ServiceMap.Mahalle" />
+        <input type="text" asp-for="ServiceMap.Mahalle" class="form-control" />
     </div>
     <div class="form-group">
         @Html.Label("Koy")
-        <input type="text" asp-for="ServiceMap.Koy" />
+        <input type="text" asp-for="ServiceMap.Koy" class="form-control" />
     </div>
     <div class="form-group">
         @Html.Label("Ilce")
-        <input type="text" asp-for="ServiceMap.Ilce" />
+        <input type="text" asp-for="ServiceMap.Ilce" class="form-control" />
     </div>
     <div class="form-group">
         @Html.Label("Il")
-        <input type="text" asp-for="ServiceMap.Il" />
+        <input type="text" asp-for="ServiceMap.Il" class="form-control" />
     </div>
     <div class="form-group">
         @Html.Label("EklenmeTarihi")
@@ -171,7 +171,7 @@
 
     <div class="form-group">
         @Html.Label("FotografYolu")
-        <input type="text" asp-for="ServicePhoto.FotografYolu" />
+        <input type="text" asp-for="ServicePhoto.FotografYolu" class="form-control" />
     </div>
 
     @*    <div class="form-group">

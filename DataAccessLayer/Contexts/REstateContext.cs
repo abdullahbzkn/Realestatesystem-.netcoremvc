@@ -32,39 +32,45 @@ namespace DataAccessLayer.Contexts
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
-        //    modelBuilder.Entity<ServiceHousing>()
-        //        .HasMany(sh => sh.ServicePhotos)
-        //        .WithOne(sp => sp.ServiceHousing)
+        //    // ServicePhoto - ServiceHousing ilişkisi
+        //    modelBuilder.Entity<ServicePhoto>()
+        //        .HasOne(sp => sp.ServiceHousing)
+        //        .WithMany(sh => sh.ServicePhotos)
         //        .HasForeignKey(sp => sp.ServiceHousingId)
         //        .OnDelete(DeleteBehavior.Cascade);
 
-        //    modelBuilder.Entity<ServiceHousing>()
-        //        .HasOne(sh => sh.ServiceMap)
-        //        .WithMany(sm => sm.ServiceHousings)
-        //        .HasForeignKey(sh => sh.ServiceMapId)
-        //        .OnDelete(DeleteBehavior.Cascade);
-
-        //    modelBuilder.Entity<ServiceHousing>()
-        //        .HasOne(sh => sh.ServiceInfo)
-        //        .WithMany(si => si.ServiceHousings)
-        //        .HasForeignKey(sh => sh.ServiceInfoId)
-        //        .OnDelete(DeleteBehavior.Cascade);
-
-        //    modelBuilder.Entity<ServiceTerrain>()
-        //        .HasMany(st => st.ServicePhotos)
-        //        .WithOne(sp => sp.ServiceTerrain)
+        //    // ServicePhoto - ServiceTerrain ilişkisi
+        //    modelBuilder.Entity<ServicePhoto>()
+        //        .HasOne(sp => sp.ServiceTerrain)
+        //        .WithMany(st => st.ServicePhotos)
         //        .HasForeignKey(sp => sp.ServiceTerrainId)
         //        .OnDelete(DeleteBehavior.Cascade);
 
-        //    modelBuilder.Entity<ServiceTerrain>()
-        //        .HasOne(st => st.ServiceMap)
-        //        .WithMany(sm => sm.ServiceTerrains)
+        //    // ServiceMap - ServiceHousing ilişkisi
+        //    modelBuilder.Entity<ServiceMap>()
+        //        .HasMany(sm => sm.ServiceHousings)
+        //        .WithOne(sh => sh.ServiceMap)
+        //        .HasForeignKey(sh => sh.ServiceMapId)
+        //        .OnDelete(DeleteBehavior.Cascade);
+
+        //    // ServiceMap - ServiceTerrain ilişkisi
+        //    modelBuilder.Entity<ServiceMap>()
+        //        .HasMany(sm => sm.ServiceTerrains)
+        //        .WithOne(st => st.ServiceMap)
         //        .HasForeignKey(st => st.ServiceMapId)
         //        .OnDelete(DeleteBehavior.Cascade);
 
-        //    modelBuilder.Entity<ServiceTerrain>()
-        //        .HasOne(st => st.ServiceInfo)
-        //        .WithMany(si => si.ServiceTerrains)
+        //    // ServiceInfo - ServiceHousing ilişkisi
+        //    modelBuilder.Entity<ServiceInfo>()
+        //        .HasMany(si => si.ServiceHousings)
+        //        .WithOne(sh => sh.ServiceInfo)
+        //        .HasForeignKey(sh => sh.ServiceInfoId)
+        //        .OnDelete(DeleteBehavior.Cascade);
+
+        //    // ServiceInfo - ServiceTerrain ilişkisi
+        //    modelBuilder.Entity<ServiceInfo>()
+        //        .HasMany(si => si.ServiceTerrains)
+        //        .WithOne(st => st.ServiceInfo)
         //        .HasForeignKey(st => st.ServiceInfoId)
         //        .OnDelete(DeleteBehavior.Cascade);
 
