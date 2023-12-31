@@ -2,76 +2,110 @@
 @model List<ServiceHousing>
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+@* <div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Yeni Konut Ilan Listesi</h1>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <table class="table table-bordered">
+                <tr>
+                    <th>#</th>
+                    <th>Başlık</th>
+                    <th>Fiyat</th>
+                    <th>Status</th>
+                    <th>Sil</th>
+                    <th>Düzenle</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@item.ServiceHousingID</td>
+                    <td>@item.Baslik</td>
+                    <td>@item.Fiyat</td>
+                    <td>@item.Status</td>
 
-<h1>Yeni Konut Ilan Listesi</h1>
-<table class="table table-bordered">
-    <tr>
-        <th>#</th>
-        <th>Başlık</th>
-        <th>Fiyat</th>
-  @*       <th>BinaKatSayisi</th>
-        <th>Gorsel</th> *@
-        <th>Status</th>
- @*        <th>TapuDurumu</th>
-        <th>YapininDurumu</th>
-        <th>Isitma</th>
-        <th>YapininCephesi</th>
-        <th>YapininSekli</th>
-        <th>TuvaletSayisi</th>
-        <th>BalkonSayisi</th>
-        <th>BanyoSayisi</th>
-        <th>SalonSayisi</th>
-        <th>OdaSayisi</th>
-        <th>KiraGetirisi</th>
-        <th>TakasYapilir</th>
-        <th>KullanimDurumu</th>
-        <th>YakitTipi</th>
-        <th>BulunduguKat</th>
-        <th>Aidat</th>
-        <th>KrediyeUygun</th>
-        <th>UzunAciklama</th>
-        <th>KonumLink</th>
-        <th>ServiceMapId</th>
-        <th>ServiceInfoId</th> *@
-        <th>Sil</th>
-        <th>Düzenle</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.ServiceHousingID</td>
-            <td>@item.Baslik</td>
-            <td>@item.Fiyat</td>
-    @*         <td>@item.BinaKatSayisi</td>
-            <td>@item.Gorsel</td> *@
-            <td>@item.Status</td>
-    @*         <td>@item.TapuDurumu</td>
-            <td>@item.YapininDurumu</td>
-            <td>@item.Isitma</td>
-            <td>@item.YapininCephesi</td>
-            <td>@item.YapininSekli</td>
-            <td>@item.TuvaletSayisi</td>
-            <td>@item.BalkonSayisi</td>
-            <td>@item.BanyoSayisi</td>
-            <td>@item.SalonSayisi</td>
-            <td>@item.OdaSayisi</td>
-            <td>@item.KiraGetirisi</td>
-            <td>@item.TakasYapilir</td>
-            <td>@item.KullanimDurumu</td>
-            <td>@item.YakitTipi</td>
-            <td>@item.BulunduguKat</td>
-            <td>@item.Aidat</td>
-            <td>@item.KrediyeUygun</td>
-            <td>@item.Devren</td>
-            <td>@item.UzunAciklama</td>
-            <td>@item.KonumLink</td>
-            <td>@item.ServiceMapId</td>
-            <td>@item.ServiceInfoId</td> *@
-            <td><a href="/ServiceHousing/DeleteServiceHousing/@item.ServiceHousingID" class="btn btn-outline-danger">Sil</a></td>
-            <td><a href="/ServiceHousing/EditServiceHousing/@item.ServiceHousingID" class="btn btn-outline-warning">Düzenle</a></td>
-        </tr>
-    }
-</table>
-<a href="/ServiceHousing/AddServiceHousing/" class="btn btn-outline-info">Yeni Ilan Girişi</a>
+                        <td>
+                            <a href="/ServiceHousing/DeleteServiceHousing/@item.ServiceHousingID" class="btn btn-danger btn-circle">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/ServiceHousing/EditServiceHousing/@item.ServiceHousingID" class="btn btn-info btn-circle">
+                            <i class="fas fa-info-circle"></i>
+                        </a>
+                        </td>
+                      <td><a href="/ServiceHousing/DeleteServiceHousing/@item.ServiceHousingID" class="btn btn-outline-danger">Sil</a></td> 
+                      <td><a href="/ServiceHousing/EditServiceHousing/@item.ServiceHousingID" class="btn btn-outline-warning">Düzenle</a></td> 
+                </tr>
+                }
+            </table>
+            <a href="/ServiceHousing/AddServiceHousing/" class="btn btn-outline-info">Yeni Ilan Girişi</a>
+            </div>
+    </div>
+</div> *@
+
+
+<div class="container-fluid">
+
+    <h1 class="h3 mb-2 text-gray-800">Konut lan Listesi</h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Konut İlan Listesi</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Başlık</th>
+                            <th>Fiyat</th>
+                            <th>Durum</th>
+                            <th>Eklenme Tarihi</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>#</th>
+                            <th>Başlık</th>
+                            <th>Fiyat</th>
+                            <th>Durum</th>
+                            <th>Eklenme Tarihi</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ServiceHousingID</td>
+                                <td>@item.Baslik</td>
+                                <td>@item.Fiyat</td>
+                                <td>@(item.Status.ToString().ToLower() == "true" ? "Aktif" : "Pasif")</td>
+                                <td>@item.ServiceInfo?.EklenmeTarihi</td>
+                                <td>
+                                    <a href="/ServiceHousing/DeleteServiceHousing/@item.ServiceHousingID" class="btn btn-danger btn-circle">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/ServiceHousing/EditServiceHousing/@item.ServiceHousingID" class="btn btn-info btn-circle">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                </td>
+                                 @*  <td><a href="/ServiceHousing/DeleteServiceHousing/@item.ServiceHousingID" class="btn btn-outline-danger">Sil</a></td>
+                                  <td><a href="/ServiceHousing/EditServiceHousing/@item.ServiceHousingID" class="btn btn-outline-warning">Düzenle</a></td>  *@
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <a href="/ServiceHousing/AddServiceHousing/" class="btn btn-outline-info">Yeni Ilan Girişi</a>
+            </div>
+        </div>
+    </div>
+</div>

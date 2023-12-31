@@ -272,5 +272,10 @@ namespace REstatePresentation.Controllers
 
         //    return RedirectToAction("Index");
         //}
+
+        public IActionResult Deneme()
+        {
+            return View();
+        }
     }
 }
