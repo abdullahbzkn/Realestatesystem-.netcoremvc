@@ -1,0 +1,7 @@
+Hatalar
+
+Düzenlerken photo map ve info tablolarında yeni veriler oluşuyor eskileri düzenlenmiyor ilişkilerde sorun yok ama veriler yeniden oluşuyor
+Silme kısmında sorun var
+Info tablosunda yeni oluştururken eklenme tarihi alınabiliyor ancak duzenlemede guncelleme kısmı sorunlu
+contexte ilişkiler ne şekilde yazılmalı & controllerda verilerin guncellenmesi nasıl olucak existing... diye modelden çekince null geliyor.
+

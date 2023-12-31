@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class ServiceInfoManager: IServiceInfoService
+    public class ServiceInfoManager : IServiceInfoService
     {
         private readonly IServiceInfoDal _serviceInfoDal;
         private readonly REstateContext _context;
@@ -29,7 +29,7 @@ namespace BusinessLayer.Concrete
 
         public ServiceInfo GetById(int id)
         {
-            return _serviceInfoDal.GetById(id);        
+            return _serviceInfoDal.GetById(id);
         }
 
         public List<ServiceInfo> GetListAll()

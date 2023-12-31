@@ -24,7 +24,7 @@ namespace REstatePresentation.Controllers
         private readonly IServiceHousingService _serviceHousingService;
         private readonly IServicePhotoService _servicePhotoService;
         private readonly REstateContext _context;
-
+        ServiceInfo newServiceInfo;
       
         public ServiceHousingController(
             IServiceMapService serviceMapService,
@@ -57,10 +57,28 @@ namespace REstatePresentation.Controllers
         {
             //serviceMapManager.Insert(model.ServiceMap);
             _serviceMapService.Insert(model.ServiceMap);
-            //serviceInfoManager.Insert(model.ServiceInfo);
-            _serviceInfoService.Insert(model.ServiceInfo);
+
+
+            //_serviceInfoService.Insert(new ServiceInfo
+            //{
+            //    EklenmeTarihi = DateTime.Now,
+            //    GuncellenmeTarihi = DateTime.Now
+            //});
+
+
+            newServiceInfo = new ServiceInfo
+            {
+                EklenmeTarihi = DateTime.Now,
+                GuncellenmeTarihi = DateTime.Now
+            };
+
+
+            ////serviceInfoManager.Insert(model.ServiceInfo);
+            _serviceInfoService.Insert(newServiceInfo);
+
+
             model.ServiceHousing.ServiceMapId = model.ServiceMap.ServiceMapID;
-            model.ServiceHousing.ServiceInfoId = model.ServiceInfo.ServiceInfoID;
+            model.ServiceHousing.ServiceInfoId = newServiceInfo.ServiceInfoID;
             //serviceHousingManager.Insert(model.ServiceHousing);
             _serviceHousingService.Insert(model.ServiceHousing);
             model.ServicePhoto.ServiceHousingId = model.ServiceHousing.ServiceHousingID;
@@ -148,8 +166,41 @@ namespace REstatePresentation.Controllers
         {
             //serviceMapManager.Update(model.ServiceMap);
             _serviceMapService.Update(model.ServiceMap);
+
+            //// ServiceInfo güncelleme
+            //var existingServiceInfo = _serviceInfoService.GetById(model.ServiceInfo.ServiceInfoID);
+
+            //if (existingServiceInfo != null)
+            //{
+            //    existingServiceInfo.GuncellenmeTarihi = DateTime.Now;
+            //    _serviceInfoService.Update(existingServiceInfo);
+            //}
+
+
+            // ServiceInfo güncelleme
+            if (model.ServiceInfo == null)
+            {
+                // Eğer ServiceInfo null ise, yeni bir ServiceInfo oluştur
+                model.ServiceInfo = new ServiceInfo
+                {
+                    EklenmeTarihi = DateTime.Now,
+                    GuncellenmeTarihi = DateTime.Now
+                };
+            }
+            else
+            {
+                // Eğer ServiceInfo null değilse, güncelleme işlemini yap
+                var existingServiceInfo = _serviceInfoService.GetById(model.ServiceInfo.ServiceInfoID);
+
+                if (existingServiceInfo != null)
+                {
+                    existingServiceInfo.GuncellenmeTarihi = DateTime.Now;
+                    _serviceInfoService.Update(existingServiceInfo);
+                }
+            }
+
             //serviceInfoManager.Update(model.ServiceInfo);
-            _serviceInfoService.Update(model.ServiceInfo);
+            //_serviceInfoService.Update(model.ServiceInfo);
             model.ServiceHousing.ServiceMapId = model.ServiceMap.ServiceMapID;
             model.ServiceHousing.ServiceInfoId = model.ServiceInfo.ServiceInfoID;
             //serviceHousingManager.Update(model.ServiceHousing);
@@ -157,8 +208,69 @@ namespace REstatePresentation.Controllers
             model.ServicePhoto.ServiceHousingId = model.ServiceHousing.ServiceHousingID;
             //servicePhotoManager.Update(model.ServicePhoto);
             _servicePhotoService.Update(model.ServicePhoto);
+
             return RedirectToAction("Index");
         }
 
+        //[HttpPost]
+        //public IActionResult EditServiceHousing(ServiceHousingAddViewModel model)
+        //{
+        //    var existingServiceMap = _serviceMapService.GetById(model.ServiceMap.ServiceMapID);
+        //    var existingServiceInfo = _serviceInfoService.GetById(model.ServiceInfo.ServiceInfoID);
+        //    var existingServiceHousing = _serviceHousingService.GetById(model.ServiceHousing.ServiceHousingID);
+        //    var existingServicePhoto = _servicePhotoService.GetByServiceHousingId(model.ServiceHousing.ServiceHousingID);
+
+        //    existingServiceMap.Mahalle = model.ServiceMap.Mahalle;
+        //    existingServiceMap.Koy = model.ServiceMap.Koy;
+        //    existingServiceMap.Ilce = model.ServiceMap.Ilce;
+        //    existingServiceMap.Il = model.ServiceMap.Il;
+
+        //    if (existingServiceInfo != null)
+        //    {
+        //        existingServiceInfo.GuncellenmeTarihi = DateTime.Now;
+        //    }
+        //    else
+        //    {
+        //        model.ServiceInfo.EklenmeTarihi = DateTime.Now;
+        //        model.ServiceInfo.GuncellenmeTarihi = DateTime.Now;
+        //        _serviceInfoService.Insert(model.ServiceInfo);
+        //        existingServiceHousing.ServiceInfoId = model.ServiceInfo.ServiceInfoID;
+        //    }
+
+        //    existingServiceHousing.Baslik = model.ServiceHousing.Baslik;
+        //    existingServiceHousing.Gorsel = model.ServiceHousing.Gorsel;
+        //    existingServiceHousing.Fiyat = model.ServiceHousing.Fiyat;
+        //    existingServiceHousing.TapuDurumu = model.ServiceHousing.TapuDurumu;
+        //    existingServiceHousing.YapininDurumu = model.ServiceHousing.YapininDurumu;
+        //    existingServiceHousing.Isitma = model.ServiceHousing.Isitma;
+        //    existingServiceHousing.BinaKatSayisi = model.ServiceHousing.BinaKatSayisi;
+        //    existingServiceHousing.YapininCephesi = model.ServiceHousing.YapininCephesi;
+        //    existingServiceHousing.YapininSekli = model.ServiceHousing.YapininSekli;
+        //    existingServiceHousing.TuvaletSayisi = model.ServiceHousing.TuvaletSayisi;
+        //    existingServiceHousing.BalkonSayisi = model.ServiceHousing.BalkonSayisi;
+        //    existingServiceHousing.BanyoSayisi = model.ServiceHousing.BanyoSayisi;
+        //    existingServiceHousing.SalonSayisi = model.ServiceHousing.SalonSayisi;
+        //    existingServiceHousing.OdaSayisi = model.ServiceHousing.OdaSayisi;
+        //    existingServiceHousing.KiraGetirisi = model.ServiceHousing.KiraGetirisi;
+        //    existingServiceHousing.KullanimDurumu = model.ServiceHousing.KullanimDurumu;
+        //    existingServiceHousing.YakitTipi = model.ServiceHousing.YakitTipi;
+        //    existingServiceHousing.BulunduguKat = model.ServiceHousing.BulunduguKat;
+        //    existingServiceHousing.Aidat = model.ServiceHousing.Aidat;
+        //    existingServiceHousing.KonumLink = model.ServiceHousing.KonumLink;
+        //    existingServiceHousing.UzunAciklama = model.ServiceHousing.UzunAciklama;
+        //    existingServiceHousing.TakasYapilir = model.ServiceHousing.TakasYapilir;
+        //    existingServiceHousing.KrediyeUygun = model.ServiceHousing.KrediyeUygun;
+        //    existingServiceHousing.Devren = model.ServiceHousing.Devren;
+        //    existingServiceHousing.Status = model.ServiceHousing.Status;
+
+        //    existingServicePhoto.FotografYolu = model.ServicePhoto.FotografYolu;
+
+        //    _serviceMapService.Update(existingServiceMap);
+        //    _serviceInfoService.Update(existingServiceInfo);
+        //    _serviceHousingService.Update(existingServiceHousing);
+        //    _servicePhotoService.Update(existingServicePhoto);
+
+        //    return RedirectToAction("Index");
+        //}
     }
 }

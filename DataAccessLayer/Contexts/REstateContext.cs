@@ -30,6 +30,18 @@ namespace DataAccessLayer.Contexts
         public DbSet<WhatWeDo> WhatWeDos { get; set; }
 
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ServiceInfo>()
+                .Property(x => x.EklenmeTarihi)
+                .HasDefaultValueSql("GETDATE()");
+
+            modelBuilder.Entity<ServiceInfo>()
+                .Property(x => x.GuncellenmeTarihi)
+                .HasDefaultValueSql("GETDATE()")
+                .ValueGeneratedOnUpdate();
+        }
+
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
         //    // ServicePhoto - ServiceHousing ilişkisi

@@ -213,11 +213,9 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int");
 
                     b.Property<int?>("ServiceInfoId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int?>("ServiceMapId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<bool?>("Status")
@@ -265,10 +263,14 @@ namespace DataAccessLayer.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ServiceInfoID"), 1L, 1);
 
                     b.Property<DateTime>("EklenmeTarihi")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<DateTime>("GuncellenmeTarihi")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnUpdate()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("ServiceInfoID");
 
@@ -317,11 +319,9 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ServiceHousingId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int?>("ServiceTerrainId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.HasKey("ServicePhotoID");
@@ -500,15 +500,11 @@ namespace DataAccessLayer.Migrations
                 {
                     b.HasOne("EntityLayer.Concrete.ServiceInfo", "ServiceInfo")
                         .WithMany("ServiceHousings")
-                        .HasForeignKey("ServiceInfoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ServiceInfoId");
 
                     b.HasOne("EntityLayer.Concrete.ServiceMap", "ServiceMap")
                         .WithMany("ServiceHousings")
-                        .HasForeignKey("ServiceMapId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ServiceMapId");
 
                     b.Navigation("ServiceInfo");
 
@@ -519,15 +515,11 @@ namespace DataAccessLayer.Migrations
                 {
                     b.HasOne("EntityLayer.Concrete.ServiceHousing", "ServiceHousing")
                         .WithMany("ServicePhotos")
-                        .HasForeignKey("ServiceHousingId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ServiceHousingId");
 
                     b.HasOne("EntityLayer.Concrete.ServiceTerrain", "ServiceTerrain")
                         .WithMany("ServicePhotos")
-                        .HasForeignKey("ServiceTerrainId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ServiceTerrainId");
 
                     b.Navigation("ServiceHousing");
 
