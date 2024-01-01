@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qAiENikRUFMtx5dLdVu9Z08pvg9NX1v/Wmw2zwh3Bss=",
+  "Hash": "FreDBzzChZo3VUBw8bkQvBvK86yWE91YwA4RVPAb1Bo=",
   "Source": "REstatePresentation",
   "BasePath": "_content/REstatePresentation",
   "Mode": "Default",
@@ -1290,6 +1290,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\templateadmin\\img\\background-image.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateadmin\\img\\Buzkan gayrimenkul.png",
+      "SourceId": "REstatePresentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
+      "BasePath": "_content/REstatePresentation",
+      "RelativePath": "templateadmin/img/Buzkan gayrimenkul.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templateadmin\\img\\Buzkan gayrimenkul.png"
     },
     {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateadmin\\img\\housingimg1.jpg",
