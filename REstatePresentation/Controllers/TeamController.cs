@@ -1,5 +1,7 @@
 ﻿using BusinessLayer.Abstract;
+using BusinessLayer.ValidationRules;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 
 namespace REstatePresentation.Controllers
@@ -27,20 +29,55 @@ namespace REstatePresentation.Controllers
         [HttpPost]
         public IActionResult AddTeam(Team team)
         {
-            _teamService.Insert(team);
+            TeamValidator validationRules = new TeamValidator();
+            ValidationResult result = validationRules.Validate(team);
+            if (result.IsValid)
+            {
+                _teamService.Insert(team);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach(var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+        }
+
+        public IActionResult DeleteTeam(int id)
+        {
+            var values = _teamService.GetById(id);
+            _teamService.Delete(values);
             return RedirectToAction("Index");
         }
 
+
         [HttpGet]
-        public IActionResult EditTeam()
+        public IActionResult EditTeam(int id)
         {
-            return View();
+            var values = _teamService.GetById(id);
+            return View(values);
         }
         [HttpPost]
         public IActionResult EditTeam(Team team)
         {
-            _teamService.Update(team);
-            return RedirectToAction("Index");
+            TeamValidator validationRules = new TeamValidator();
+            ValidationResult result = validationRules.Validate(team);
+            if (result.IsValid)
+            {
+                _teamService.Update(team);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
     }
 }

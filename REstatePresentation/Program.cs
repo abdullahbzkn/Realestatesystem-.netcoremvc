@@ -20,6 +20,9 @@ builder.Services.AddScoped<IServicePhotoService, ServicePhotoManager>();
 builder.Services.AddScoped<IServicePhotoDal, EfServicePhotoDal>();
 builder.Services.AddScoped<ITeamService, TeamManager>();
 builder.Services.AddScoped<ITeamDal, EfTeamDal>();
+builder.Services.AddScoped<IWhatWeDoService, WhatWeDoManager>();
+builder.Services.AddScoped<IWhatWeDoDal, EfWhatWeDoDal>();
+
 
 builder.Services.AddDbContext<REstateContext>();
 var app = builder.Build();

@@ -8,15 +8,18 @@
     <form method="post">
         <div class="form-group">
             @Html.Label("Ad Soyad")
+            <span asp-validation-for="KisiAdi" class="text-danger"></span>
             <input type="text" asp-for="KisiAdi" class="form-control" placeholder="isim ve soyisim giriniz"/>
         </div><br />
         <div class="form-group">
             @Html.Label("Açıklama")
+            <span asp-validation-for="Aciklama" class="text-danger"></span>
             <input type="text" asp-for="Aciklama" class="form-control" placeholder="açıklama veya departman giriniz" />
         </div><br />
      
         <div class="form-group">
             @Html.Label("Fotoğraf Yolu")
+            <span asp-validation-for="FotografYolu" class="text-danger"></span>
             <input type="text" asp-for="FotografYolu" class="form-control" placeholder="fotoğraf dosya yolunu giriniz" />
         </div><br />
      

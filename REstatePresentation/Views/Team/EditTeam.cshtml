@@ -6,17 +6,21 @@
 <div class="container-fluid">
     <h1 class="h3 mb-2 text-gray-800">Takım Arkadaşı Kaydı Düzenleme</h1>
     <form method="post">
+        @Html.HiddenFor(x=>x.TeamID)
         <div class="form-group">
             @Html.Label("Ad Soyad")
+            <span asp-validation-for="KisiAdi" class="text-danger"></span>
             <input type="text" asp-for="KisiAdi" class="form-control" />
         </div><br />
         <div class="form-group">
             @Html.Label("Açıklama")
+            <span asp-validation-for="Aciklama" class="text-danger"></span>
             <input type="text" asp-for="Aciklama" class="form-control" />
         </div><br />
 
         <div class="form-group">
             @Html.Label("Fotoğraf Yolu")
+            <span asp-validation-for="FotografYolu" class="text-danger"></span>
             <input type="text" asp-for="FotografYolu" class="form-control" />
         </div><br />
 

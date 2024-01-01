@@ -1,0 +1,58 @@
+﻿@model EntityLayer.Concrete.WhatWeDo
+@{
+    ViewData["Title"] = "AddWhatWeDo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Ne Yapıyoruz Bölümü Ekleme Sayfası</h1>
+    <form method="post">
+        <div class="form-group">
+            @Html.Label("Başlık")
+            <span asp-validation-for="Baslik" class="text-danger"></span>
+            <input type="text" asp-for="Baslik" class="form-control" placeholder="Başlık giriniz" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Küçük Başlık 1")
+            <span asp-validation-for="KBaslik1" class="text-danger"></span>
+            <input type="text" asp-for="KBaslik1" class="form-control" placeholder="Başlık giriniz" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Metin 1")
+            <span asp-validation-for="Metin1" class="text-danger"></span>
+            <input type="text" asp-for="Metin1" class="form-control" placeholder="Başlık giriniz" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Küçük Başlık 2")
+            <span asp-validation-for="KBaslik2" class="text-danger"></span>
+            <input type="text" asp-for="KBaslik2" class="form-control" placeholder="Başlık giriniz" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Metin 2")
+            <span asp-validation-for="Metin2" class="text-danger"></span>
+            <input type="text" asp-for="Metin2" class="form-control" placeholder="Başlık giriniz" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Küçük Başlık 3")
+            <span asp-validation-for="KBaslik3" class="text-danger"></span>
+            <input type="text" asp-for="KBaslik3" class="form-control" placeholder="Başlık giriniz" />
+        </div><br />
+
+        <div class="form-group">
+            @Html.Label("Metin 3")
+            <span asp-validation-for="Metin3" class="text-danger"></span>
+            <input type="text" asp-for="Metin3" class="form-control" placeholder="Başlık giriniz" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Küçük Başlık 4")
+            <span asp-validation-for="KBaslik4" class="text-danger"></span>
+            <input type="text" asp-for="KBaslik4" class="form-control" placeholder="Başlık giriniz" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Metin 4")
+            <span asp-validation-for="Metin4" class="text-danger"></span>
+            <input type="text" asp-for="Metin4" class="form-control" placeholder="Başlık giriniz" />
+        </div><br />
+        <button class="btn btn-outline-info">Ekle</button>
+    </form>
+</div>

@@ -253,3 +253,7 @@ C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\REstatePresentation\obj\Debug
 C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\REstatePresentation\obj\Debug\net6.0\REstatePresentation.pdb
 C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\REstatePresentation\obj\Debug\net6.0\REstatePresentation.genruntimeconfig.cache
 C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\REstatePresentation\obj\Debug\net6.0\ref\REstatePresentation.dll
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\REstatePresentation\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\REstatePresentation\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\REstatePresentation\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\REstatePresentation\obj\Debug\net6.0\REstatePresentation.MvcApplicationPartsAssemblyInfo.cs

@@ -1,0 +1,82 @@
+﻿@using EntityLayer.Concrete
+@model List<WhatWeDo>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+
+    <h1 class="h3 mb-2 text-gray-800">Ne Yapıyoruz Bölümü</h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Ne Yapıyoruz Bölümü</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Başlık</th>
+                            <th>Küçük Başlık 1</th>
+                            <th>Metin 1</th>
+                            <th>Küçük Başlık 2</th>
+                            <th>Metin 2</th>
+                            <th>Küçük Başlık 3</th>
+                            <th>Metin 3</th>
+                            <th>Küçük Başlık 4</th>
+                            <th>Metin 4</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>#</th>
+                            <th>Başlık</th>
+                            <th>Küçük Başlık 1</th>
+                            <th>Metin 1</th>
+                            <th>Küçük Başlık 2</th>
+                            <th>Metin 2</th>
+                            <th>Küçük Başlık 3</th>
+                            <th>Metin 3</th>
+                            <th>Küçük Başlık 4</th>
+                            <th>Metin 4</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.WhatWeDoID</td>
+                                <td>@item.Baslik</td>
+                                <td>@item.KBaslik1</td>
+                                <td>@item.Metin1</td>
+                                <td>@item.KBaslik2</td>
+                                <td>@item.Metin2</td>
+                                <td>@item.KBaslik3</td>
+                                <td>@item.Metin3</td>
+                                <td>@item.KBaslik4</td>
+                                <td>@item.Metin4</td>
+                                <td>
+                                    <a href="/WhatWeDo/DeleteWhatWeDo/@item.WhatWeDoID" class="btn btn-danger btn-circle">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/WhatWeDo/EditWhatWeDo/@item.WhatWeDoID" class="btn btn-info btn-circle">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <a href="/WhatWeDo/AddWhatWeDo" class="btn btn-outline-info">Yeni Ne Yapıyoruz Bölümü Ekleme</a>
+            </div>
+        </div>
+    </div>
+</div>

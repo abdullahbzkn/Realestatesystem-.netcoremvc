@@ -16,7 +16,7 @@ namespace REstatePresentation.Controllers
         //ServiceMapManager serviceMapManager = new ServiceMapManager(new EfServiceMapDal(), new REstateContext());
         //ServicePhotoManager servicePhotoManager = new ServicePhotoManager(new EfServicePhotoDal(), new REstateContext());
         //ServiceInfoManager serviceInfoManager = new ServiceInfoManager(new EfServiceInfoDal(), new REstateContext());
-
+       
 
         //REstateContext rEstateContext = new REstateContext();
         private readonly IServiceMapService _serviceMapService;
@@ -25,7 +25,7 @@ namespace REstatePresentation.Controllers
         private readonly IServicePhotoService _servicePhotoService;
         private readonly REstateContext _context;
         ServiceInfo newServiceInfo;
-      
+
         public ServiceHousingController(
             IServiceMapService serviceMapService,
             IServiceInfoService serviceInfoService,
@@ -67,7 +67,6 @@ namespace REstatePresentation.Controllers
             var values = _serviceHousingService.GetListAll();
             return View(values);
         }
-
 
         [HttpGet]
         public IActionResult AddServiceHousing()
