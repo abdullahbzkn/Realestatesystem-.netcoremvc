@@ -13,10 +13,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\img\\housingimg1.jpg",
-      "PackagePath": "staticwebassets\\img\\housingimg1.jpg"
-    },
-    {
       "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -307,6 +303,10 @@
     {
       "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateadmin\\img\\background-image.jpg",
       "PackagePath": "staticwebassets\\templateadmin\\img\\background-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateadmin\\img\\housingimg1.jpg",
+      "PackagePath": "staticwebassets\\templateadmin\\img\\housingimg1.jpg"
     },
     {
       "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateadmin\\img\\undraw_posting_photo.svg",
@@ -7759,6 +7759,242 @@
     {
       "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateadmin\\vendor\\jquery\\jquery.slim.min.map",
       "PackagePath": "staticwebassets\\templateadmin\\vendor\\jquery\\jquery.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\templateuser\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\css\\tooplate-infinite-loop.css",
+      "PackagePath": "staticwebassets\\templateuser\\css\\tooplate-infinite-loop.css"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\fontawesome-5.5\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\templateuser\\fontawesome-5.5\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\gallery-img-01.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\gallery-img-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\gallery-img-02.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\gallery-img-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\gallery-img-03.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\gallery-img-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\gallery-img-04.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\gallery-img-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\gallery-img-05.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\gallery-img-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\gallery-img-06.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\gallery-img-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\gallery-tn-01.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\gallery-tn-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\gallery-tn-02.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\gallery-tn-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\gallery-tn-03.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\gallery-tn-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\gallery-tn-04.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\gallery-tn-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\gallery-tn-05.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\gallery-tn-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\gallery-tn-06.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\gallery-tn-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\infinite-loop-01.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\infinite-loop-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\infinite-loop-02-mobile.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\infinite-loop-02-mobile.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\infinite-loop-02.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\infinite-loop-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\infinite-loop-03.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\infinite-loop-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\testimonial-img-01.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\testimonial-img-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\testimonial-img-02.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\testimonial-img-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\testimonial-img-03.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\testimonial-img-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\img\\testimonial-img-04.jpg",
+      "PackagePath": "staticwebassets\\templateuser\\img\\testimonial-img-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\index.html",
+      "PackagePath": "staticwebassets\\templateuser\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\templateuser\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\js\\easing.min.js",
+      "PackagePath": "staticwebassets\\templateuser\\js\\easing.min.js"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\js\\jquery-1.9.1.min.js",
+      "PackagePath": "staticwebassets\\templateuser\\js\\jquery-1.9.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\js\\jquery.singlePageNav.min.js",
+      "PackagePath": "staticwebassets\\templateuser\\js\\jquery.singlePageNav.min.js"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\magnific-popup\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\templateuser\\magnific-popup\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\magnific-popup\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\templateuser\\magnific-popup\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\config.rb",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\config.rb"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\fonts\\slick.eot"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\fonts\\slick.svg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\fonts\\slick.woff"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\slick-theme.css",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\slick-theme.less",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\slick-theme.less"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\slick-theme.scss",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\slick-theme.scss"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\slick.css",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\slick.js",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\slick.js"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\slick.less",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\slick.less"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\slick.min.js",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\templateuser\\slick\\slick.scss",
+      "PackagePath": "staticwebassets\\templateuser\\slick\\slick.scss"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.REstatePresentation.Microsoft.AspNetCore.StaticWebAssets.props",
