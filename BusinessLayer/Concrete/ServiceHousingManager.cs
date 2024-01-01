@@ -51,6 +51,11 @@ namespace BusinessLayer.Concrete
             _serviceHousingDal.Insert(t);
         }
 
+        public void ServiceHousingStatusToChange(int id)
+        {
+            _serviceHousingDal.ServiceHousingStatusToChange(id);
+        }
+
         public void Update(ServiceHousing t)
         {
             _serviceHousingDal.Update(t);

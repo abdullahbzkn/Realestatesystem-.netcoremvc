@@ -9,5 +9,6 @@ namespace BusinessLayer.Abstract
 {
     public interface IServiceHousingService : IGenericService<ServiceHousing>
     {
+        void ServiceHousingStatusToChange(int id);
     }
 }

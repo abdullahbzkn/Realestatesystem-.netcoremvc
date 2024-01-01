@@ -102,6 +102,7 @@ namespace REstatePresentation.Controllers
             model.ServiceHousing.ServiceMapId = model.ServiceMap.ServiceMapID;
             model.ServiceHousing.ServiceInfoId = newServiceInfo.ServiceInfoID;
             //serviceHousingManager.Insert(model.ServiceHousing);
+            model.ServiceHousing.Status = true;
             _serviceHousingService.Insert(model.ServiceHousing);
             model.ServicePhoto.ServiceHousingId = model.ServiceHousing.ServiceHousingID;
             //model.ServicePhoto.ServiceTerrainId = model.ServiceHousing.ServiceTerrainID;
@@ -352,7 +353,11 @@ namespace REstatePresentation.Controllers
 
         //    return RedirectToAction("Index");
         //}
-
+        public IActionResult ChangeStatus(int id)
+        {
+            _serviceHousingService.ServiceHousingStatusToChange(id);
+            return RedirectToAction("Index");
+        }
         public IActionResult Deneme()
         {
             return View();

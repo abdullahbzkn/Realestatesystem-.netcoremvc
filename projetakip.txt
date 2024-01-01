@@ -29,10 +29,11 @@ silme kısmı anlamadıgım bir şekilde şuan sorun çıkarmıyor.
 
 
 Eklenme Tarihi İlanlar Sayfasına Düşmüyor (null hatası)
-
+Güncelleme Tarihi İlanlar Sayfasına Düşmüyor 
 
 
 Düzenlemede Guncellenme Tarihi Değişmiyor
+sorun düzeldi
 
 
 

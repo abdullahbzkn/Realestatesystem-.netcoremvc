@@ -9,5 +9,6 @@ namespace DataAccessLayer.Abstract
 {
     public interface IServiceHousingDal : IGenericDal<ServiceHousing>
     {
+        void ServiceHousingStatusToChange(int id);
     }
 }

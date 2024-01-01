@@ -64,8 +64,10 @@
                             <th>Fiyat</th>
                             <th>Durum</th>
                             <th>Eklenme Tarihi</th>
+                            <th>Son Güncellenme Tarihi</th>
                             <th>Sil</th>
                             <th>Güncelle</th>
+                            <th>Durumu Değiştir</th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -75,8 +77,10 @@
                             <th>Fiyat</th>
                             <th>Durum</th>
                             <th>Eklenme Tarihi</th>
+                            <th>Son Güncellenme Tarihi</th>
                             <th>Sil</th>
                             <th>Güncelle</th>
+                            <th>Durumu Değiştir</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -88,6 +92,7 @@
                                 <td>@item.Fiyat</td>
                                 <td>@(item.Status.ToString().ToLower() == "true" ? "Aktif" : "Pasif")</td>
                                 <td>@item.ServiceInfo?.EklenmeTarihi</td>
+                                <td>@item.ServiceInfo?.GuncellenmeTarihi</td>
                                 <td>
                                     <a href="/ServiceHousing/DeleteServiceHousing/@item.ServiceHousingID" class="btn btn-danger btn-circle">
                                         <i class="fas fa-trash"></i>
@@ -96,6 +101,11 @@
                                 <td>
                                     <a href="/ServiceHousing/EditServiceHousing/@item.ServiceHousingID" class="btn btn-info btn-circle">
                                         <i class="fas fa-info-circle"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/ServiceHousing/ChangeStatus/@item.ServiceHousingID" class="btn btn-info btn-circle">
+                                        <i class="fas fa-check"></i>
                                     </a>
                                 </td>
                                  @*  <td><a href="/ServiceHousing/DeleteServiceHousing/@item.ServiceHousingID" class="btn btn-outline-danger">Sil</a></td>

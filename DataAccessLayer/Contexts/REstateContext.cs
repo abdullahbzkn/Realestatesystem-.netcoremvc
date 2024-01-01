@@ -32,14 +32,14 @@ namespace DataAccessLayer.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ServiceInfo>()
-                .Property(x => x.EklenmeTarihi)
-                .HasDefaultValueSql("GETDATE()");
+            //modelBuilder.Entity<ServiceInfo>()
+            //    .Property(x => x.EklenmeTarihi)
+            //    .HasDefaultValueSql("GETDATE()");
 
-            modelBuilder.Entity<ServiceInfo>()
-                .Property(x => x.GuncellenmeTarihi)
-                .HasDefaultValueSql("GETDATE()")
-                .ValueGeneratedOnUpdate();
+            //modelBuilder.Entity<ServiceInfo>()
+            //    .Property(x => x.GuncellenmeTarihi)
+            //    .HasDefaultValueSql("GETDATE()")
+            //    .ValueGeneratedOnUpdate();
 
             //// ServicePhoto - ServiceHousing ilişkisi
             //modelBuilder.Entity<ServicePhoto>()
