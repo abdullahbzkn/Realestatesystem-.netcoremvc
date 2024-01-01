@@ -1,0 +1,36 @@
+﻿@model EntityLayer.Concrete.Team
+@{
+    ViewData["Title"] = "EditTeam";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Takım Arkadaşı Kaydı Düzenleme</h1>
+    <form method="post">
+        <div class="form-group">
+            @Html.Label("Ad Soyad")
+            <input type="text" asp-for="KisiAdi" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Açıklama")
+            <input type="text" asp-for="Aciklama" class="form-control" />
+        </div><br />
+
+        <div class="form-group">
+            @Html.Label("Fotoğraf Yolu")
+            <input type="text" asp-for="FotografYolu" class="form-control" />
+        </div><br />
+
+        @*   <div class="form-group">
+        @Html.Label("FACE OR İNSTA OR MAİL OR X")
+        <input type="text" asp-for="SOSYALMEDYAHESAPALINABİLİRŞİMDİLİKKALSIN" class="form-control" />
+        </div><br /> *@
+
+        @*         BU DUZENLENİCEK FOTOGRAF BU ŞEKİLDE ALINICAK
+        *@       @*  <div class="form-group">
+        @Html.Label("Fotoğraf")
+        <input type="file" name="" multiple />
+        </div>
+        *@
+        <button class="btn btn-outline-info">Değişiklikleri Kaydet</button>
+    </form>
+</div>

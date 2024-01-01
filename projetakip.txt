@@ -1,40 +1,5 @@
-HATALAR
-
-Silme kısmında sorun var
-Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException
-  HResult=0x80131500
-  Message=The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
-  Source=Microsoft.EntityFrameworkCore.Relational
-  StackTrace:
-   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
-   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithoutPropagation(Int32 commandIndex, RelationalDataReader reader)
-   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
-   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
-   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
-   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
-   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
-   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
-   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
-   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
-   at DataAccessLayer.Concrete.Repository.GenericRepository`1.Delete(T t) in C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\DataAccessLayer\Concrete\Repository\GenericRepository.cs:line 17
-   at BusinessLayer.Concrete.ServicePhotoManager.Delete(ServicePhoto t) in C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\Concrete\ServicePhotoManager.cs:line 27
-   at REstatePresentation.Controllers.ServiceHousingController.DeleteServiceHousing(Int32 id) in C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\REstatePresentation\Controllers\ServiceHousingController.cs:line 178
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
-
-silme kısmı anlamadıgım bir şekilde şuan sorun çıkarmıyor.
-
-
-
 Eklenme Tarihi İlanlar Sayfasına Düşmüyor (null hatası)
 Güncelleme Tarihi İlanlar Sayfasına Düşmüyor 
-
-
-Düzenlemede Guncellenme Tarihi Değişmiyor
-sorun düzeldi
-
 
 
 Misal ServiceMap tablosunda 
@@ -43,7 +8,6 @@ il : aaaaa
 ilçe : aaaaa
 köy : aaaaa
 bu degerlerde birden fazla ilan olursa aynı satır kullanılmıyor yeni veri oluşuyor bu sebeple ilişkili tablo kullanma daki tasarrfu mantıgı devre dışı kalıyor
-
 
 
 Soru 
