@@ -40,7 +40,37 @@ namespace DataAccessLayer.Contexts
                 .Property(x => x.GuncellenmeTarihi)
                 .HasDefaultValueSql("GETDATE()")
                 .ValueGeneratedOnUpdate();
+
+            //// ServicePhoto - ServiceHousing ilişkisi
+            //modelBuilder.Entity<ServicePhoto>()
+            //    .HasOne(sp => sp.ServiceHousing)
+            //    .WithMany(sh => sh.ServicePhotos)
+            //    .HasForeignKey(sp => sp.ServiceHousingId)
+            //    .OnDelete(DeleteBehavior.Cascade);
+
+            //// ServicePhoto - ServiceTerrain ilişkisi
+            //modelBuilder.Entity<ServicePhoto>()
+            //    .HasOne(sp => sp.ServiceTerrain)
+            //    .WithMany(st => st.ServicePhotos)
+            //    .HasForeignKey(sp => sp.ServiceTerrainId)
+            //    .OnDelete(DeleteBehavior.Cascade);
+
+            //modelBuilder.Entity<ServicePhoto>()
+            //    .HasOne(sp => sp.ServiceTerrain)
+            //    .WithMany(st => st.ServicePhotos)
+            //    .HasForeignKey(sp => sp.ServiceTerrainId)
+            //    .OnDelete(DeleteBehavior.Cascade);
+
+            //// ServiceMap - ServiceHousing ilişkisi
+            //modelBuilder.Entity<ServiceMap>()
+            //    .HasMany(sm => sm.ServiceHousings)
+            //    .WithOne(sh => sh.ServiceMap)
+            //    .HasForeignKey(sh => sh.ServiceMapId)
+            //    .OnDelete(DeleteBehavior.Cascade);
+
         }
+
+
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{

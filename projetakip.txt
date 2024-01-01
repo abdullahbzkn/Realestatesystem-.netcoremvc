@@ -24,6 +24,8 @@ Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
 
+silme kısmı anlamadıgım bir şekilde şuan sorun çıkarmıyor.
+
 
 
 Eklenme Tarihi İlanlar Sayfasına Düşmüyor (null hatası)

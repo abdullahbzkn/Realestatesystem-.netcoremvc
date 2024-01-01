@@ -41,12 +41,34 @@ namespace REstatePresentation.Controllers
             _context = rEstateContext;
         }
 
+        //public IActionResult Index()
+        //{
+        //    var serviceHousingList = _serviceHousingService.GetListAll();
+        //    var viewModelList = new List<ServiceHousingAddViewModel>();
+
+        //    foreach (var serviceHousing in serviceHousingList)
+        //    {
+        //        var viewModel = new ServiceHousingAddViewModel
+        //        {
+        //            ServiceHousing = serviceHousing,
+        //            // You may need to populate ServiceInfo property based on your application logic
+        //            // ServiceInfo = PopulateServiceInfo(serviceHousing),
+        //        };
+
+        //        viewModelList.Add(viewModel);
+        //    }
+
+        //    return View(viewModelList);
+        //}
+
         public IActionResult Index()
         {
             //var values = serviceHousingManager.GetListAll();
             var values = _serviceHousingService.GetListAll();
             return View(values);
         }
+
+
         [HttpGet]
         public IActionResult AddServiceHousing()
         {
@@ -90,55 +112,93 @@ namespace REstatePresentation.Controllers
             return RedirectToAction("Index");
         }
 
+        //public IActionResult DeleteServiceHousing(int id)
+        //{
+        //    //var serviceHousing = serviceHousingManager.GetById(id);
+        //    var serviceHousing = _serviceHousingService.GetById(id);
+        //    //var serviceMap = serviceMapManager.GetById(serviceHousing.ServiceMapId ?? 0);
+        //    var serviceMap = _serviceMapService.GetById(serviceHousing.ServiceMapId ?? 0);
+        //    //var serviceInfo = serviceInfoManager.GetById(serviceHousing.ServiceInfoId ?? 0);
+        //    var serviceInfo = _serviceInfoService.GetById(serviceHousing.ServiceInfoId ?? 0);
+        //    //var servicePhoto = servicePhotoManager.GetByServiceHousingId(serviceHousing.ServiceHousingID);
+        //    var servicePhoto = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
+
+        //    //serviceHousingManager.Delete(serviceHousing);
+        //    _serviceHousingService.Delete(serviceHousing);
+        //    //serviceMapManager.Delete(serviceMap);
+        //    _serviceMapService.Delete(serviceMap);
+        //    //serviceInfoManager.Delete(serviceInfo);
+        //    _serviceInfoService.Delete(serviceInfo);
+        //    //servicePhotoManager.Delete(servicePhoto);
+        //    _servicePhotoService.Delete(servicePhoto);
+
+        //    //var serviceHousingToDelete = _context.ServiceHousings
+        //    //.Include(sh => sh.ServicePhotos)
+        //    //.Include(sh => sh.ServiceMap)
+        //    //.Include(sh => sh.ServiceInfo)
+        //    //.FirstOrDefault(sh => sh.ServiceHousingID == id);
+        //    //if (serviceHousingToDelete != null)
+        //    //{
+        //    //    // ServiceHousing'a bağlı diğer verileri sil
+        //    //    _context.ServicePhotos.RemoveRange(serviceHousingToDelete.ServicePhotos);
+        //    //    _context.ServiceMaps.Remove(serviceHousingToDelete.ServiceMap);
+        //    //    _context.ServiceInfos.Remove(serviceHousingToDelete.ServiceInfo);
+
+        //    //    foreach (var servicePhoto in serviceHousingToDelete.ServicePhotos)
+        //    //    {
+        //    //        servicePhoto.ServiceHousing = null;
+        //    //    }
+        //    //    serviceHousingToDelete.ServiceMap = null;
+        //    //    serviceHousingToDelete.ServiceInfo = null;
+
+        //    //    // ServiceHousing'ı sil
+        //    //    _context.ServiceHousings.Remove(serviceHousingToDelete);
+
+        //    //    // Değişiklikleri kaydet
+        //    //    _context.SaveChanges();
+        //    //}
+
+
+        //    return RedirectToAction("Index");
+        //}
+
         public IActionResult DeleteServiceHousing(int id)
         {
-            //var serviceHousing = serviceHousingManager.GetById(id);
             var serviceHousing = _serviceHousingService.GetById(id);
-            //var serviceMap = serviceMapManager.GetById(serviceHousing.ServiceMapId ?? 0);
             var serviceMap = _serviceMapService.GetById(serviceHousing.ServiceMapId ?? 0);
-            //var serviceInfo = serviceInfoManager.GetById(serviceHousing.ServiceInfoId ?? 0);
             var serviceInfo = _serviceInfoService.GetById(serviceHousing.ServiceInfoId ?? 0);
-            //var servicePhoto = servicePhotoManager.GetByServiceHousingId(serviceHousing.ServiceHousingID);
             var servicePhoto = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
+            if (serviceHousing == null)
+            {
+                return NotFound();
+            }
 
-            //serviceHousingManager.Delete(serviceHousing);
+            var existingServiceHousing = _context.ServiceHousings.AsNoTracking().FirstOrDefault(sh => sh.ServiceHousingID == id);
+            var existingServiceInfo = _context.ServiceInfos.AsNoTracking().FirstOrDefault(sh => sh.ServiceInfoID == serviceHousing.ServiceInfoId);
+
+            if (existingServiceHousing != null && (existingServiceInfo.EklenmeTarihi != serviceInfo.EklenmeTarihi || existingServiceInfo.GuncellenmeTarihi != serviceInfo.GuncellenmeTarihi))
+            {
+                return View("ConcurrencyError");
+            }
+
             _serviceHousingService.Delete(serviceHousing);
-            //serviceMapManager.Delete(serviceMap);
-            _serviceMapService.Delete(serviceMap);
-            //serviceInfoManager.Delete(serviceInfo);
-            _serviceInfoService.Delete(serviceInfo);
-            //servicePhotoManager.Delete(servicePhoto);
-            _servicePhotoService.Delete(servicePhoto);
 
-            //var serviceHousingToDelete = _context.ServiceHousings
-            //.Include(sh => sh.ServicePhotos)
-            //.Include(sh => sh.ServiceMap)
-            //.Include(sh => sh.ServiceInfo)
-            //.FirstOrDefault(sh => sh.ServiceHousingID == id);
-            //if (serviceHousingToDelete != null)
+            if (serviceMap != null)
+            {
+                _serviceMapService.Delete(serviceMap);
+            }
+
+            if (serviceInfo != null)
+            {
+                _serviceInfoService.Delete(serviceInfo);
+            }
+            //if (servicePhoto != null)  photo zaten siliniyor
             //{
-            //    // ServiceHousing'a bağlı diğer verileri sil
-            //    _context.ServicePhotos.RemoveRange(serviceHousingToDelete.ServicePhotos);
-            //    _context.ServiceMaps.Remove(serviceHousingToDelete.ServiceMap);
-            //    _context.ServiceInfos.Remove(serviceHousingToDelete.ServiceInfo);
-
-            //    foreach (var servicePhoto in serviceHousingToDelete.ServicePhotos)
-            //    {
-            //        servicePhoto.ServiceHousing = null;
-            //    }
-            //    serviceHousingToDelete.ServiceMap = null;
-            //    serviceHousingToDelete.ServiceInfo = null;
-
-            //    // ServiceHousing'ı sil
-            //    _context.ServiceHousings.Remove(serviceHousingToDelete);
-
-            //    // Değişiklikleri kaydet
-            //    _context.SaveChanges();
+            //    _servicePhotoService.Delete(servicePhoto);
             //}
-
-
             return RedirectToAction("Index");
         }
+
         [HttpGet]
         public IActionResult EditServiceHousing(int id)
         {
@@ -177,32 +237,52 @@ namespace REstatePresentation.Controllers
             //}
 
 
+            //// ServiceInfo güncelleme
+            //if (model.ServiceInfo == null)
+            //{
+            //    // Eğer ServiceInfo null ise, yeni bir ServiceInfo oluştur
+            //    model.ServiceInfo = new ServiceInfo
+            //    {
+            //        EklenmeTarihi = DateTime.Now,
+            //        GuncellenmeTarihi = DateTime.Now
+            //    };
+            //}
+            //else
+            //{
+            //    // Eğer ServiceInfo null değilse, güncelleme işlemini yap
+            //    var existingServiceInfo = _serviceInfoService.GetById(model.ServiceInfo.ServiceInfoID);
+
+            //    if (existingServiceInfo != null)
+            //    {
+            //        existingServiceInfo.GuncellenmeTarihi = DateTime.Now;
+            //        _serviceInfoService.Update(existingServiceInfo);
+            //    }
+            //}
+
+
             // ServiceInfo güncelleme
-            if (model.ServiceInfo == null)
+            var existingServiceInfo = _serviceInfoService.GetById(model.ServiceInfo.ServiceInfoID);
+
+            if (existingServiceInfo != null)
             {
-                // Eğer ServiceInfo null ise, yeni bir ServiceInfo oluştur
-                model.ServiceInfo = new ServiceInfo
-                {
-                    EklenmeTarihi = DateTime.Now,
-                    GuncellenmeTarihi = DateTime.Now
-                };
+                existingServiceInfo.GuncellenmeTarihi = DateTime.Now;
+                _serviceInfoService.Update(existingServiceInfo);
             }
             else
             {
                 // Eğer ServiceInfo null değilse, güncelleme işlemini yap
-                var existingServiceInfo = _serviceInfoService.GetById(model.ServiceInfo.ServiceInfoID);
-
-                if (existingServiceInfo != null)
-                {
-                    existingServiceInfo.GuncellenmeTarihi = DateTime.Now;
-                    _serviceInfoService.Update(existingServiceInfo);
-                }
+                model.ServiceInfo.EklenmeTarihi = DateTime.Now;
+                model.ServiceInfo.GuncellenmeTarihi = DateTime.Now;
+                _serviceInfoService.Insert(model.ServiceInfo);
+                existingServiceInfo = model.ServiceInfo; // Eklenen ServiceInfo'nun referansını al
             }
+
+
 
             //serviceInfoManager.Update(model.ServiceInfo);
             //_serviceInfoService.Update(model.ServiceInfo);
             model.ServiceHousing.ServiceMapId = model.ServiceMap.ServiceMapID;
-            model.ServiceHousing.ServiceInfoId = model.ServiceInfo.ServiceInfoID;
+            model.ServiceHousing.ServiceInfoId = existingServiceInfo.ServiceInfoID;
             //serviceHousingManager.Update(model.ServiceHousing);
             _serviceHousingService.Update(model.ServiceHousing);
             model.ServicePhoto.ServiceHousingId = model.ServiceHousing.ServiceHousingID;
