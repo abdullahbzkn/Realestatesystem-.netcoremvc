@@ -1,16 +1,24 @@
 Eklenme Tarihi İlanlar Sayfasına Düşmüyor (null hatası)
 Güncelleme Tarihi İlanlar Sayfasına Düşmüyor 
-
-
+-----------------------------------------------------------------------
 Misal ServiceMap tablosunda 
 mahalle : aaaaa
 il : aaaaa
 ilçe : aaaaa
 köy : aaaaa
 bu degerlerde birden fazla ilan olursa aynı satır kullanılmıyor yeni veri oluşuyor bu sebeple ilişkili tablo kullanma daki tasarrfu mantıgı devre dışı kalıyor
-
+-----------------------------------------------------------------------
 
 Soru 
-
+-----------------------
 contexte ilişkiler ne şekilde yazılmalı & controllerda verilerin guncellenmesi nasıl olucak existing... diye modelden çekince null geliyor.
 
+Kalanlar
+-----------
+aboutuses
+adresses
+contacts
+contactuses
+entrances
+galleries
+serviceterrains

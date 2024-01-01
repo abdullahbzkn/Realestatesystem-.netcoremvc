@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\REstatePresentation
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/AdminPartials/PartialFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYXJ0aWFsc1xQYXJ0aWFsRm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/AdminPartials/PartialHead.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYXJ0aWFsc1xQYXJ0aWFsSGVhZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/AdminPartials/PartialScript.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYXJ0aWFsc1xQYXJ0aWFsU2NyaXB0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/AdminPartials/PartialSidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYXJ0aWFsc1xQYXJ0aWFsU2lkZWJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/AdminPartials/PartialTopbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYXJ0aWFsc1xQYXJ0aWFsVG9wYmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Default/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVmYXVsdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
