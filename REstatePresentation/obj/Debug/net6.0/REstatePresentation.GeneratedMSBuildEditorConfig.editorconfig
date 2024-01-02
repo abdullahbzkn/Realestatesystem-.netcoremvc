@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVmYXVsdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Default/SendMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVmYXVsdFxTZW5kTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,6 +66,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/ServiceHousing/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUhvdXNpbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Shared/Components/_ContactPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0NvbnRhY3RQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Shared/Components/_GalleryPartial/Default.cshtml]

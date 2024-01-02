@@ -78,20 +78,14 @@
             <div class="row">
 
                 <div class="text-center col-12">
-                    <h2 class="tm-section-title mb-4">Contact Us</h2>
+                    <h2 class="tm-section-title mb-4">Bizimle İrtibata Geçin</h2>
                     <p class="mb-5">
                         Proin enim orci, tincidunt quis suscipit in, placerat nec est. Vestibulum posuere faucibus posuere. Quisque aliquam velit eget leo blandit egestas. Nulla id posuere felis, quis tristique nulla.
                     </p><br>
                 </div>
 
-                <div class="col-sm-12 col-md-6">
-                    <form action="" method="get">
-                        <input id="name" name="name" type="text" placeholder="Your Name" class="tm-input" required />
-                        <input id="email" name="email" type="email" placeholder="Your Email" class="tm-input" required />
-                        <textarea id="message" name="message" rows="8" placeholder="Message" class="tm-input" required></textarea>
-                        <button type="submit" class="btn tm-btn-submit">Submit</button>
-                    </form>
-                </div>
+@*                 @await Component.InvokeAsync("_ContactPartial")
+ *@                @await Html.PartialAsync("/Views/Default/SendMessage.cshtml")
 
                 <div class="col-sm-12 col-md-6">
 

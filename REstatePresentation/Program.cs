@@ -22,7 +22,8 @@ builder.Services.AddScoped<ITeamService, TeamManager>();
 builder.Services.AddScoped<ITeamDal, EfTeamDal>();
 builder.Services.AddScoped<IWhatWeDoService, WhatWeDoManager>();
 builder.Services.AddScoped<IWhatWeDoDal, EfWhatWeDoDal>();
-
+builder.Services.AddScoped<IContactService, ContactManager>();
+builder.Services.AddScoped<IContactDal, EfContactDal>();
 
 builder.Services.AddDbContext<REstateContext>();
 var app = builder.Build();
