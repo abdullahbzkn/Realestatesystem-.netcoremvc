@@ -17,6 +17,7 @@ namespace REstatePresentation.Models
         //}
 
         public ServiceHousing ServiceHousing { get; set; }
+        //public ServiceTerrain ServiceTerrain { get; set; }
         public ServicePhoto ServicePhoto { get; set; }
         public ServiceMap ServiceMap { get; set; }
         public ServiceInfo ServiceInfo { get; set; }

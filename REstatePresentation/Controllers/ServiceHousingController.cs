@@ -12,13 +12,6 @@ namespace REstatePresentation.Controllers
 {
     public class ServiceHousingController : Controller
     {
-        //ServiceHousingManager serviceHousingManager = new ServiceHousingManager(new EfServiceHousingDal(),new REstateContext());
-        //ServiceMapManager serviceMapManager = new ServiceMapManager(new EfServiceMapDal(), new REstateContext());
-        //ServicePhotoManager servicePhotoManager = new ServicePhotoManager(new EfServicePhotoDal(), new REstateContext());
-        //ServiceInfoManager serviceInfoManager = new ServiceInfoManager(new EfServiceInfoDal(), new REstateContext());
-       
-
-        //REstateContext rEstateContext = new REstateContext();
         private readonly IServiceMapService _serviceMapService;
         private readonly IServiceInfoService _serviceInfoService;
         private readonly IServiceHousingService _serviceHousingService;
@@ -44,6 +37,7 @@ namespace REstatePresentation.Controllers
         //public IActionResult Index()
         //{
         //    var serviceHousingList = _serviceHousingService.GetListAll();
+        //    var serviceTerrainList = _serviceTerrainService.GetListAll();
         //    var viewModelList = new List<ServiceHousingAddViewModel>();
 
         //    foreach (var serviceHousing in serviceHousingList)
@@ -57,15 +51,23 @@ namespace REstatePresentation.Controllers
 
         //        viewModelList.Add(viewModel);
         //    }
+        //    foreach (var serviceTerrain in serviceTerrainList)
+        //    {
+        //        var viewModel2 = new ServiceHousingAddViewModel
+        //        {
+        //            ServiceTerrain = serviceTerrain,
+        //            // ServiceInfo = PopulateServiceInfo(serviceTerrain),
+        //        };
+
+        //        viewModelList.Add(viewModel2);
+        //    }
 
         //    return View(viewModelList);
         //}
 
         public IActionResult Index()
         {
-            //var values = serviceHousingManager.GetListAll();
-            var values = _serviceHousingService.GetListAll();
-            return View(values);
+            return View(_context.ServiceHousings.Include(c => c.ServiceInfo).Include(c => c.ServicePhotos).Include(c => c.ServiceMap).ToList());
         }
 
         [HttpGet]
@@ -76,16 +78,7 @@ namespace REstatePresentation.Controllers
         [HttpPost]
         public IActionResult AddServiceHousing(ServiceHousingAddViewModel model)
         {
-            //serviceMapManager.Insert(model.ServiceMap);
             _serviceMapService.Insert(model.ServiceMap);
-
-
-            //_serviceInfoService.Insert(new ServiceInfo
-            //{
-            //    EklenmeTarihi = DateTime.Now,
-            //    GuncellenmeTarihi = DateTime.Now
-            //});
-
 
             newServiceInfo = new ServiceInfo
             {
@@ -93,20 +86,15 @@ namespace REstatePresentation.Controllers
                 GuncellenmeTarihi = DateTime.Now
             };
 
-
-            ////serviceInfoManager.Insert(model.ServiceInfo);
             _serviceInfoService.Insert(newServiceInfo);
-
 
             model.ServiceHousing.ServiceMapId = model.ServiceMap.ServiceMapID;
             model.ServiceHousing.ServiceInfoId = newServiceInfo.ServiceInfoID;
-            //serviceHousingManager.Insert(model.ServiceHousing);
             model.ServiceHousing.Status = true;
             _serviceHousingService.Insert(model.ServiceHousing);
             model.ServicePhoto.ServiceHousingId = model.ServiceHousing.ServiceHousingID;
             //model.ServicePhoto.ServiceTerrainId = model.ServiceHousing.ServiceTerrainID;
 
-            //servicePhotoManager.Insert(model.ServicePhoto);
             _servicePhotoService.Insert(model.ServicePhoto);
 
             return RedirectToAction("Index");
@@ -114,22 +102,14 @@ namespace REstatePresentation.Controllers
 
         //public IActionResult DeleteServiceHousing(int id)
         //{
-        //    //var serviceHousing = serviceHousingManager.GetById(id);
         //    var serviceHousing = _serviceHousingService.GetById(id);
-        //    //var serviceMap = serviceMapManager.GetById(serviceHousing.ServiceMapId ?? 0);
         //    var serviceMap = _serviceMapService.GetById(serviceHousing.ServiceMapId ?? 0);
-        //    //var serviceInfo = serviceInfoManager.GetById(serviceHousing.ServiceInfoId ?? 0);
         //    var serviceInfo = _serviceInfoService.GetById(serviceHousing.ServiceInfoId ?? 0);
-        //    //var servicePhoto = servicePhotoManager.GetByServiceHousingId(serviceHousing.ServiceHousingID);
         //    var servicePhoto = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
 
-        //    //serviceHousingManager.Delete(serviceHousing);
         //    _serviceHousingService.Delete(serviceHousing);
-        //    //serviceMapManager.Delete(serviceMap);
         //    _serviceMapService.Delete(serviceMap);
-        //    //serviceInfoManager.Delete(serviceInfo);
         //    _serviceInfoService.Delete(serviceInfo);
-        //    //servicePhotoManager.Delete(servicePhoto);
         //    _servicePhotoService.Delete(servicePhoto);
 
         //    //var serviceHousingToDelete = _context.ServiceHousings
@@ -172,7 +152,6 @@ namespace REstatePresentation.Controllers
             {
                 return NotFound();
             }
-
             var existingServiceHousing = _context.ServiceHousings.AsNoTracking().FirstOrDefault(sh => sh.ServiceHousingID == id);
             var existingServiceInfo = _context.ServiceInfos.AsNoTracking().FirstOrDefault(sh => sh.ServiceInfoID == serviceHousing.ServiceInfoId);
 
@@ -202,13 +181,9 @@ namespace REstatePresentation.Controllers
         [HttpGet]
         public IActionResult EditServiceHousing(int id)
         {
-            //var serviceHousing = serviceHousingManager.GetById(id);
             var serviceHousing = _serviceHousingService.GetById(id);
-            //var serviceMap = serviceMapManager.GetById(serviceHousing.ServiceMapId ?? 0);
             var serviceMap = _serviceMapService.GetById(serviceHousing.ServiceMapId ?? 0);
-            //var serviceInfo = serviceInfoManager.GetById(serviceHousing.ServiceInfoId ?? 0);
             var serviceInfo = _serviceInfoService.GetById(serviceHousing.ServiceInfoId ?? 0);
-            //var servicePhoto = servicePhotoManager.GetByServiceHousingId(serviceHousing.ServiceHousingID);
             var servicePhoto = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
 
             var model = new ServiceHousingAddViewModel
@@ -224,41 +199,7 @@ namespace REstatePresentation.Controllers
         [HttpPost]
         public IActionResult EditServiceHousing(ServiceHousingAddViewModel model)
         {
-            //serviceMapManager.Update(model.ServiceMap);
             _serviceMapService.Update(model.ServiceMap);
-
-            //// ServiceInfo güncelleme
-            //var existingServiceInfo = _serviceInfoService.GetById(model.ServiceInfo.ServiceInfoID);
-
-            //if (existingServiceInfo != null)
-            //{
-            //    existingServiceInfo.GuncellenmeTarihi = DateTime.Now;
-            //    _serviceInfoService.Update(existingServiceInfo);
-            //}
-
-
-            //// ServiceInfo güncelleme
-            //if (model.ServiceInfo == null)
-            //{
-            //    // Eğer ServiceInfo null ise, yeni bir ServiceInfo oluştur
-            //    model.ServiceInfo = new ServiceInfo
-            //    {
-            //        EklenmeTarihi = DateTime.Now,
-            //        GuncellenmeTarihi = DateTime.Now
-            //    };
-            //}
-            //else
-            //{
-            //    // Eğer ServiceInfo null değilse, güncelleme işlemini yap
-            //    var existingServiceInfo = _serviceInfoService.GetById(model.ServiceInfo.ServiceInfoID);
-
-            //    if (existingServiceInfo != null)
-            //    {
-            //        existingServiceInfo.GuncellenmeTarihi = DateTime.Now;
-            //        _serviceInfoService.Update(existingServiceInfo);
-            //    }
-            //}
-
 
             // ServiceInfo güncelleme
             var existingServiceInfo = _serviceInfoService.GetById(model.ServiceInfo.ServiceInfoID);
@@ -270,93 +211,28 @@ namespace REstatePresentation.Controllers
             }
             else
             {
-                // Eğer ServiceInfo null değilse, güncelleme işlemini yap
                 model.ServiceInfo.EklenmeTarihi = DateTime.Now;
                 model.ServiceInfo.GuncellenmeTarihi = DateTime.Now;
                 _serviceInfoService.Insert(model.ServiceInfo);
-                existingServiceInfo = model.ServiceInfo; // Eklenen ServiceInfo'nun referansını al
+                existingServiceInfo = model.ServiceInfo;
             }
 
-
-
-            //serviceInfoManager.Update(model.ServiceInfo);
-            //_serviceInfoService.Update(model.ServiceInfo);
             model.ServiceHousing.ServiceMapId = model.ServiceMap.ServiceMapID;
             model.ServiceHousing.ServiceInfoId = existingServiceInfo.ServiceInfoID;
-            //serviceHousingManager.Update(model.ServiceHousing);
             _serviceHousingService.Update(model.ServiceHousing);
+
             model.ServicePhoto.ServiceHousingId = model.ServiceHousing.ServiceHousingID;
-            //servicePhotoManager.Update(model.ServicePhoto);
             _servicePhotoService.Update(model.ServicePhoto);
 
             return RedirectToAction("Index");
         }
 
-        //[HttpPost]
-        //public IActionResult EditServiceHousing(ServiceHousingAddViewModel model)
-        //{
-        //    var existingServiceMap = _serviceMapService.GetById(model.ServiceMap.ServiceMapID);
-        //    var existingServiceInfo = _serviceInfoService.GetById(model.ServiceInfo.ServiceInfoID);
-        //    var existingServiceHousing = _serviceHousingService.GetById(model.ServiceHousing.ServiceHousingID);
-        //    var existingServicePhoto = _servicePhotoService.GetByServiceHousingId(model.ServiceHousing.ServiceHousingID);
-
-        //    existingServiceMap.Mahalle = model.ServiceMap.Mahalle;
-        //    existingServiceMap.Koy = model.ServiceMap.Koy;
-        //    existingServiceMap.Ilce = model.ServiceMap.Ilce;
-        //    existingServiceMap.Il = model.ServiceMap.Il;
-
-        //    if (existingServiceInfo != null)
-        //    {
-        //        existingServiceInfo.GuncellenmeTarihi = DateTime.Now;
-        //    }
-        //    else
-        //    {
-        //        model.ServiceInfo.EklenmeTarihi = DateTime.Now;
-        //        model.ServiceInfo.GuncellenmeTarihi = DateTime.Now;
-        //        _serviceInfoService.Insert(model.ServiceInfo);
-        //        existingServiceHousing.ServiceInfoId = model.ServiceInfo.ServiceInfoID;
-        //    }
-
-        //    existingServiceHousing.Baslik = model.ServiceHousing.Baslik;
-        //    existingServiceHousing.Gorsel = model.ServiceHousing.Gorsel;
-        //    existingServiceHousing.Fiyat = model.ServiceHousing.Fiyat;
-        //    existingServiceHousing.TapuDurumu = model.ServiceHousing.TapuDurumu;
-        //    existingServiceHousing.YapininDurumu = model.ServiceHousing.YapininDurumu;
-        //    existingServiceHousing.Isitma = model.ServiceHousing.Isitma;
-        //    existingServiceHousing.BinaKatSayisi = model.ServiceHousing.BinaKatSayisi;
-        //    existingServiceHousing.YapininCephesi = model.ServiceHousing.YapininCephesi;
-        //    existingServiceHousing.YapininSekli = model.ServiceHousing.YapininSekli;
-        //    existingServiceHousing.TuvaletSayisi = model.ServiceHousing.TuvaletSayisi;
-        //    existingServiceHousing.BalkonSayisi = model.ServiceHousing.BalkonSayisi;
-        //    existingServiceHousing.BanyoSayisi = model.ServiceHousing.BanyoSayisi;
-        //    existingServiceHousing.SalonSayisi = model.ServiceHousing.SalonSayisi;
-        //    existingServiceHousing.OdaSayisi = model.ServiceHousing.OdaSayisi;
-        //    existingServiceHousing.KiraGetirisi = model.ServiceHousing.KiraGetirisi;
-        //    existingServiceHousing.KullanimDurumu = model.ServiceHousing.KullanimDurumu;
-        //    existingServiceHousing.YakitTipi = model.ServiceHousing.YakitTipi;
-        //    existingServiceHousing.BulunduguKat = model.ServiceHousing.BulunduguKat;
-        //    existingServiceHousing.Aidat = model.ServiceHousing.Aidat;
-        //    existingServiceHousing.KonumLink = model.ServiceHousing.KonumLink;
-        //    existingServiceHousing.UzunAciklama = model.ServiceHousing.UzunAciklama;
-        //    existingServiceHousing.TakasYapilir = model.ServiceHousing.TakasYapilir;
-        //    existingServiceHousing.KrediyeUygun = model.ServiceHousing.KrediyeUygun;
-        //    existingServiceHousing.Devren = model.ServiceHousing.Devren;
-        //    existingServiceHousing.Status = model.ServiceHousing.Status;
-
-        //    existingServicePhoto.FotografYolu = model.ServicePhoto.FotografYolu;
-
-        //    _serviceMapService.Update(existingServiceMap);
-        //    _serviceInfoService.Update(existingServiceInfo);
-        //    _serviceHousingService.Update(existingServiceHousing);
-        //    _servicePhotoService.Update(existingServicePhoto);
-
-        //    return RedirectToAction("Index");
-        //}
         public IActionResult ChangeStatus(int id)
         {
             _serviceHousingService.ServiceHousingStatusToChange(id);
             return RedirectToAction("Index");
         }
+
         public IActionResult Deneme()
         {
             return View();
