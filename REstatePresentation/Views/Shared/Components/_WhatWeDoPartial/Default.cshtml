@@ -1,0 +1,79 @@
+﻿@using EntityLayer.Concrete
+@model List<WhatWeDo>
+@foreach(var item in Model){
+
+    <div class="row tm-content-box">
+        <!-- first row -->
+        <div class="col-lg-12 col-xl-12">
+            <div class="tm-intro-text-container">
+                <h2 class="tm-text-primary mb-4 tm-section-title">@item.Baslik</h2>
+                <p class="mb-4 tm-intro-text">
+                    @item.NeYapiyoruzMetni
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- first row -->
+    <div class="row tm-content-box">
+        <!-- second row -->
+        <div class="col-lg-1">
+            <i class="far fa-3x fa-chart-bar text-center tm-icon"></i>
+        </div>
+        <div class="col-lg-5">
+            <div class="tm-intro-text-container">
+                <h2 class="tm-text-primary mb-4">@item.KBaslik1</h2>
+                <p class="mb-4 tm-intro-text">
+                    @item.Metin1
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-1">
+            <i class="far fa-3x fa-comment-alt text-center tm-icon"></i>
+        </div>
+        <div class="col-lg-5">
+            <div class="tm-intro-text-container">
+                <h2 class="tm-text-primary mb-4">@item.KBaslik2</h2>
+                <p class="mb-4 tm-intro-text">
+                    @item.Metin2
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- second row -->
+    <div class="row tm-content-box">
+        <!-- third row -->
+        <div class="col-lg-1">
+            <i class="fas fa-3x fa-fingerprint text-center tm-icon"></i>
+        </div>
+        <div class="col-lg-5">
+            <div class="tm-intro-text-container">
+                <h2 class="tm-text-primary mb-4">@item.KBaslik3</h2>
+                <p class="mb-4 tm-intro-text">
+                    @item.Metin3
+                </p>
+
+                <div class="tm-continue">
+                    <a href="#testimonials" class="tm-intro-text tm-btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <i class="fas fa-3x fa-users text-center tm-icon"></i>
+        </div>
+        <div class="col-lg-5">
+            <div class="tm-intro-text-container">
+                <h2 class="tm-text-primary mb-4">@item.KBaslik4</h2>
+                <p class="mb-4 tm-intro-text">
+                    @item.Metin4
+                </p>
+
+                <div class="tm-continue">
+                    <a href="#testimonials" class="tm-intro-text tm-btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,14 @@
+﻿@using EntityLayer.Concrete
+@model List<Team>
+<div class="mx-auto tm-gallery-container tm-gallery-container-2">
+    <div class="tm-testimonials-carousel">
+       @foreach(var item in Model)
+       {
+        <figure class="tm-testimonial-item">
+            <img src="@item.FotografYolu" alt="Image" class="img-fluid mx-auto">
+            <blockquote>@item.Aciklama</blockquote>
+            <figcaption>@item.KisiAdi</figcaption>
+        </figure>
+       }
+    </div>
+</div>

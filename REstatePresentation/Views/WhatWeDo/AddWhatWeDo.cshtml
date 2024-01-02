@@ -13,6 +13,11 @@
             <input type="text" asp-for="Baslik" class="form-control" placeholder="Başlık giriniz" />
         </div><br />
         <div class="form-group">
+            @Html.Label("Ne Yapıyoruz Metni")
+            <span asp-validation-for="NeYapiyoruzMetni" class="text-danger"></span>
+            <input type="text" asp-for="NeYapiyoruzMetni" class="form-control" placeholder="Metin giriniz" />
+        </div><br />
+        <div class="form-group">
             @Html.Label("Küçük Başlık 1")
             <span asp-validation-for="KBaslik1" class="text-danger"></span>
             <input type="text" asp-for="KBaslik1" class="form-control" placeholder="Başlık giriniz" />
@@ -20,7 +25,7 @@
         <div class="form-group">
             @Html.Label("Metin 1")
             <span asp-validation-for="Metin1" class="text-danger"></span>
-            <input type="text" asp-for="Metin1" class="form-control" placeholder="Başlık giriniz" />
+            <input type="text" asp-for="Metin1" class="form-control" placeholder="Metin giriniz" />
         </div><br />
         <div class="form-group">
             @Html.Label("Küçük Başlık 2")
@@ -30,7 +35,7 @@
         <div class="form-group">
             @Html.Label("Metin 2")
             <span asp-validation-for="Metin2" class="text-danger"></span>
-            <input type="text" asp-for="Metin2" class="form-control" placeholder="Başlık giriniz" />
+            <input type="text" asp-for="Metin2" class="form-control" placeholder="Metin giriniz" />
         </div><br />
         <div class="form-group">
             @Html.Label("Küçük Başlık 3")
@@ -41,7 +46,7 @@
         <div class="form-group">
             @Html.Label("Metin 3")
             <span asp-validation-for="Metin3" class="text-danger"></span>
-            <input type="text" asp-for="Metin3" class="form-control" placeholder="Başlık giriniz" />
+            <input type="text" asp-for="Metin3" class="form-control" placeholder="Metin giriniz" />
         </div><br />
         <div class="form-group">
             @Html.Label("Küçük Başlık 4")
@@ -51,7 +56,7 @@
         <div class="form-group">
             @Html.Label("Metin 4")
             <span asp-validation-for="Metin4" class="text-danger"></span>
-            <input type="text" asp-for="Metin4" class="form-control" placeholder="Başlık giriniz" />
+            <input type="text" asp-for="Metin4" class="form-control" placeholder="Metin giriniz" />
         </div><br />
         <button class="btn btn-outline-info">Ekle</button>
     </form>

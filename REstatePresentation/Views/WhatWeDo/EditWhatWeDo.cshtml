@@ -13,6 +13,11 @@
             <input type="text" asp-for="Baslik" class="form-control" />
         </div><br />
         <div class="form-group">
+            @Html.Label("Ne Yapıyoruz Metni")
+            <span asp-validation-for="NeYapiyoruzMetni" class="text-danger"></span>
+            <input type="text" asp-for="NeYapiyoruzMetni" class="form-control" />
+        </div><br />
+        <div class="form-group">
             @Html.Label("Küçük Başlık 1")
             <span asp-validation-for="KBaslik1" class="text-danger"></span>
             <input type="text" asp-for="KBaslik1" class="form-control" />

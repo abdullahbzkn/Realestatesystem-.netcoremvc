@@ -12,6 +12,7 @@ namespace EntityLayer.Concrete
         [Key]
         public int WhatWeDoID { get; set; }
         public string Baslik { get; set; }
+        public string NeYapiyoruzMetni { get; set; }
         public string KBaslik1 { get; set; }
         public string Metin1 { get; set; }
         public string KBaslik2 { get; set; }
