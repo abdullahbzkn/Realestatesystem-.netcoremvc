@@ -1,0 +1,8 @@
+﻿@using EntityLayer.Concrete
+@model List<AboutUs>
+@foreach(var item in Model)
+{
+    <p class="mx-auto tm-section-desc text-center">
+        @item.HakkimizdaMetni
+    </p>
+}

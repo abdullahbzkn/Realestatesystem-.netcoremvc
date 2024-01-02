@@ -47,10 +47,6 @@ namespace DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdressID"), 1L, 1);
 
-                    b.Property<string>("Aciklama1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("HaritaLink")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

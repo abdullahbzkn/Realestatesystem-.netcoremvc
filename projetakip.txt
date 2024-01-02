@@ -25,3 +25,20 @@ controllerlar managerlar viewlar model
 ServiceTerrains -> ****
 ilan detay sayfası------> ****
 ----------------------------------------------------------------------------------------------------------------------------------------------
+4 partial
+
+entrance
+ilan
+bize ulasın
+adresses
+
+-------------------
+admin kısmında 
+ilan ekle
+1arsa yapıldı
+2konut
+3giriş bilgi düzenle
+4ne yapıyoruz yapıldı
+5hakkımızda açıklama düzenle 
+6ilan açıklama düzenle
+7 bize ulaşın düzenle

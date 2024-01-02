@@ -1,6 +1,7 @@
 using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.Concrete.EntityFramework;
 using DataAccessLayer.Contexts;
 
@@ -24,6 +25,16 @@ builder.Services.AddScoped<IWhatWeDoService, WhatWeDoManager>();
 builder.Services.AddScoped<IWhatWeDoDal, EfWhatWeDoDal>();
 builder.Services.AddScoped<IContactService, ContactManager>();
 builder.Services.AddScoped<IContactDal, EfContactDal>();
+builder.Services.AddScoped<IContactUsService, ContactUsManager>();
+builder.Services.AddScoped<IContactUsDal, EfContactUsDal>();
+builder.Services.AddScoped<IAddressService, AddressManager>();
+builder.Services.AddScoped<IAddressDal, EfAddressDal>();
+builder.Services.AddScoped<IEntranceService, EntranceManager>();
+builder.Services.AddScoped<IEntranceDal, EfEntranceDal>();
+builder.Services.AddScoped<IAboutUsService, AboutUsManager>();
+builder.Services.AddScoped<IAboutUsDal, EfAboutUsDal>();
+builder.Services.AddScoped<IGalleryService, GalleryManager>();
+builder.Services.AddScoped<IGalleryDal, EfGalleryDal>();
 
 builder.Services.AddDbContext<REstateContext>();
 var app = builder.Build();

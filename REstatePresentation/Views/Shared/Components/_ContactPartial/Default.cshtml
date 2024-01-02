@@ -1,10 +1,12 @@
-﻿@model EntityLayer.Concrete.Contact
+﻿@using EntityLayer.Concrete
+@model List<ContactUs>
 
-<div class="col-sm-12 col-md-6">
-    <form  method="get">
-        <input id="name" name="name" type="text" placeholder="Adınız Soyadınız" class="tm-input" required />
-        <input id="email" name="email" type="email" placeholder="Mail Adresiniz" class="tm-input" required />
-        <textarea id="message" name="message" rows="8" placeholder="Mesajınız" class="tm-input" required></textarea>
-        <button type="submit" class="btn tm-btn-submit">Gönder</button>
-    </form>
+<div class="text-center col-12">
+    <h2 class="tm-section-title mb-4">Bizimle İrtibata Geçin</h2>
+    @foreach(var item in Model)
+    {
+        <p class="mb-5">
+            @item.IletisimMetni
+        </p><br>
+    }
 </div>
