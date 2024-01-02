@@ -13,26 +13,7 @@ Model oluşturmak ve kullanmakta bilgi eksikligi var
 Soru 
 contexte ilişkiler ne şekilde yazılmalı & controllerda verilerin guncellenmesi nasıl olucak existing... diye modelden çekince null geliyor.
 ----------------------------------------------------------------------------------------------------------------------------------------------
-Kalanlar
------------------
-aboutuses
-adresses
-contacts
-contactuses
-entrances
-galleries
-controllerlar managerlar viewlar model
-ServiceTerrains -> ****
-ilan detay sayfası------> ****
-----------------------------------------------------------------------------------------------------------------------------------------------
-4 partial
 
-entrance
-ilan
-bize ulasın
-adresses
-
--------------------
 admin kısmında 
 ilan ekle
 1arsa yapıldı

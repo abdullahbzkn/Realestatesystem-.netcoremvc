@@ -28,6 +28,7 @@ namespace DataAccessLayer.Contexts
         public DbSet<ServicePhoto> ServicePhotos { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<WhatWeDo> WhatWeDos { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
