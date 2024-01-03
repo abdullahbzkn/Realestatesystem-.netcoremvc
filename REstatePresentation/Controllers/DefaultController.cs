@@ -47,6 +47,7 @@ namespace REstatePresentation.Controllers
         public IActionResult SendMessage(Contact contact)
         {
             contact.Date = DateTime.Now;
+            contact.OkunduBilgisi = false;
             _contactService.Insert(contact);
             return RedirectToAction("Index","Default");
         }

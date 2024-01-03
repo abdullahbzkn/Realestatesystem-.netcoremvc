@@ -6,9 +6,9 @@
     </button>
 
     <div>
-        <h5 class="accordion-header" >Yönetim Paneli</h5>
+        <h5 class="accordion-header">Yönetim Paneli</h5>
     </div>
-   
+
 
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
@@ -37,14 +37,15 @@
             </div>
         </li>
 
-
+        @if(ViewBag.okunmamisMesajlar != null){
         <!-- Nav Item - Messages -->
         <li class="nav-item dropdown no-arrow mx-1">
+           
             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-envelope fa-fw"></i>
                 <!-- Counter - Messages -->
-                <span class="badge badge-danger badge-counter">7</span>
+                <span class="badge badge-danger badge-counter">@if(ViewBag.messagecount!=0 && ViewBag.messagecount != null){@ViewBag.messagecount}</span>
             </a>
             <!-- Dropdown - Messages -->
             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -52,27 +53,31 @@
                 <h6 class="dropdown-header">
                     Gelen Mesajlar
                 </h6>
+              
+                @foreach (var item in ViewBag.okunmamisMesajlar)
+                {
+                    @if (item.OkunduBilgisi == false)
+                    {
+                        <a class="dropdown-item d-flex align-items-center" href="/Contact/ReadMessage/@item.ContactID">
+                            <div class="dropdown-list-image mr-3">
+                                <img class="rounded-circle" src="~/templateadmin/img/undraw_profile_1.svg"
+                                        alt="...">
+                                <div class="status-indicator bg-success"></div>
+                            </div>
+                            <div class="font-weight-bold">
+                                <div class="text-truncate">
+                                    @item.Mesaj
+                                </div>
+                                <div class="small text-gray-500">@item.Name · @item.Date</div>
+                            </div>
+                        </a>
+                    }
 
-               @*  foreach ile alınıcak bu tekrara *@
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                    <div class="dropdown-list-image mr-3">
-                        <img class="rounded-circle" src="~/templateadmin/img/undraw_profile_1.svg"
-                             alt="...">
-                        <div class="status-indicator bg-success"></div>
-                    </div>
-                    <div class="font-weight-bold">
-                        <div class="text-truncate">
-                            Hi there! I am wondering if you can help me with a
-                            problem I've been having.
-                        </div>
-                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                    </div>
-                </a>
-               @*  buraya mesajlar linki verilicek *@
-                <a class="dropdown-item text-center small text-gray-500" href="#">Tüm Mesajları Görüntüle</a>
+                }
+                <a class="dropdown-item text-center small text-gray-500" href="/Contact/Index/">Tüm Mesajları Görüntüle</a>
             </div>
         </li>
-
+        }
         <div class="topbar-divider d-none d-sm-block"></div>
 
         <!-- Nav Item - User Information -->
@@ -86,7 +91,7 @@
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                  aria-labelledby="userDropdown">
-               
+
                 <a class="dropdown-item" href="#">
                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                     Şifre Ayarları

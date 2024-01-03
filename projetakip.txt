@@ -1,41 +1,29 @@
-----------------------------------------------------------------------------------------------------------------------------------------------
 SORUN 1
 Misal ServiceMap tablosunda 
 mahalle : aaaaa
 il : aaaaa
 ilçe : aaaaa
 köy : aaaaa
-bu degerlerde birden fazla ilan olursa aynı satır kullanılmıyor yeni veri oluşuyor bu sebeple ilişkili tablo kullanma daki tasarrfu mantıgı devre dışı kalıyor
-----------------------------------------------------------------------------------------------------------------------------------------------
+bu degerlerde birden fazla ilan olursa aynı satır kullanılmıyor yeni veri oluşuyor bu 
+sebeple ilişkili tablo kullanma daki tasarrfu mantıgı devre dışı kalıyor
+--------------------------------------------------------------------------------------------
 SORUN 2
 Model oluşturmak ve kullanmakta bilgi eksikligi var
-----------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 Soru 
-contexte ilişkiler ne şekilde yazılmalı & controllerda verilerin guncellenmesi nasıl olucak existing... diye modelden çekince null geliyor.
-----------------------------------------------------------------------------------------------------------------------------------------------
+contexte ilişkiler ne şekilde yazılmalı & controllerda verilerin guncellenmesi nasıl
+olucak existing... diye modelden çekince null geliyor.
+-------------------------------------------------------------------------------------------
 
 YAPILACAKLAR
 --------------
 serviceterraincontroller yapıldı ancak sorunlar var
 
-
-addresscontroller
-
-
-sağ üstte admin name getir
-
-
-mesaj bildirim kısmını hallet okundu/okunmadı
-
-
-günlük görüntüleme ekle viewcounter sınıfına grafik ile admin panelde hem günlük hem toplam göster
-
+günlük görüntüleme ekle viewcounter sınıfına grafik ile admin panelde hem günlük hem toplam göster (daha sonra eklenicek)
 
 Identity
 
-
 Validation Rules kalanlar
-
 
 Rapor Yaz
 

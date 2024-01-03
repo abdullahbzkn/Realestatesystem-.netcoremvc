@@ -6,16 +6,16 @@ namespace REstatePresentation.Controllers
 {
     public class ContactUsController : Controller
     {
-        private readonly IContactUsService _ContactUsService;
+        private readonly IContactUsService _contactUsService;
 
-        public ContactUsController(IContactUsService ContactUsService)
+        public ContactUsController(IContactUsService contactUsService)
         {
-            _ContactUsService = ContactUsService;
+            _contactUsService = contactUsService;
         }
 
         public IActionResult Index()
         {
-            var values = _ContactUsService.GetListAll();
+            var values = _contactUsService.GetListAll();
             return View(values);
         }
 
@@ -29,15 +29,15 @@ namespace REstatePresentation.Controllers
         [HttpPost]
         public IActionResult AddContactUs(ContactUs ContactUs)
         {
-            _ContactUsService.Insert(ContactUs);
+            _contactUsService.Insert(ContactUs);
             return RedirectToAction("Index");
         }
 
 
         public IActionResult DeleteContactUs(int id)
         {
-            var values = _ContactUsService.GetById(id);
-            _ContactUsService.Delete(values);
+            var values = _contactUsService.GetById(id);
+            _contactUsService.Delete(values);
             return RedirectToAction("Index");
         }
 
@@ -45,13 +45,13 @@ namespace REstatePresentation.Controllers
         [HttpGet]
         public IActionResult EditContactUs(int id)
         {
-            var values = _ContactUsService.GetById(id);
+            var values = _contactUsService.GetById(id);
             return View(values);
         }
         [HttpPost]
         public IActionResult EditContactUs(ContactUs ContactUs)
         {
-            _ContactUsService.Update(ContactUs);
+            _contactUsService.Update(ContactUs);
             return RedirectToAction("Index");
         }
     }
