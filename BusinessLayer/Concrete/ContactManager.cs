@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,11 @@ namespace BusinessLayer.Concrete
         public ContactManager(IContactDal contactDal)
         {
             _contactDal = contactDal;
+        }
+
+        public void ContactStatusToChange(int id)
+        {
+            _contactDal.ContactStatusToChange(id);
         }
 
         public void Delete(Contact t)

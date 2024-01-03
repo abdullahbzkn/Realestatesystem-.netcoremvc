@@ -14,7 +14,7 @@ Soru
 contexte ilişkiler ne şekilde yazılmalı & controllerda verilerin guncellenmesi nasıl olucak existing... diye modelden çekince null geliyor.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-admin kısmında 
+
 ilan ekle
 1arsa yapıldı
 2konut
@@ -23,3 +23,7 @@ ilan ekle
 5hakkımızda açıklama düzenle 
 6ilan açıklama düzenle
 7 bize ulaşın düzenle
+
+
+
+25.12/03.01

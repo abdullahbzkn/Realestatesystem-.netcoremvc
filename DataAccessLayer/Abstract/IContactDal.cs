@@ -10,5 +10,6 @@ namespace DataAccessLayer.Abstract
 
     public interface IContactDal : IGenericDal<Contact>
     {
+        void ContactStatusToChange(int id);
     }
 }

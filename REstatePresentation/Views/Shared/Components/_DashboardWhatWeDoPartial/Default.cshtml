@@ -1,0 +1,43 @@
+﻿@using EntityLayer.Concrete
+@model List<WhatWeDo>
+@foreach(var item in Model)
+{
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">@item.Baslik</h6>
+    </div>
+    <div class="card-body">
+        <p>
+           @item.NeYapiyoruzMetni
+        </p>
+            <br>
+        <p class="mb-0">
+           @item.KBaslik1
+        </p>
+        <p class="mb-0">
+            @item.Metin1
+        </p>
+            <br>
+        <p class="mb-0">
+            @item.KBaslik2
+        </p>
+        <p class="mb-0">
+            @item.Metin2
+        </p>
+            <br>
+        <p class="mb-0">
+            @item.KBaslik3
+        </p>
+        <p class="mb-0">
+            @item.Metin3
+        </p>
+            <br>
+        <p class="mb-0">
+            @item.KBaslik4
+        </p>
+        <p class="mb-0">
+            @item.Metin4
+        </p>
+    </div>
+</div>
+}

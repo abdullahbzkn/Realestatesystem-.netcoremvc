@@ -14,6 +14,7 @@ namespace EntityLayer.Concrete
         public string Name { get; set; }
         public string Mail { get; set; }
         public string Mesaj { get; set; }
+        public bool? OkunduBilgisi { get; set; }
         public DateTime Date { get; set; }
     }
 }

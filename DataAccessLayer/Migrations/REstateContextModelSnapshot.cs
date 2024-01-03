@@ -108,6 +108,9 @@ namespace DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool?>("OkunduBilgisi")
+                        .HasColumnType("bit");
+
                     b.HasKey("ContactID");
 
                     b.ToTable("Contacts");
@@ -458,6 +461,22 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("TeamID");
 
                     b.ToTable("Teams");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.VisitorCounter", b =>
+                {
+                    b.Property<int>("VisitorCounterID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VisitorCounterID"), 1L, 1);
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.HasKey("VisitorCounterID");
+
+                    b.ToTable("VisitorCounters");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.WhatWeDo", b =>

@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Default/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVmYXVsdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -94,6 +98,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Shared/Components/_ContactPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0NvbnRhY3RQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Shared/Components/_DashboardAboutUsPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Rhc2hib2FyZEFib3V0VXNQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Shared/Components/_DashboardStatisticsPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Rhc2hib2FyZFN0YXRpc3RpY3NQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Shared/Components/_DashboardWhatWeDoPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Rhc2hib2FyZFdoYXRXZURvUGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Shared/Components/_EntrancePartial/Default.cshtml]
