@@ -9,5 +9,6 @@ namespace DataAccessLayer.Abstract
 {
     public interface IServiceTerrainDal : IGenericDal<ServiceTerrain>
     {
+        void ServiceTerrainStatusToChange(int id);
     }
 }

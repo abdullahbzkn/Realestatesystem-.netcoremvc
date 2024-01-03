@@ -9,5 +9,6 @@ namespace BusinessLayer.Abstract
 {
     public interface IServiceTerrainService : IGenericService<ServiceTerrain>
     {
+        void ServiceTerrainStatusToChange(int id);
     }
 }

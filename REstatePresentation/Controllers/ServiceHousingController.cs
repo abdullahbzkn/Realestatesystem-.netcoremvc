@@ -17,7 +17,7 @@ namespace REstatePresentation.Controllers
         private readonly IServiceHousingService _serviceHousingService;
         private readonly IServicePhotoService _servicePhotoService;
         private readonly REstateContext _context;
-        ServiceInfo newServiceInfo;
+        private ServiceInfo newServiceInfo;
 
         public ServiceHousingController(
             IServiceMapService serviceMapService,
@@ -231,11 +231,6 @@ namespace REstatePresentation.Controllers
         {
             _serviceHousingService.ServiceHousingStatusToChange(id);
             return RedirectToAction("Index");
-        }
-
-        public IActionResult Deneme()
-        {
-            return View();
         }
     }
 }

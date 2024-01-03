@@ -20,5 +20,13 @@ namespace DataAccessLayer.Concrete.EntityFramework
             }
         }
 
+        public ServicePhoto GetByServiceTerrainId(int serviceTerrainId)
+        {
+            using (var context = new REstateContext())
+            {
+                return context.ServicePhotos.FirstOrDefault(x => x.ServiceHousingId == serviceTerrainId);
+            }
+        }
+
     }
 }

@@ -16,7 +16,7 @@ contexte ilişkiler ne şekilde yazılmalı & controllerda verilerin guncellenme
 
 YAPILACAKLAR
 --------------
-serviceterraincontroller
+serviceterraincontroller yapıldı ancak sorunlar var
 entrancecontroller
 aboutuscontroller
 gallerycontroller

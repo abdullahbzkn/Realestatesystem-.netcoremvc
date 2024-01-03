@@ -76,16 +76,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUhvdXNpbmdcQWRkU2VydmljZUhvdXNpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/ServiceHousing/Deneme.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUhvdXNpbmdcRGVuZW1lLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/ServiceHousing/EditServiceHousing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUhvdXNpbmdcRWRpdFNlcnZpY2VIb3VzaW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/ServiceHousing/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUhvdXNpbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/ServiceTerrain/AddServiceTerrain.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVRlcnJhaW5cQWRkU2VydmljZVRlcnJhaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/ServiceTerrain/EditServiceTerrain.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVRlcnJhaW5cRWRpdFNlcnZpY2VUZXJyYWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/ServiceTerrain/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVRlcnJhaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/abdbz/Desktop/İNTERNET PROGRAMLAMA PROJE/REstatePresentation/Views/Shared/Components/_AboutUsPartial/Default.cshtml]

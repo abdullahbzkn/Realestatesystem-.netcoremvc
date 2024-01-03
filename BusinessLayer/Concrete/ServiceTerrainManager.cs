@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete.EntityFramework;
 using DataAccessLayer.Contexts;
 using EntityLayer.Concrete;
 using System;
@@ -13,16 +14,25 @@ namespace BusinessLayer.Concrete
     public class ServiceTerrainManager : IServiceTerrainService
     {
         private readonly IServiceTerrainDal _serviceTerrainDal;
+        private readonly IServicePhotoService _servicePhotoService;
+
         private readonly REstateContext _context;
 
-        public ServiceTerrainManager(IServiceTerrainDal serviceTerrainDal, REstateContext context)
+        public ServiceTerrainManager(IServiceTerrainDal serviceTerrainDal,IServicePhotoService servicePhotoService, REstateContext context)
         {
             _serviceTerrainDal = serviceTerrainDal;
+            _servicePhotoService = servicePhotoService;
             _context = context;
         }
 
         public void Delete(ServiceTerrain t)
         {
+            //ServicePhotos'u silelim
+            var servicePhotos = _servicePhotoService.GetListAll().Where(x => x.ServiceHousingId == t.ServiceTerrainID).ToList();
+            foreach (var photo in servicePhotos)
+            {
+                _servicePhotoService.Delete(photo);
+            }
             _serviceTerrainDal.Delete(t);
         }
 
@@ -41,9 +51,16 @@ namespace BusinessLayer.Concrete
             _serviceTerrainDal.Insert(t);
         }
 
+        public void ServiceTerrainStatusToChange(int id)
+        {
+            _serviceTerrainDal.ServiceTerrainStatusToChange(id);
+        }
+
         public void Update(ServiceTerrain t)
         {
             _serviceTerrainDal.Update(t);
         }
+
+
     }
 }

@@ -1,0 +1,149 @@
+﻿@model REstatePresentation.Models.ServiceTerrainAddViewModel
+@{
+    ViewData["Title"] = "AddServiceTerrain";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Yeni Arsa İlan Girişi</h1>
+    <form method="post">
+        <div class="form-group">
+            @Html.Label("Başlık")
+            <span asp-validation-for="ServiceTerrain.Baslik" class="text-danger"></span>
+            <input type="text" asp-for="ServiceTerrain.Baslik" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Fotograf Yolu")
+            <span asp-validation-for="ServiceTerrain.Gorsel" class="text-danger"></span>
+            <input type="text" asp-for="ServiceTerrain.Gorsel" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Fiyat")
+            <span asp-validation-for="ServiceTerrain.Fiyat" class="text-danger"></span>
+            <input type="number" asp-for="ServiceTerrain.Fiyat" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("TapuDurumu")
+            <span asp-validation-for="ServiceTerrain.TapuDurumu" class="text-danger"></span>
+            <input type="text" asp-for="ServiceTerrain.TapuDurumu" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("BelediyeAdi")
+            <span asp-validation-for="ServiceTerrain.BelediyeAdi" class="text-danger"></span>
+            <input type="text" asp-for="ServiceTerrain.BelediyeAdi" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("TapuParsel")
+            <span asp-validation-for="ServiceTerrain.TapuParsel" class="text-danger"></span>
+            <input type="number" asp-for="ServiceTerrain.TapuParsel" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("TapuPafta")
+            <span asp-validation-for="ServiceTerrain.TapuPafta" class="text-danger"></span>
+            <input type="number" asp-for="ServiceTerrain.TapuPafta" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("TapuAda")
+            <span asp-validation-for="ServiceTerrain.TapuAda" class="text-danger"></span>
+            <input type="number" asp-for="ServiceTerrain.TapuAda" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("IzinVerilenKatAdedi")
+            <span asp-validation-for="ServiceTerrain.IzinVerilenKatAdedi" class="text-danger"></span>
+            <input type="number" asp-for="ServiceTerrain.IzinVerilenKatAdedi" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("TabanInsaaAlani")
+            <span asp-validation-for="ServiceTerrain.TabanInsaaAlani" class="text-danger"></span>
+            <input type="number" asp-for="ServiceTerrain.TabanInsaaAlani" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("ToplamInsaatAlani")
+            <span asp-validation-for="ServiceTerrain.ToplamInsaatAlani" class="text-danger"></span>
+            <input type="number" asp-for="ServiceTerrain.ToplamInsaatAlani" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("MaksimumBinaYuksekligi")
+            <span asp-validation-for="ServiceTerrain.MaksimumBinaYuksekligi" class="text-danger"></span>
+            <input type="text" asp-for="ServiceTerrain.MaksimumBinaYuksekligi" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("KonumLink")
+            <span asp-validation-for="ServiceTerrain.KonumLink" class="text-danger"></span>
+            <input type="text" asp-for="ServiceTerrain.KonumLink" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("UzunAciklama")
+            <span asp-validation-for="ServiceTerrain.UzunAciklama" class="text-danger"></span>
+            <textarea class="form-control" asp-for="ServiceTerrain.UzunAciklama" rows="4"></textarea>
+        </div><br />
+        <div class="form-group">
+            @Html.Label("TakasYapilir")
+            <select asp-for="ServiceTerrain.TakasYapilir" class="form-control">
+                <option value="">-- Select --</option>
+                <option value="True">Evet</option>
+                <option value="False">Hayır</option>
+            </select>
+        </div><br />
+        <div class="form-group">
+            @Html.Label("KrediyeUygun")
+            <select asp-for="ServiceTerrain.KrediyeUygun" class="form-control">
+                <option value="">-- Select --</option>
+                <option value="True">Evet</option>
+                <option value="False">Hayır</option>
+            </select>
+        </div><br />
+        <div class="form-group">
+            @Html.Label("KatKarşılığı")
+            <select asp-for="ServiceTerrain.KatKarsiligi" class="form-control">
+                <option value="">-- Select --</option>
+                <option value="True">Evet</option>
+                <option value="False">Hayır</option>
+            </select>
+        </div><br />
+        <div class="form-group">
+            @Html.Label("İskanDurumu")
+            <select asp-for="ServiceTerrain.IskanDurumu" class="form-control">
+                <option value="">-- Select --</option>
+                <option value="True">Evet</option>
+                <option value="False">Hayır</option>
+            </select>
+        </div><br />
+        <div class="form-group">
+            @Html.Label("VadeVarmi")
+            <select asp-for="ServiceTerrain.VadeVarmi" class="form-control">
+                <option value="">-- Select --</option>
+                <option value="True">Evet</option>
+                <option value="False">Hayır</option>
+            </select>
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Mahalle")
+            <input type="text" asp-for="ServiceMap.Mahalle" class="form-control" />
+        </div>
+        <div class="form-group">
+            @Html.Label("Koy")
+            <input type="text" asp-for="ServiceMap.Koy" class="form-control" />
+        </div>
+        <div class="form-group">
+            @Html.Label("Ilce")
+            <input type="text" asp-for="ServiceMap.Ilce" class="form-control" />
+        </div>
+        <div class="form-group">
+            @Html.Label("Il")
+            <input type="text" asp-for="ServiceMap.Il" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            @Html.Label("FotografYolu")
+            <input type="text" asp-for="ServicePhoto.FotografYolu" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Fotoğraf")
+            <input type="file" name="ServicePhoto.FotografYolu" multiple />
+        </div>
+
+        <button class="btn btn-outline-info">Değişiklikleri Kaydet</button>
+    </form>
+</div>
