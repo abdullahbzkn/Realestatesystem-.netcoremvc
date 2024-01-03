@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Address
+@{
+    ViewData["Title"] = "AddWhatWeDo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Emlak Bilgileri Bölümü Ekleme Sayfası</h1>
+    <form method="post">
+        <div class="form-group">
+            @Html.Label("Mail")
+            <span asp-validation-for="Mail" class="text-danger"></span>
+            <input type="email" asp-for="Mail" class="form-control" placeholder="Şirket mail adresi giriniz" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Harita Link")
+            <span asp-validation-for="HaritaLink" class="text-danger"></span>
+            <input type="text" asp-for="HaritaLink" class="form-control" placeholder="Şirket konum linki giriniz" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Küçük Başlık 1")
+            <span asp-validation-for="Tel" class="text-danger"></span>
+            <input type="tel" asp-for="Tel" class="form-control" placeholder="Şirket telefon numarası giriniz" />
+        </div><br />
+        <div class="form-group">
+        <button class="btn btn-outline-info">Ekle</button>
+    </form>
+</div>

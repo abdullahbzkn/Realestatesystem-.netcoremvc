@@ -1,0 +1,52 @@
+﻿@using EntityLayer.Concrete
+@model List<Address>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+
+    <h1 class="h3 mb-2 text-gray-800">Emlak Bilgileri Bölümü</h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Emlak Bilgileri Bölümü</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Mail</th>
+                            <th>Harita Linki</th>
+                            <th>Telefon</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Mail</td>
+                                <td>@item.HaritaLink</td>
+                                <td>@item.Tel</td>
+                                <td>
+                                    <a href="/Address/DeleteAddress/@item.AdressID" class="btn btn-danger btn-circle">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/Address/EditAddress/@item.AdressID" class="btn btn-info btn-circle">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <a href="/Address/AddAddress" class="btn btn-outline-info">Yeni Emlak Bilgileri Bölümü Ekleme</a>
+            </div>
+        </div>
+    </div>
+</div>
