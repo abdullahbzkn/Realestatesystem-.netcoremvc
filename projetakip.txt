@@ -14,16 +14,21 @@ Soru
 contexte ilişkiler ne şekilde yazılmalı & controllerda verilerin guncellenmesi nasıl olucak existing... diye modelden çekince null geliyor.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
+YAPILACAKLAR
+--------------
+serviceterraincontroller
+entrancecontroller
+aboutuscontroller
+gallerycontroller
+contactuscontroller
+addresscontroller
+sağ üstte admin name getir
+mesaj bildirim kısmını hallet okundu/okunmadı
+günlük görüntüleme ekle viewcounter sınıfına grafik ile admin panelde hem günlük hem toplam göster
+Identity
+Validation Rules kalanlar
+Rapor Yaz
 
-ilan ekle
-1arsa yapıldı
-2konut
-3giriş bilgi düzenle
-4ne yapıyoruz yapıldı
-5hakkımızda açıklama düzenle 
-6ilan açıklama düzenle
-7 bize ulaşın düzenle
 
-
-
+---------------------
 25.12/03.01

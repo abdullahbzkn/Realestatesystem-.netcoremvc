@@ -17,7 +17,6 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>#</th>
                             <th>Başlık</th>
                             <th>Küçük Başlık 1</th>
                             <th>Metin 1</th>
@@ -31,27 +30,10 @@
                             <th>Güncelle</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>#</th>
-                            <th>Başlık</th>
-                            <th>Küçük Başlık 1</th>
-                            <th>Metin 1</th>
-                            <th>Küçük Başlık 2</th>
-                            <th>Metin 2</th>
-                            <th>Küçük Başlık 3</th>
-                            <th>Metin 3</th>
-                            <th>Küçük Başlık 4</th>
-                            <th>Metin 4</th>
-                            <th>Sil</th>
-                            <th>Güncelle</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td>@item.WhatWeDoID</td>
                                 <td>@item.Baslik</td>
                                 <td>@item.KBaslik1</td>
                                 <td>@item.Metin1</td>
