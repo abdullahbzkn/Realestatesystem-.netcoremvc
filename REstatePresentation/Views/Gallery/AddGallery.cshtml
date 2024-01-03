@@ -1,0 +1,16 @@
+﻿@model EntityLayer.Concrete.Gallery
+@{
+    ViewData["Title"] = "AddGallery";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">İlanlar Açıklama Bölümü Ekleme Sayfası</h1>
+    <form method="post">
+        <div class="form-group">
+            @Html.Label("IlanlarMetni")
+            <span asp-validation-for="IlanlarMetni" class="text-danger"></span>
+            <input type="text" asp-for="IlanlarMetni" class="form-control" placeholder="Metin giriniz" />
+        </div><br />
+        <button class="btn btn-outline-info">Ekle</button>
+    </form>
+</div>

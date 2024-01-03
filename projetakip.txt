@@ -17,15 +17,27 @@ contexte ilişkiler ne şekilde yazılmalı & controllerda verilerin guncellenme
 YAPILACAKLAR
 --------------
 serviceterraincontroller yapıldı ancak sorunlar var
-aboutuscontroller
-gallerycontroller
+
+
 contactuscontroller
 addresscontroller
+
+
 sağ üstte admin name getir
+
+
 mesaj bildirim kısmını hallet okundu/okunmadı
+
+
 günlük görüntüleme ekle viewcounter sınıfına grafik ile admin panelde hem günlük hem toplam göster
+
+
 Identity
+
+
 Validation Rules kalanlar
+
+
 Rapor Yaz
 
 
