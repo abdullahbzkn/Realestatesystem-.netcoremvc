@@ -19,7 +19,6 @@ YAPILACAKLAR
 serviceterraincontroller yapıldı ancak sorunlar var
 
 
-contactuscontroller
 addresscontroller
 
 
