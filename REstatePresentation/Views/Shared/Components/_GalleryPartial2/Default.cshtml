@@ -1,10 +1,7 @@
 ﻿@using EntityLayer.Concrete
-@model List<ServiceHousing>
-<div class="row">
-    <div class="col-12">
-        <div class="mx-auto tm-gallery-container">
-            <div class="grid tm-gallery">
-                @foreach(var item in Model)
+@model List<ServiceTerrain>
+
+                @foreach (var item in Model)
                 {
                     <a href="~/templateuser/img/gallery-img-01.jpg">
                         <figure class="effect-honey tm-gallery-item">
@@ -15,3 +12,7 @@
                         </figure>
                     </a>
                 }
+            </div>
+        </div>
+    </div>
+</div>
