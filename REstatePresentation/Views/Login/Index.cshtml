@@ -1,4 +1,4 @@
-﻿
+﻿@model REstatePresentation.Models.LoginViewModel
 @{
     Layout = null;
 }
@@ -39,15 +39,15 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Hoşgeldiniz !</h1>
                                     </div>
-                                    <form class="user" style="text-align:center">
+                                    <form method="post" class="user" style="text-align:center">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                   id="exampleInputEmail" aria-describedby="emailHelp"
+                                            <input type="text" class="form-control form-control-user"
+                                                   id="exampleInputName" asp-for="username"
                                                    placeholder="Kullanıcı Adı">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                   id="exampleInputPassword" placeholder="Şifre">
+                                                   id="exampleInputPassword" placeholder="Şifre" asp-for="password">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -57,9 +57,9 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <a href="~/templateadmin/index.html" class="btn btn-primary btn-user btn-block">
+                                        <button class="btn btn-primary btn-user btn-block">
                                             Giriş Yap
-                                        </a>
+                                        </button>
                                         <hr>
                                     </form>
                                  </div>

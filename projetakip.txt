@@ -21,6 +21,12 @@ serviceterraincontroller yapıldı ancak sorunlar var
 
 günlük görüntüleme ekle viewcounter sınıfına grafik ile admin panelde hem günlük hem toplam göster (daha sonra eklenicek)
 
+adminden usera userdan admine geçiş ekle
+
+ilan detay sayfası
+
+fotograf ekleme olayı
+
 Identity
 
 Validation Rules kalanlar

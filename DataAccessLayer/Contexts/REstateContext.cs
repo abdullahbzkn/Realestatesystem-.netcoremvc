@@ -1,4 +1,6 @@
 ﻿using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,8 +10,9 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Contexts
 {
-    public class REstateContext : DbContext
+    public class REstateContext : IdentityDbContext
     {
+       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("server=ABDBZ\\SQLEXPRESS;database=DbREstate;integrated security=true");
@@ -34,6 +37,14 @@ namespace DataAccessLayer.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            //base.OnModelCreating(modelBuilder);
+
+            //// Identity konfigürasyonları burada yapılır
+            modelBuilder.Entity<IdentityUserLogin<string>>().HasNoKey();
+            modelBuilder.Entity<IdentityUserRole<string>>().HasNoKey();
+            modelBuilder.Entity<IdentityUserToken<string>>().HasNoKey();
+
             //modelBuilder.Entity<ServiceInfo>()
             //    .Property(x => x.EklenmeTarihi)
             //    .HasDefaultValueSql("GETDATE()");

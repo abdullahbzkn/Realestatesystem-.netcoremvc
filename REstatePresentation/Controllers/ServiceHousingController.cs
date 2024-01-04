@@ -95,6 +95,20 @@ namespace REstatePresentation.Controllers
             model.ServicePhoto.ServiceHousingId = model.ServiceHousing.ServiceHousingID;
             //model.ServicePhoto.ServiceTerrainId = model.ServiceHousing.ServiceTerrainID;
 
+            //foreach (var file in model.FotoğrafYolu) buraya geri dönüş yapılacak
+            //{
+            //    // Dosyayı bir yere kaydet, örneğin sunucu klasörüne
+            //    var filePath = Path.Combine("wwwroot/images", file.FileName);
+            //    using (var stream = new FileStream(filePath, FileMode.Create))
+            //    {
+            //        file.CopyTo(stream);
+            //    }
+
+            //    // Dosyanın yolu veya başka işlemleri veritabanına kaydet
+            //    // ...
+            //}
+
+
             _servicePhotoService.Insert(model.ServicePhoto);
 
             return RedirectToAction("Index");
