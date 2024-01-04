@@ -27,9 +27,11 @@ ilan detay sayfası
 
 fotograf ekleme olayı
 
-Identity
+Identity tamamlandı giriş çıkış tamamlandı beni hatırla kısmıına bakılabilir.
 
-Validation Rules kalanlar
+profile controller da sayfa iyileştirilicek tüm inputlar zorunlu hale getirilcek.
+
+Validation Rules kalanlar yazılıcak 
 
 Rapor Yaz
 
