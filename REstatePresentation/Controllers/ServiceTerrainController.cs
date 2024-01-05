@@ -115,6 +115,9 @@ namespace REstatePresentation.Controllers
                     photoPaths.Add("/uploads/" + uniqueFileName);
                 }
             }
+            var firstPhoto = photoPaths[0];
+            model.ServiceTerrain.Gorsel = firstPhoto;
+            _serviceTerrainService.Update(model.ServiceTerrain);
             return RedirectToAction("Index");
         }
         
@@ -177,7 +180,8 @@ namespace REstatePresentation.Controllers
                 ServiceTerrain = serviceTerrain,
                 ServiceMap = serviceMap,
                 ServiceInfo = serviceInfo,
-                PhotoPaths = photoPaths
+                PhotoPaths = photoPaths,
+                GorselYolu = serviceTerrain.Gorsel
             };
 
             return View(model);
@@ -206,18 +210,7 @@ namespace REstatePresentation.Controllers
             model.ServiceTerrain.ServiceMapId = model.ServiceMap.ServiceMapID;
             model.ServiceTerrain.ServiceInfoId = existingServiceInfo.ServiceInfoID;
             _serviceTerrainService.Update(model.ServiceTerrain);
-            // Fotografları güncelleme
-            var photoPaths = model.PhotoPaths;
-            for (int i = 0; i < photoPaths.Count; i++)
-            {
-                var servicePhoto = new ServicePhoto
-                {
-                    FotografYolu = photoPaths[i],
-                    ServiceTerrainId = model.ServiceTerrain.ServiceTerrainID
-                };
-
-                _servicePhotoService.Update(servicePhoto);
-            }
+           
             return RedirectToAction("Index");
         }
 

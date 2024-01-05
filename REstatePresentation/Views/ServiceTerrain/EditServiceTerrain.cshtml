@@ -21,16 +21,15 @@
             <input type="text" asp-for="ServiceTerrain.Baslik" class="form-control" />
         </div><br />
         <div class="form-group">
-            @Html.Label("Fotograf Yolu")
-            <span asp-validation-for="Gorsel" class="text-danger"></span>
-            <input type="text" asp-for="Gorsel" class="form-control" />
-        </div><br />
-        <div>
-            <label>Fotoğraf:</label>
-            <div>
-                    <img src="@Url.Content(Model.GorselYolu)" alt="Service Photo" class="img-thumbnail" />
-            </div>
+            @Html.Label("Kapak Görseli")
+            <span asp-validation-for="ServiceTerrain.Gorsel" class="text-danger"></span>
+            <input type="text" asp-for="ServiceTerrain.Gorsel" class="form-control" readonly/>
         </div>
+        <div>
+            <div>
+                    <img src="@Url.Content(Model.ServiceTerrain.Gorsel)" alt="Service Photo" class="img-thumbnail" />
+            </div>
+        </div><br />
         <div class="form-group">
             @Html.Label("Fiyat")
             <span asp-validation-for="ServiceTerrain.Fiyat" class="text-danger"></span>

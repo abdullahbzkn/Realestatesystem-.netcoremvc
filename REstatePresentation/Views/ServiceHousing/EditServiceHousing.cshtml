@@ -3,6 +3,7 @@
     ViewData["Title"] = "EditServiceHousing";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
 <div class="container-fluid">
     <h1 class="h3 mb-2 text-gray-800">İlan Güncelleme Sayfası</h1>
     <form method="post">
@@ -19,11 +20,18 @@
             <span asp-validation-for="ServiceHousing.Baslik" class="text-danger"></span>
             <input type="text" asp-for="ServiceHousing.Baslik" class="form-control" />
         </div><br />
+
         <div class="form-group">
-            @Html.Label("Fotograf Yolu")
+            @Html.Label("Kapak Görseli")
             <span asp-validation-for="ServiceHousing.Gorsel" class="text-danger"></span>
-            <input type="text" asp-for="ServiceHousing.Gorsel" class="form-control" />
+            <input type="text" asp-for="ServiceHousing.Gorsel" class="form-control" readonly />
+        </div>
+        <div>
+            <div>
+                <img src="@Url.Content(Model.ServiceHousing.Gorsel)" alt="Service Photo" class="img-thumbnail" />
+            </div>
         </div><br />
+
         <div class="form-group">
             @Html.Label("Fiyat")
             <span asp-validation-for="ServiceHousing.Fiyat" class="text-danger"></span>

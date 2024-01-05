@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4lC/K578vMQbDDRV0TDW0tTDBDWsJXwtFhsU7tkDzfI=",
+  "Hash": "p9I/SPEFmDz814rg2hxdVYjhfkpElsuyjsZmwjYEldI=",
   "Source": "REstatePresentation",
   "BasePath": "_content/REstatePresentation",
   "Mode": "Default",
@@ -34034,12 +34034,12 @@
       "OriginalItemSpec": "wwwroot\\templateuser\\slick\\slick-theme.scss"
     },
     {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\24e5bf90-cbae-4ec4-ad39-f1d0375c606d_gallery-img-01.jpg",
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\1592ee25-ae9b-4e46-8af9-efab3b43f0d2_Picture10.png",
       "SourceId": "REstatePresentation",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
       "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/24e5bf90-cbae-4ec4-ad39-f1d0375c606d_gallery-img-01.jpg",
+      "RelativePath": "uploads/1592ee25-ae9b-4e46-8af9-efab3b43f0d2_Picture10.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -34048,15 +34048,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\24e5bf90-cbae-4ec4-ad39-f1d0375c606d_gallery-img-01.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\1592ee25-ae9b-4e46-8af9-efab3b43f0d2_Picture10.png"
     },
     {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\51a15d34-8b4d-42c1-8f3e-af17626c6a27_gallery-img-04.jpg",
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\74b7ef1f-ab71-462e-8388-bf9de65c4cc7_Picture8.png",
       "SourceId": "REstatePresentation",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
       "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/51a15d34-8b4d-42c1-8f3e-af17626c6a27_gallery-img-04.jpg",
+      "RelativePath": "uploads/74b7ef1f-ab71-462e-8388-bf9de65c4cc7_Picture8.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -34065,15 +34065,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\51a15d34-8b4d-42c1-8f3e-af17626c6a27_gallery-img-04.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\74b7ef1f-ab71-462e-8388-bf9de65c4cc7_Picture8.png"
     },
     {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\cb0151ec-46ea-491f-9c5b-75dc66d0281b_gallery-tn-01.jpg",
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\c1c9d9a2-c53e-4e49-8575-a428602a7f68_Picture9.png",
       "SourceId": "REstatePresentation",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
       "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/cb0151ec-46ea-491f-9c5b-75dc66d0281b_gallery-tn-01.jpg",
+      "RelativePath": "uploads/c1c9d9a2-c53e-4e49-8575-a428602a7f68_Picture9.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -34082,24 +34082,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\cb0151ec-46ea-491f-9c5b-75dc66d0281b_gallery-tn-01.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\dc36ca8d-30ca-4435-b2cc-05a3009d246d_gallery-img-03.jpg",
-      "SourceId": "REstatePresentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
-      "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/dc36ca8d-30ca-4435-b2cc-05a3009d246d_gallery-img-03.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\dc36ca8d-30ca-4435-b2cc-05a3009d246d_gallery-img-03.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\c1c9d9a2-c53e-4e49-8575-a428602a7f68_Picture9.png"
     }
   ]
 }

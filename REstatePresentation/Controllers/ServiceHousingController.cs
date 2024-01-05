@@ -3,10 +3,15 @@ using BusinessLayer.Concrete;
 using DataAccessLayer.Concrete.EntityFramework;
 using DataAccessLayer.Contexts;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting.Internal;
 using REstatePresentation.Models;
 using System.ComponentModel;
+using System.Linq;
+using System.IO;
+
 
 namespace REstatePresentation.Controllers
 {
@@ -38,6 +43,8 @@ namespace REstatePresentation.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
+
+
         public IActionResult Index()
         {
             return View(_context.ServiceHousings.Include(c => c.ServiceInfo).Include(c => c.ServicePhotos).Include(c => c.ServiceMap).ToList());
@@ -54,8 +61,9 @@ namespace REstatePresentation.Controllers
             if (model.Photos == null || !model.Photos.Any())
             {
                 ModelState.AddModelError("Photos", "En az bir fotoğraf seçmelisiniz.");
-                return View(model); // Hata durumunda aynı view'i tekrar göster
+                return View(model);
             }
+
             _serviceMapService.Insert(model.ServiceMap);
 
             newServiceInfo = new ServiceInfo
@@ -68,6 +76,7 @@ namespace REstatePresentation.Controllers
             model.ServiceHousing.ServiceMapId = model.ServiceMap.ServiceMapID;
             model.ServiceHousing.ServiceInfoId = newServiceInfo.ServiceInfoID;
             model.ServiceHousing.Status = true;
+
             _serviceHousingService.Insert(model.ServiceHousing);
 
             var photoPaths = new List<string>();
@@ -92,6 +101,9 @@ namespace REstatePresentation.Controllers
                     photoPaths.Add("/uploads/" + uniqueFileName);
                 }
             }
+            var firstPhoto = photoPaths[0];
+            model.ServiceHousing.Gorsel = firstPhoto;
+            _serviceHousingService.Update(model.ServiceHousing);
             return RedirectToAction("Index");
         }
 
@@ -113,7 +125,6 @@ namespace REstatePresentation.Controllers
                 return View("ConcurrencyError");
             }
 
-            // Fotoğraf yollarını ve dosyalarını silelim
             foreach (var photo in servicePhotos)
             {
                 var photoPath = Path.Combine(_webHostEnvironment.WebRootPath, "uploads", photo.FotografYolu);
@@ -150,13 +161,13 @@ namespace REstatePresentation.Controllers
             var servicePhotos = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
             var photoPaths = servicePhotos.Select(photo => photo.FotografYolu).ToList();
 
-
             var model = new ServiceHousingAddViewModel
             {
                 ServiceHousing = serviceHousing,
                 ServiceMap = serviceMap,
                 ServiceInfo = serviceInfo,
-                PhotoPaths = photoPaths
+                PhotoPaths = photoPaths,
+                GorselYolu = serviceHousing.Gorsel
             };
 
             return View(model);
@@ -186,18 +197,6 @@ namespace REstatePresentation.Controllers
             model.ServiceHousing.ServiceInfoId = existingServiceInfo.ServiceInfoID;
             _serviceHousingService.Update(model.ServiceHousing);
 
-            // Fotografları güncelleme
-            var photoPaths = model.PhotoPaths;
-            for (int i = 0; i < photoPaths.Count; i++)
-            {
-                var servicePhoto = new ServicePhoto
-                {
-                    FotografYolu = photoPaths[i],
-                    ServiceTerrainId = model.ServiceHousing.ServiceHousingID
-                };
-
-                _servicePhotoService.Update(servicePhoto);
-            }
             return RedirectToAction("Index");
         }
 

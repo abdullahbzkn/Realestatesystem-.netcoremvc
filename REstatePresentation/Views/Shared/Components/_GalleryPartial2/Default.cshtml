@@ -3,10 +3,10 @@
 
                 @foreach (var item in Model)
                 {
-                     var firstPhoto = item.ServicePhotos.FirstOrDefault();
+                  
                     <a href="~/templateuser/img/gallery-img-01.jpg">
                         <figure class="effect-honey tm-gallery-item">
-                              <img src="@firstPhoto?.FotografYolu" alt="Image 1" class="img-fluid">
+                         <img src="@Url.Content(item.Gorsel)" alt="Image 1" class="img-fluid">
                             <figcaption>
                                 <h2><i>@item.Baslik<br />@item.Fiyat</i></h2>
                             </figcaption>

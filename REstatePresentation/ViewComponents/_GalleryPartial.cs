@@ -17,9 +17,7 @@ namespace REstatePresentation.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-        //    var values = _serviceHousingService.GetListAll();
-        //    return View(values); hepsini listeler
          return View(_context.ServiceHousings.Include(c => c.ServiceInfo).Include(c => c.ServicePhotos).Include(c => c.ServiceMap).Where(r => r.Status == true).ToList());
         }
-}
+    }
 }

@@ -5,16 +5,11 @@
 }
 <div class="container-fluid">
     <h1 class="h3 mb-2 text-gray-800">Yeni Konut İlan Girişi</h1>
-            <form method="post">
-        <div class="form-group" enctype="multipart/form-data" >
+        <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
                     @Html.Label("Başlık")
                     <span asp-validation-for="ServiceHousing.Baslik" class="text-danger"></span>
                     <input type="text" asp-for="ServiceHousing.Baslik" class="form-control" />
-                </div><br />
-                <div class="form-group">
-                    @Html.Label("Fotograf Yolu")
-                    <span asp-validation-for="ServiceHousing.Gorsel" class="text-danger"></span>
-                    <input type="text" asp-for="ServiceHousing.Gorsel" class="form-control" />
                 </div><br />
                 <div class="form-group">
                     @Html.Label("Fiyat")
@@ -153,7 +148,7 @@
                     <input type="text" asp-for="ServiceMap.Il" class="form-control" />
                 </div>
                 <div class="form-group">
-                    @Html.Label("Fotograflar")
+                    @Html.Label("Fotograf Yolu")
                     <input type="file" asp-for="Photos" class="form-control" multiple />
                 </div><br />
 

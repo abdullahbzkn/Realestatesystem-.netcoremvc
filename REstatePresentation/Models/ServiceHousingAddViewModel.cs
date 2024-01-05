@@ -12,6 +12,8 @@ namespace REstatePresentation.Models
         public ServiceInfo ServiceInfo { get; set; }
         [NotMapped]
         public List<IFormFile> Photos { get; set; }
+        public FormFile Gorsel { get; set; }
+        public string GorselYolu { get; set; }
         public List<string> PhotoPaths { get; set; }
     }
 }
