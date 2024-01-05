@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadPartial")
+
+<body>
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+
+        <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
+            <div class="container">
+                <div class="tm-next">
+                    <a href="#infinite" class="navbar-brand">
+                        <img src="~/templateadmin/img/Buzkan gayrimenkul.png" alt="Buzkan Emlak Logo" class="logo-img">
+                        Buzkan Emlak
+                    </a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars navbar-toggler-icon"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="#infinite">Ana Sayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="#whatwedo">Ne yapıyoruz ?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="#testimonials">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="#gallery">İlanlar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="#contact">İletişim</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        @await Component.InvokeAsync("_EntrancePartial")
+
+        <div class="tm-next tm-intro-next">
+            <a href="#gallery" class="text-center tm-down-arrow-link">
+                <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+            </a>
+        </div>
+    </section>
+
+
+    <section id="gallery" class="tm-section-pad-top">
+        <div class="container tm-container-gallery">
+
+            @await Component.InvokeAsync("_GalleryDescriptionPartial")
+
+            @RenderBody()
+
+        </div>
+    </section>
+
+    <section id="testimonials" class="tm-section-pad-top tm-parallax-2">
+        <div class="container tm-testimonials-content">
+            <div class="row">
+                <div class="col-lg-12 tm-content-box">
+                    <h2 class="text-white text-center mb-4 tm-section-title">Hakkımızda</h2>
+
+                    @await Component.InvokeAsync("_AboutUsPartial")
+
+                    @await Component.InvokeAsync("_TeamPartial")
+
+                </div>
+            </div>
+        </div>
+        <div class="tm-bg-overlay"></div>
+    </section>
+
+    @await Html.PartialAsync("/Views/Default/ScriptPartial.cshtml")
+</body>
+</html>
