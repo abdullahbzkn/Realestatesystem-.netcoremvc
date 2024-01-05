@@ -6,17 +6,18 @@
 
 <div class="container-fluid">
     <h1 class="h3 mb-2 text-gray-800">Yeni Arsa İlan Girişi</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <div class="form-group">
             @Html.Label("Başlık")
             <span asp-validation-for="ServiceTerrain.Baslik" class="text-danger"></span>
             <input type="text" asp-for="ServiceTerrain.Baslik" class="form-control" />
         </div><br />
+@* 
         <div class="form-group">
-            @Html.Label("Fotograf Yolu")
-            <span asp-validation-for="ServiceTerrain.Gorsel" class="text-danger"></span>
-            <input type="text" asp-for="ServiceTerrain.Gorsel" class="form-control" />
+            @Html.Label("Fotograf Kapak")
+            <input type="file" asp-for="Gorsel" class="form-control" />
         </div><br />
+ *@
         <div class="form-group">
             @Html.Label("Fiyat")
             <span asp-validation-for="ServiceTerrain.Fiyat" class="text-danger"></span>
@@ -135,15 +136,10 @@
         </div>
 
         <div class="form-group">
-            @Html.Label("FotografYolu")
-            <input type="text" asp-for="ServicePhoto.FotografYolu" class="form-control" />
-        </div>
+            @Html.Label("Fotograf Yolu")
+            <input type="file" asp-for="Photos" class="form-control" multiple />
+        </div><br />
 
-        <div class="form-group">
-            @Html.Label("Fotoğraf")
-            <input type="file" name="ServicePhoto.FotografYolu" multiple />
-        </div>
-
-        <button class="btn btn-outline-info">Değişiklikleri Kaydet</button>
+        <button class="btn btn-outline-info">Kaydet</button>
     </form>
 </div>

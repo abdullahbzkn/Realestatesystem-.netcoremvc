@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <h1 class="h3 mb-2 text-gray-800">Yeni Konut İlan Girişi</h1>
             <form method="post">
-                <div class="form-group">
+        <div class="form-group" enctype="multipart/form-data" >
                     @Html.Label("Başlık")
                     <span asp-validation-for="ServiceHousing.Baslik" class="text-danger"></span>
                     <input type="text" asp-for="ServiceHousing.Baslik" class="form-control" />
@@ -134,14 +134,7 @@
                         <option value="True" >Evet</option>
                         <option value="False">Hayır</option>
                     </select>
-                </div><br />@*  <div class="form-group">
-                    @Html.Label("Status")
-                    <select asp-for="ServiceHousing.Status" class="form-control">
-                        <option value="">-- Select --</option>
-                        <option value="True">Aktif</option>
-                        <option value="False">Pasif</option>
-                    </select>
-                </div><br /> *@
+                </div><br />
 
                 <div class="form-group">
                     @Html.Label("Mahalle")
@@ -159,24 +152,10 @@
                     @Html.Label("Il")
                     <input type="text" asp-for="ServiceMap.Il" class="form-control" />
                 </div>
-         @*        <div class="form-group">
-                    @Html.Label("EklenmeTarihi")
-                    <input type="datetime" asp-for="ServiceInfo.EklenmeTarihi" />
-                </div>
                 <div class="form-group">
-                    @Html.Label("GuncellenmeTarihi")
-                    <input type="datetime" asp-for="ServiceInfo.GuncellenmeTarihi" />
-                </div> *@
-
-                <div class="form-group">
-                    @Html.Label("FotografYolu")
-                    <input type="text" asp-for="ServicePhoto.FotografYolu" class="form-control" />
-                </div>
-
-                   <div class="form-group">
-                @Html.Label("Fotoğraf")
-                <input type="file" name="ServicePhoto.FotografYolu" multiple />
-                </div>
+                    @Html.Label("Fotograflar")
+                    <input type="file" asp-for="Photos" class="form-control" multiple />
+                </div><br />
 
                 <button class="btn btn-outline-info">Kaydet</button>
             </form>

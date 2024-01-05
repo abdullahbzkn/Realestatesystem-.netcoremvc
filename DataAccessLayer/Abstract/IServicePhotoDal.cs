@@ -9,7 +9,7 @@ namespace DataAccessLayer.Abstract
 {
     public interface IServicePhotoDal : IGenericDal<ServicePhoto>
     {
-        ServicePhoto GetByServiceHousingId(int serviceHousingId);
-        ServicePhoto GetByServiceTerrainId(int serviceTerrainId);
+        List<ServicePhoto> GetByServiceHousingId(int serviceHousingId);
+        List<ServicePhoto> GetByServiceTerrainId(int serviceTerrainId);
     }
 }

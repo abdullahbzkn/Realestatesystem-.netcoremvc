@@ -9,8 +9,8 @@ namespace BusinessLayer.Abstract
 {
     public interface IServicePhotoService : IGenericService<ServicePhoto>
     {
-        ServicePhoto GetByServiceHousingId(int serviceHousingId);
-        ServicePhoto GetByServiceTerrainId(int serviceTerrainId);
+        List<ServicePhoto> GetByServiceHousingId(int serviceHousingId);
+        List<ServicePhoto> GetByServiceTerrainId(int serviceTerrainId);
 
     }
 }

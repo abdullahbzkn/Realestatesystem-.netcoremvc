@@ -8001,6 +8001,22 @@
       "PackagePath": "staticwebassets\\templateuser\\slick\\slick.scss"
     },
     {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\24e5bf90-cbae-4ec4-ad39-f1d0375c606d_gallery-img-01.jpg",
+      "PackagePath": "staticwebassets\\uploads\\24e5bf90-cbae-4ec4-ad39-f1d0375c606d_gallery-img-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\51a15d34-8b4d-42c1-8f3e-af17626c6a27_gallery-img-04.jpg",
+      "PackagePath": "staticwebassets\\uploads\\51a15d34-8b4d-42c1-8f3e-af17626c6a27_gallery-img-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\cb0151ec-46ea-491f-9c5b-75dc66d0281b_gallery-tn-01.jpg",
+      "PackagePath": "staticwebassets\\uploads\\cb0151ec-46ea-491f-9c5b-75dc66d0281b_gallery-tn-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\dc36ca8d-30ca-4435-b2cc-05a3009d246d_gallery-img-03.jpg",
+      "PackagePath": "staticwebassets\\uploads\\dc36ca8d-30ca-4435-b2cc-05a3009d246d_gallery-img-03.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.REstatePresentation.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -12,19 +12,19 @@ namespace DataAccessLayer.Concrete.EntityFramework
 {
     public class EfServicePhotoDal : GenericRepository<ServicePhoto>, IServicePhotoDal
     {
-        public ServicePhoto GetByServiceHousingId(int serviceHousingId)
+        public List<ServicePhoto> GetByServiceHousingId(int serviceHousingId)
         {
             using (var context = new REstateContext())
             {
-                return context.ServicePhotos.FirstOrDefault(x => x.ServiceHousingId == serviceHousingId);
+                return context.ServicePhotos.Where(x => x.ServiceHousingId == serviceHousingId).ToList();
             }
         }
 
-        public ServicePhoto GetByServiceTerrainId(int serviceTerrainId)
+        public List<ServicePhoto> GetByServiceTerrainId(int serviceTerrainId)
         {
             using (var context = new REstateContext())
             {
-                return context.ServicePhotos.FirstOrDefault(x => x.ServiceHousingId == serviceTerrainId);
+                return context.ServicePhotos.Where(x => x.ServiceTerrainId == serviceTerrainId).ToList();
             }
         }
 

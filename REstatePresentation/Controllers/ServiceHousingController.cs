@@ -18,13 +18,16 @@ namespace REstatePresentation.Controllers
         private readonly IServicePhotoService _servicePhotoService;
         private readonly REstateContext _context;
         private ServiceInfo newServiceInfo;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
 
         public ServiceHousingController(
             IServiceMapService serviceMapService,
             IServiceInfoService serviceInfoService,
             IServiceHousingService serviceHousingService,
             IServicePhotoService servicePhotoService,
-            REstateContext rEstateContext
+            REstateContext rEstateContext,
+            IWebHostEnvironment webHostEnvironment
             )
         {
             _serviceMapService = serviceMapService;
@@ -32,38 +35,8 @@ namespace REstatePresentation.Controllers
             _serviceHousingService = serviceHousingService;
             _servicePhotoService = servicePhotoService;
             _context = rEstateContext;
+            _webHostEnvironment = webHostEnvironment;
         }
-
-        //public IActionResult Index()
-        //{
-        //    var serviceHousingList = _serviceHousingService.GetListAll();
-        //    var serviceTerrainList = _serviceTerrainService.GetListAll();
-        //    var viewModelList = new List<ServiceHousingAddViewModel>();
-
-        //    foreach (var serviceHousing in serviceHousingList)
-        //    {
-        //        var viewModel = new ServiceHousingAddViewModel
-        //        {
-        //            ServiceHousing = serviceHousing,
-        //            // You may need to populate ServiceInfo property based on your application logic
-        //            // ServiceInfo = PopulateServiceInfo(serviceHousing),
-        //        };
-
-        //        viewModelList.Add(viewModel);
-        //    }
-        //    foreach (var serviceTerrain in serviceTerrainList)
-        //    {
-        //        var viewModel2 = new ServiceHousingAddViewModel
-        //        {
-        //            ServiceTerrain = serviceTerrain,
-        //            // ServiceInfo = PopulateServiceInfo(serviceTerrain),
-        //        };
-
-        //        viewModelList.Add(viewModel2);
-        //    }
-
-        //    return View(viewModelList);
-        //}
 
         public IActionResult Index()
         {
@@ -78,6 +51,11 @@ namespace REstatePresentation.Controllers
         [HttpPost]
         public IActionResult AddServiceHousing(ServiceHousingAddViewModel model)
         {
+            if (model.Photos == null || !model.Photos.Any())
+            {
+                ModelState.AddModelError("Photos", "En az bir fotoğraf seçmelisiniz.");
+                return View(model); // Hata durumunda aynı view'i tekrar göster
+            }
             _serviceMapService.Insert(model.ServiceMap);
 
             newServiceInfo = new ServiceInfo
@@ -87,81 +65,42 @@ namespace REstatePresentation.Controllers
             };
 
             _serviceInfoService.Insert(newServiceInfo);
-
             model.ServiceHousing.ServiceMapId = model.ServiceMap.ServiceMapID;
             model.ServiceHousing.ServiceInfoId = newServiceInfo.ServiceInfoID;
             model.ServiceHousing.Status = true;
             _serviceHousingService.Insert(model.ServiceHousing);
-            model.ServicePhoto.ServiceHousingId = model.ServiceHousing.ServiceHousingID;
-            //model.ServicePhoto.ServiceTerrainId = model.ServiceHousing.ServiceTerrainID;
 
-            //foreach (var file in model.FotoğrafYolu) buraya geri dönüş yapılacak
-            //{
-            //    // Dosyayı bir yere kaydet, örneğin sunucu klasörüne
-            //    var filePath = Path.Combine("wwwroot/images", file.FileName);
-            //    using (var stream = new FileStream(filePath, FileMode.Create))
-            //    {
-            //        file.CopyTo(stream);
-            //    }
+            var photoPaths = new List<string>();
 
-            //    // Dosyanın yolu veya başka işlemleri veritabanına kaydet
-            //    // ...
-            //}
+            foreach (var photo in model.Photos)
+            {
+                if (photo.Length > 0)
+                {
+                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+                    var uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(photo.FileName);
+                    uniqueFileName = uniqueFileName.Replace(" ", "_");
+                    uniqueFileName = Uri.EscapeDataString(uniqueFileName);
+                    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                    photo.CopyTo(new FileStream(filePath, FileMode.Create));
+                    var servicePhoto = new ServicePhoto
+                    {
+                        FotografYolu = "/uploads/" + uniqueFileName,
+                        ServiceHousingId = model.ServiceHousing.ServiceHousingID
+                    };
 
-
-            _servicePhotoService.Insert(model.ServicePhoto);
-
+                    _servicePhotoService.Insert(servicePhoto);
+                    photoPaths.Add("/uploads/" + uniqueFileName);
+                }
+            }
             return RedirectToAction("Index");
         }
-
-        //public IActionResult DeleteServiceHousing(int id)
-        //{
-        //    var serviceHousing = _serviceHousingService.GetById(id);
-        //    var serviceMap = _serviceMapService.GetById(serviceHousing.ServiceMapId ?? 0);
-        //    var serviceInfo = _serviceInfoService.GetById(serviceHousing.ServiceInfoId ?? 0);
-        //    var servicePhoto = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
-
-        //    _serviceHousingService.Delete(serviceHousing);
-        //    _serviceMapService.Delete(serviceMap);
-        //    _serviceInfoService.Delete(serviceInfo);
-        //    _servicePhotoService.Delete(servicePhoto);
-
-        //    //var serviceHousingToDelete = _context.ServiceHousings
-        //    //.Include(sh => sh.ServicePhotos)
-        //    //.Include(sh => sh.ServiceMap)
-        //    //.Include(sh => sh.ServiceInfo)
-        //    //.FirstOrDefault(sh => sh.ServiceHousingID == id);
-        //    //if (serviceHousingToDelete != null)
-        //    //{
-        //    //    // ServiceHousing'a bağlı diğer verileri sil
-        //    //    _context.ServicePhotos.RemoveRange(serviceHousingToDelete.ServicePhotos);
-        //    //    _context.ServiceMaps.Remove(serviceHousingToDelete.ServiceMap);
-        //    //    _context.ServiceInfos.Remove(serviceHousingToDelete.ServiceInfo);
-
-        //    //    foreach (var servicePhoto in serviceHousingToDelete.ServicePhotos)
-        //    //    {
-        //    //        servicePhoto.ServiceHousing = null;
-        //    //    }
-        //    //    serviceHousingToDelete.ServiceMap = null;
-        //    //    serviceHousingToDelete.ServiceInfo = null;
-
-        //    //    // ServiceHousing'ı sil
-        //    //    _context.ServiceHousings.Remove(serviceHousingToDelete);
-
-        //    //    // Değişiklikleri kaydet
-        //    //    _context.SaveChanges();
-        //    //}
-
-
-        //    return RedirectToAction("Index");
-        //}
 
         public IActionResult DeleteServiceHousing(int id)
         {
             var serviceHousing = _serviceHousingService.GetById(id);
             var serviceMap = _serviceMapService.GetById(serviceHousing.ServiceMapId ?? 0);
             var serviceInfo = _serviceInfoService.GetById(serviceHousing.ServiceInfoId ?? 0);
-            var servicePhoto = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
+            var servicePhotos = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
             if (serviceHousing == null)
             {
                 return NotFound();
@@ -172,6 +111,19 @@ namespace REstatePresentation.Controllers
             if (existingServiceHousing != null && (existingServiceInfo.EklenmeTarihi != serviceInfo.EklenmeTarihi || existingServiceInfo.GuncellenmeTarihi != serviceInfo.GuncellenmeTarihi))
             {
                 return View("ConcurrencyError");
+            }
+
+            // Fotoğraf yollarını ve dosyalarını silelim
+            foreach (var photo in servicePhotos)
+            {
+                var photoPath = Path.Combine(_webHostEnvironment.WebRootPath, "uploads", photo.FotografYolu);
+
+                if (System.IO.File.Exists(photoPath))
+                {
+                    System.IO.File.Delete(photoPath);
+                }
+
+                _servicePhotoService.Delete(photo);
             }
 
             _serviceHousingService.Delete(serviceHousing);
@@ -185,10 +137,7 @@ namespace REstatePresentation.Controllers
             {
                 _serviceInfoService.Delete(serviceInfo);
             }
-            //if (servicePhoto != null)  photo zaten siliniyor
-            //{
-            //    _servicePhotoService.Delete(servicePhoto);
-            //}
+
             return RedirectToAction("Index");
         }
 
@@ -198,14 +147,16 @@ namespace REstatePresentation.Controllers
             var serviceHousing = _serviceHousingService.GetById(id);
             var serviceMap = _serviceMapService.GetById(serviceHousing.ServiceMapId ?? 0);
             var serviceInfo = _serviceInfoService.GetById(serviceHousing.ServiceInfoId ?? 0);
-            var servicePhoto = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
+            var servicePhotos = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
+            var photoPaths = servicePhotos.Select(photo => photo.FotografYolu).ToList();
+
 
             var model = new ServiceHousingAddViewModel
             {
                 ServiceHousing = serviceHousing,
                 ServiceMap = serviceMap,
                 ServiceInfo = serviceInfo,
-                ServicePhoto = servicePhoto
+                PhotoPaths = photoPaths
             };
 
             return View(model);
@@ -235,9 +186,18 @@ namespace REstatePresentation.Controllers
             model.ServiceHousing.ServiceInfoId = existingServiceInfo.ServiceInfoID;
             _serviceHousingService.Update(model.ServiceHousing);
 
-            model.ServicePhoto.ServiceHousingId = model.ServiceHousing.ServiceHousingID;
-            _servicePhotoService.Update(model.ServicePhoto);
+            // Fotografları güncelleme
+            var photoPaths = model.PhotoPaths;
+            for (int i = 0; i < photoPaths.Count; i++)
+            {
+                var servicePhoto = new ServicePhoto
+                {
+                    FotografYolu = photoPaths[i],
+                    ServiceTerrainId = model.ServiceHousing.ServiceHousingID
+                };
 
+                _servicePhotoService.Update(servicePhoto);
+            }
             return RedirectToAction("Index");
         }
 

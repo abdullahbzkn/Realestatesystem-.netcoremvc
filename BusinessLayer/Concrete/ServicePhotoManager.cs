@@ -77,12 +77,12 @@ namespace BusinessLayer.Concrete
         //}
 
 
-        public ServicePhoto GetByServiceHousingId(int serviceHousingId)
+        public List<ServicePhoto> GetByServiceHousingId(int serviceHousingId)
         {
-            return _servicePhotoDal.GetByServiceHousingId(serviceHousingId);
+            return _servicePhotoDal.GetByServiceTerrainId(serviceHousingId);
         }
 
-        public ServicePhoto GetByServiceTerrainId(int serviceTerrainId)
+        public List<ServicePhoto> GetByServiceTerrainId(int serviceTerrainId)
         {
             return _servicePhotoDal.GetByServiceTerrainId(serviceTerrainId);
         }

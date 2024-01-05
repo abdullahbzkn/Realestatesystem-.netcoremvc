@@ -4,48 +4,6 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-@* <div class="container-fluid">
-    <h1 class="h3 mb-2 text-gray-800">Yeni Konut Ilan Listesi</h1>
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <table class="table table-bordered">
-                <tr>
-                    <th>#</th>
-                    <th>Başlık</th>
-                    <th>Fiyat</th>
-                    <th>Status</th>
-                    <th>Sil</th>
-                    <th>Düzenle</th>
-                </tr>
-                @foreach (var item in Model)
-                {
-                <tr>
-                    <td>@item.ServiceHousingID</td>
-                    <td>@item.Baslik</td>
-                    <td>@item.Fiyat</td>
-                    <td>@item.Status</td>
-
-                        <td>
-                            <a href="/ServiceHousing/DeleteServiceHousing/@item.ServiceHousingID" class="btn btn-danger btn-circle">
-                                <i class="fas fa-trash"></i>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="/ServiceHousing/EditServiceHousing/@item.ServiceHousingID" class="btn btn-info btn-circle">
-                            <i class="fas fa-info-circle"></i>
-                        </a>
-                        </td>
-                      <td><a href="/ServiceHousing/DeleteServiceHousing/@item.ServiceHousingID" class="btn btn-outline-danger">Sil</a></td> 
-                      <td><a href="/ServiceHousing/EditServiceHousing/@item.ServiceHousingID" class="btn btn-outline-warning">Düzenle</a></td> 
-                </tr>
-                }
-            </table>
-            <a href="/ServiceHousing/AddServiceHousing/" class="btn btn-outline-info">Yeni Ilan Girişi</a>
-            </div>
-    </div>
-</div> *@
-
-
 <div class="container-fluid">
 
     <h1 class="h3 mb-2 text-gray-800">Konut lan Listesi</h1>
@@ -108,8 +66,6 @@
                                         <i class="fas fa-check"></i>
                                     </a>
                                 </td>
-                                 @*  <td><a href="/ServiceHousing/DeleteServiceHousing/@item.ServiceHousingID" class="btn btn-outline-danger">Sil</a></td>
-                                  <td><a href="/ServiceHousing/EditServiceHousing/@item.ServiceHousingID" class="btn btn-outline-warning">Düzenle</a></td>  *@
                             </tr>
                         }
                     </tbody>

@@ -12,7 +12,7 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int ServicePhotoID { get; set; }
-        public string FotografYolu { get; set; }
+        public string? FotografYolu { get; set; }
 
         public int? ServiceHousingId { get; set; }
         public virtual ServiceHousing ServiceHousing { get; set; }
