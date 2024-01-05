@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5CD8cuanHXZnI8xCvZUc6dC1neeclcKf3Sq/Kri48Gc=",
+  "Hash": "NjlfEBLeQZ+7xWaU23EpyabBb6IGbsqunZ+ih3prkMc=",
   "Source": "REstatePresentation",
   "BasePath": "_content/REstatePresentation",
   "Mode": "Default",
@@ -34168,6 +34168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\93bb013c-ad24-4b97-859b-b669d443928c_Picture5.png"
+    },
+    {
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\9db25a17-77ad-44f4-8838-4759411bf2b2_01.jpg",
+      "SourceId": "REstatePresentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
+      "BasePath": "_content/REstatePresentation",
+      "RelativePath": "uploads/9db25a17-77ad-44f4-8838-4759411bf2b2_01.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\9db25a17-77ad-44f4-8838-4759411bf2b2_01.jpg"
     },
     {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\a3e4fd72-d4cd-42cd-8aae-9b07e42c990f_Picture9.png",

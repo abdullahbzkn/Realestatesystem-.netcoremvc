@@ -1,19 +1,18 @@
-﻿@using EntityLayer.Concrete
+﻿﻿@using EntityLayer.Concrete
 @model List<ServiceTerrain>
 
                 @foreach (var item in Model)
                 {
-                  
-                    <a href="~/templateuser/img/gallery-img-01.jpg">
-                        <figure class="effect-honey tm-gallery-item">
-                         <img src="@Url.Content(item.Gorsel)" alt="Image 1" class="img-fluid">
+                   <a href="javascript:void(0);" onclick="window.location='/Default/ServiceTerrainDetails/'+@item.ServiceTerrainID">
+                          <figure class="effect-honey tm-gallery-item">
+                            <img src="@Url.Content(item.Gorsel)" alt="Image 1" class="img-fluid">
                             <figcaption>
                                 <h2><i>@item.Baslik<br />@item.Fiyat</i></h2>
                             </figcaption>
                         </figure>
                     </a>
                 }
-            </div>
+               </div>
         </div>
     </div>
 </div>

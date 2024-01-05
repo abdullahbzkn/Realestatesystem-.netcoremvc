@@ -1,6 +1,124 @@
-﻿
+﻿@model REstatePresentation.Models.ServiceHousingAddViewModel
+
 @{
     ViewData["Title"] = "ServiceHousingDetails";
     Layout = "~/Views/Shared/_IlanLayout.cshtml";
 }
 
+
+
+<div class="row">
+    <div class="text-center col-12">
+        <h3 class="tm-text-primary tm-section-title mb-4">@Model.ServiceHousing.Baslik</h3>
+        <p class="mx-auto">
+            @Model.ServiceHousing.UzunAciklama
+        </p>
+    </div>
+</div>
+
+
+<section id="gallery" class="tm-section-pad-top">
+    <div class="container tm-container-gallery">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="mx-auto tm-gallery-container">
+                    <div class="grid tm-gallery">
+
+                        @foreach (var item in Model.PhotoPaths)
+                        {
+                            <a href="@Url.Content(item)">
+                                <figure class="effect-honey tm-gallery-item" >
+                                    <img src="@Url.Content(item)" alt="Image 1" class="img-fluid">
+                                </figure>
+                            </a>
+                        }
+                     </div>
+                 </div>
+             </div>
+         </div>
+    </div>
+</section>
+
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    .ilan-detay {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #007bff;
+    }
+
+    .detaylar {
+        margin-top: 20px;
+    }
+
+        .detaylar p {
+            margin-bottom: 10px;
+        }
+</style>
+
+<div class="container">
+    <div class="ilan-detay">
+        <h1 class="h3 mb-2 text-primary">İlan Detayları</h1>
+
+        <div class="detaylar">
+            <p><strong>Fiyat:</strong> @string.Format("{0:N0}", Model.ServiceHousing.Fiyat)</p>
+            <p><strong>Tapu Durumu:</strong> @(Model.ServiceHousing.TapuDurumu ?? "Bilgi Yok")</p>
+            <p><strong>Yapının Durumu:</strong> @(Model.ServiceHousing.YapininDurumu ?? "Bilgi Yok")</p>
+            <p><strong>Isıtma:</strong> @(Model.ServiceHousing.Isitma ?? "Bilgi Yok")</p>
+            <p><strong>Bina Kat Sayısı:</strong> @(Model.ServiceHousing.BinaKatSayisi.HasValue ? Model.ServiceHousing.BinaKatSayisi.ToString() : "Bilgi Yok")</p>
+            <p><strong>Yapının Cephesi:</strong> @(Model.ServiceHousing.YapininCephesi ?? "Bilgi Yok")</p>
+            <p><strong>Yapının Şekli:</strong> @(Model.ServiceHousing.YapininSekli ?? "Bilgi Yok")</p>
+            <p><strong>Tuvalet Sayısı:</strong> @(Model.ServiceHousing.TuvaletSayisi.HasValue ? Model.ServiceHousing.TuvaletSayisi.ToString() : "Bilgi Yok")</p>
+            <p><strong>Balkon Sayısı:</strong> @(Model.ServiceHousing.BalkonSayisi.HasValue ? Model.ServiceHousing.BalkonSayisi.ToString() : "Bilgi Yok")</p>
+            <p><strong>Banyo Sayısı:</strong> @(Model.ServiceHousing.BanyoSayisi.HasValue ? Model.ServiceHousing.BanyoSayisi.ToString() : "Bilgi Yok")</p>
+            <p><strong>Salon Sayısı:</strong> @(Model.ServiceHousing.SalonSayisi.HasValue ? Model.ServiceHousing.SalonSayisi.ToString() : "Bilgi Yok")</p>
+            <p><strong>Oda Sayısı:</strong> @(Model.ServiceHousing.OdaSayisi.HasValue ? Model.ServiceHousing.OdaSayisi.ToString() : "Bilgi Yok")</p>
+            <p><strong>Kira Getirisi:</strong> @(Model.ServiceHousing.KiraGetirisi.HasValue ? Model.ServiceHousing.KiraGetirisi.ToString() : "Bilgi Yok")</p>
+            <p><strong>Kullanım Durumu:</strong> @(Model.ServiceHousing.KullanimDurumu ?? "Bilgi Yok")</p>
+            <p><strong>Yakıt Tipi:</strong> @(Model.ServiceHousing.YakitTipi ?? "Bilgi Yok")</p>
+            <p><strong>Bulunduğu Kat:</strong> @(Model.ServiceHousing.BulunduguKat.HasValue ? Model.ServiceHousing.BulunduguKat.ToString() : "Bilgi Yok")</p>
+            <p><strong>Aidat:</strong> @(Model.ServiceHousing.Aidat.HasValue ? Model.ServiceHousing.Aidat.ToString() + " TL" : "Bilgi Yok")</p>
+            <p><strong>Takas Yapılabilir:</strong> @(Model.ServiceHousing.TakasYapilir.HasValue ? (Model.ServiceHousing.TakasYapilir.Value ? "Evet" : "Hayır") : "Bilgi Yok")</p>
+            <p><strong>Krediye Uygun:</strong> @(Model.ServiceHousing.KrediyeUygun.HasValue ? (Model.ServiceHousing.KrediyeUygun.Value ? "Evet" : "Hayır") : "Bilgi Yok")</p>
+            <p><strong>Devren:</strong> @(Model.ServiceHousing.Devren.HasValue ? (Model.ServiceHousing.Devren.Value ? "Evet" : "Hayır") : "Bilgi Yok")</p
+        </div>
+        <hr>
+        <div class="detaylar">
+            <p><strong>Mahalle:</strong> @Model.ServiceMap.Mahalle</p>
+            <p><strong>Köy:</strong> @Model.ServiceMap.Koy</p>
+            <p><strong>İlçe:</strong> @Model.ServiceMap.Ilce</p>
+            <p><strong>İl:</strong> @Model.ServiceMap.Il</p>
+            <hr />
+            <p><strong>Eklenme Tarihi:</strong> @Model.ServiceInfo.EklenmeTarihi</p>
+            <p><strong>Güncellenme Tarihi:</strong> @Model.ServiceInfo.GuncellenmeTarihi</p>
+        </div>
+    </div>
+</div>
+<style>
+    .full {
+        width: 100%;
+    }
+</style>
+
+<div class="full">
+    <h3>Konum</h3><br />
+    @Html.Raw(Model.ServiceHousing.KonumLink)
+</div>
