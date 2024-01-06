@@ -16,6 +16,7 @@ namespace REstatePresentation.Controllers
         private readonly IServiceMapService _serviceMapService;
         private readonly IServiceInfoService _serviceInfoService;
         private readonly IServiceHousingService _serviceHousingService;
+        private readonly IServiceTerrainService _serviceTerrainService;
         private readonly IServicePhotoService _servicePhotoService;
         private ServiceInfo newServiceInfo;
         private readonly IContactService _contactService;
@@ -25,6 +26,7 @@ namespace REstatePresentation.Controllers
             IServiceMapService serviceMapService,
             IServiceInfoService serviceInfoService,
             IServiceHousingService serviceHousingService,
+            IServiceTerrainService serviceTerrainService,
             IServicePhotoService servicePhotoService,
             IContactService contactService,
             REstateContext context)
@@ -32,6 +34,7 @@ namespace REstatePresentation.Controllers
             _serviceMapService = serviceMapService;
             _serviceInfoService = serviceInfoService;
             _serviceHousingService = serviceHousingService;
+            _serviceTerrainService = serviceTerrainService;
             _servicePhotoService = servicePhotoService;
             _contactService = contactService;
             _context = context;
@@ -77,16 +80,25 @@ namespace REstatePresentation.Controllers
             return View(model);
         }
 
+        public IActionResult ServiceTerrainDetails(int id)
+        {
+            var serviceTerrain = _serviceTerrainService.GetById(id);
+            var serviceMap = _serviceMapService.GetById(serviceTerrain.ServiceMapId ?? 0);
+            var serviceInfo = _serviceInfoService.GetById(serviceTerrain.ServiceInfoId ?? 0);
+            var servicePhotos = _servicePhotoService.GetByServiceTerrainId(serviceTerrain.ServiceTerrainID);
+            var photoPaths = servicePhotos.Select(photo => photo.FotografYolu).ToList();
 
+            var model = new ServiceTerrainAddViewModel
+            {
+                ServiceTerrain = serviceTerrain,
+                ServiceMap = serviceMap,
+                ServiceInfo = serviceInfo,
+                PhotoPaths = photoPaths,
+                GorselYolu = serviceTerrain.Gorsel
+            };
 
-
-
-
-
-
-
-
-
+            return View(model);
+        }
 
         [HttpGet]
         public PartialViewResult SendMessage()

@@ -1,0 +1,119 @@
+﻿@model REstatePresentation.Models.ServiceTerrainAddViewModel
+
+@{
+    ViewData["Title"] = "ServiceTerrainDetails";
+    Layout = "~/Views/Shared/_IlanLayout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="text-center col-12">
+        <h3 class="tm-text-primary tm-section-title mb-4">@Model.ServiceTerrain.Baslik</h3>
+        <p class="mx-auto">
+            @Model.ServiceTerrain.UzunAciklama
+        </p>
+    </div>
+</div>
+
+
+<section id="gallery" class="tm-section-pad-top">
+    <div class="container tm-container-gallery">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="mx-auto tm-gallery-container">
+                    <div class="grid tm-gallery">
+
+                        @foreach (var item in Model.PhotoPaths)
+                        {
+                            <a href="@Url.Content(item)">
+                                <figure class="effect-honey tm-gallery-item" >
+                                    <img src="@Url.Content(item)" alt="Image 1" class="img-fluid">
+                                </figure>
+                            </a>
+                        }
+                     </div>
+                 </div>
+             </div>
+         </div>
+    </div>
+</section>
+
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    .ilan-detay {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #007bff;
+    }
+
+    .detaylar {
+        margin-top: 20px;
+    }
+
+        .detaylar p {
+            margin-bottom: 10px;
+        }
+</style>
+
+<div class="container">
+    <div class="ilan-detay">
+        <h1 class="h3 mb-2 text-primary">İlan Detayları</h1>
+
+        <div class="detaylar">
+            <p><strong>Fiyat:</strong> @string.Format("{0:N0}", Model.ServiceTerrain.Fiyat)</p>
+            <p><strong>Tapu Durumu:</strong> @(Model.ServiceTerrain.TapuDurumu ?? "Bilgi Yok")</p>
+            <p><strong>BelediyeAdi:</strong> @(Model.ServiceTerrain.BelediyeAdi ?? "Bilgi Yok")</p>
+            <p><strong>TapuParsel:</strong> @(Model.ServiceTerrain.TapuParsel.HasValue ? Model.ServiceTerrain.TapuParsel.ToString() : "Bilgi Yok")</p>
+            <p><strong>TapuPafta:</strong> @(Model.ServiceTerrain.TapuPafta.HasValue ? Model.ServiceTerrain.TapuPafta.ToString() : "Bilgi Yok")</p>
+            <p><strong>TapuAda:</strong> @(Model.ServiceTerrain.TapuAda.HasValue ? Model.ServiceTerrain.TapuAda.ToString() : "Bilgi Yok")</p>
+            <p><strong>IzinVerilenKatAdedi:</strong> @(Model.ServiceTerrain.IzinVerilenKatAdedi.HasValue ? Model.ServiceTerrain.IzinVerilenKatAdedi.ToString() : "Bilgi Yok")</p>
+            <p><strong>ToplamInsaatAlani:</strong> @(Model.ServiceTerrain.ToplamInsaatAlani.HasValue ? Model.ServiceTerrain.ToplamInsaatAlani.ToString() : "Bilgi Yok")</p>
+            <p><strong>TabanInsaaAlani:</strong> @(Model.ServiceTerrain.TabanInsaaAlani.HasValue ? Model.ServiceTerrain.TabanInsaaAlani.ToString() : "Bilgi Yok")</p>
+            <p><strong>MaksimumBinaYuksekligi:</strong> @(Model.ServiceTerrain.MaksimumBinaYuksekligi.HasValue ? Model.ServiceTerrain.MaksimumBinaYuksekligi.ToString() : "Bilgi Yok")</p>
+            <p><strong>Takas Yapılabilir:</strong> @(Model.ServiceTerrain.TakasYapilir.HasValue ? (Model.ServiceTerrain.TakasYapilir.Value ? "Evet" : "Hayır") : "Bilgi Yok")</p>
+            <p><strong>Krediye Uygun:</strong> @(Model.ServiceTerrain.KrediyeUygun.HasValue ? (Model.ServiceTerrain.KrediyeUygun.Value ? "Evet" : "Hayır") : "Bilgi Yok")</p>
+            <p><strong>KatKarsiligi:</strong> @(Model.ServiceTerrain.KatKarsiligi.HasValue ? (Model.ServiceTerrain.KatKarsiligi.Value ? "Evet" : "Hayır") : "Bilgi Yok")</p>
+            <p><strong>VadeVarmi:</strong> @(Model.ServiceTerrain.VadeVarmi.HasValue ? (Model.ServiceTerrain.VadeVarmi.Value ? "Evet" : "Hayır") : "Bilgi Yok")</p>
+            <p><strong>IskanDurumu:</strong> @(Model.ServiceTerrain.IskanDurumu.HasValue ? (Model.ServiceTerrain.IskanDurumu.Value ? "Evet" : "Hayır") : "Bilgi Yok")</p>
+        </div>
+        <hr>
+        <div class="detaylar">
+            <p><strong>Mahalle:</strong> @Model.ServiceMap.Mahalle</p>
+            <p><strong>Köy:</strong> @Model.ServiceMap.Koy</p>
+            <p><strong>İlçe:</strong> @Model.ServiceMap.Ilce</p>
+            <p><strong>İl:</strong> @Model.ServiceMap.Il</p>
+            <hr />
+            <p><strong>Eklenme Tarihi:</strong> @Model.ServiceInfo.EklenmeTarihi</p>
+            <p><strong>Güncellenme Tarihi:</strong> @Model.ServiceInfo.GuncellenmeTarihi</p>
+        </div>
+    </div>
+</div>
+<style>
+    .full {
+        width: 100%;
+    }
+</style>
+
+<div class="full">
+    <h3>Konum</h3><br />
+    @Html.Raw(Model.ServiceTerrain.KonumLink)
+</div>

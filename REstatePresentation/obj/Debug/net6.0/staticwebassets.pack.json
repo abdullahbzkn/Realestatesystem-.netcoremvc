@@ -8001,6 +8001,14 @@
       "PackagePath": "staticwebassets\\templateuser\\slick\\slick.scss"
     },
     {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\05a8b6f3-3ae7-4cc6-8ea1-5f2240a6809e_02.jpg",
+      "PackagePath": "staticwebassets\\uploads\\05a8b6f3-3ae7-4cc6-8ea1-5f2240a6809e_02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\06571f58-e00b-4eab-bc49-555a70f3f57d_01.jpg",
+      "PackagePath": "staticwebassets\\uploads\\06571f58-e00b-4eab-bc49-555a70f3f57d_01.jpg"
+    },
+    {
       "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\1bec098b-144a-40eb-aa9f-c2c6f39bae56_Picture3.png",
       "PackagePath": "staticwebassets\\uploads\\1bec098b-144a-40eb-aa9f-c2c6f39bae56_Picture3.png"
     },
@@ -8079,6 +8087,10 @@
     {
       "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\f67f5218-fffb-4abe-b72b-2395e5b6ce77_Picture4.png",
       "PackagePath": "staticwebassets\\uploads\\f67f5218-fffb-4abe-b72b-2395e5b6ce77_Picture4.png"
+    },
+    {
+      "Id": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\ff9a5ac0-eed5-4bc9-9d1b-0b37f5971964_02.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ff9a5ac0-eed5-4bc9-9d1b-0b37f5971964_02.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.REstatePresentation.Microsoft.AspNetCore.StaticWebAssets.props",
