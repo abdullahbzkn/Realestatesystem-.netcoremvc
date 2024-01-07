@@ -1,39 +1,31 @@
-﻿@model EntityLayer.Concrete.Team
+﻿@model REstatePresentation.Models.TeamAddViewModel
 @{
     ViewData["Title"] = "AddTeam";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <div class="container-fluid">
     <h1 class="h3 mb-2 text-gray-800">Yeni Takım Arkadaşı Kaydı</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data" >
         <div class="form-group">
             @Html.Label("Ad Soyad")
-            <span asp-validation-for="KisiAdi" class="text-danger"></span>
-            <input type="text" asp-for="KisiAdi" class="form-control" placeholder="isim ve soyisim giriniz"/>
+@*             <span asp-validation-for="Team.KisiAdi" class="text-danger"></span>
+ *@            <input type="text" asp-for="Team.KisiAdi" class="form-control" placeholder="isim ve soyisim giriniz" />
         </div><br />
         <div class="form-group">
             @Html.Label("Açıklama")
-            <span asp-validation-for="Aciklama" class="text-danger"></span>
-            <input type="text" asp-for="Aciklama" class="form-control" placeholder="açıklama veya departman giriniz" />
+@*             <span asp-validation-for="Team.Aciklama" class="text-danger"></span>
+ *@            <input type="text" asp-for="Team.Aciklama" class="form-control" placeholder="açıklama veya departman giriniz" />
         </div><br />
-     
-        <div class="form-group">
-            @Html.Label("Fotoğraf Yolu")
-            <span asp-validation-for="FotografYolu" class="text-danger"></span>
-            <input type="text" asp-for="FotografYolu" class="form-control" placeholder="fotoğraf dosya yolunu giriniz" />
-        </div><br />
-     
-      @*   <div class="form-group">
-            @Html.Label("FACE OR İNSTA OR MAİL OR X")
-            <input type="text" asp-for="SOSYALMEDYAHESAPALINABİLİRŞİMDİLİKKALSIN" class="form-control" />
+   @*      <div class="form-group">
+            @Html.Label("fotografyolu")
+            <span asp-validation-for="Team.FotografYolu" class="text-danger"></span>
+            <input type="text" asp-for="Team.FotografYolu" class="form-control" placeholder="açıklama veya departman giriniz" />
         </div><br /> *@
-       
-@*         BU DUZENLENİCEK FOTOGRAF BU ŞEKİLDE ALINICAK
- *@       @*  <div class="form-group">
-            @Html.Label("Fotoğraf")
-            <input type="file" name="" multiple />
-        </div>
- *@
+        <div class="form-group">
+            @Html.Label("Gorsel")
+            <input type="file" asp-for="Gorsel" class="form-control"/>
+        </div><br />
+
         <button class="btn btn-outline-info">Ekle</button>
     </form>
 </div>

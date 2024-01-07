@@ -13,7 +13,7 @@ namespace EntityLayer.Concrete
         public int TeamID { get; set; }
         public string KisiAdi { get; set; }
         public string Aciklama { get; set; }
-        public string FotografYolu { get; set; }
+        public string? FotografYolu { get; set; }
 
     }
 }

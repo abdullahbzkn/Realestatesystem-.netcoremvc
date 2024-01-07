@@ -18,11 +18,11 @@ olucak existing... diye modelden çekince null geliyor.
 YAPILACAKLAR
 --------------
 
+fotograf alma (team kısmı için)
+
+uploadsdan silme işlemlerinde fotografların kaldırılması
+
 günlük görüntüleme ekle viewcounter sınıfına grafik ile admin panelde hem günlük hem toplam göster (daha sonra eklenicek)
-
-adminden usera userdan admine geçiş ekle
-
-ilan detay sayfası
 
 Identity tamamlandı giriş çıkış tamamlandı beni hatırla kısmıına bakılabilir.
 
@@ -34,4 +34,4 @@ Rapor Yaz
 
 
 ---------------------
-25.12/05.01
+25.12/06.01
