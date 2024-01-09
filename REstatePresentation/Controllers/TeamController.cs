@@ -93,7 +93,6 @@ namespace REstatePresentation.Controllers
 
 
             var gorselYolu = Path.Combine(_webHostEnvironment.WebRootPath, team.FotografYolu);
-            Console.WriteLine(gorselYolu);
 
             if (System.IO.File.Exists(gorselYolu))
             {
@@ -108,8 +107,15 @@ namespace REstatePresentation.Controllers
         [HttpGet]
         public IActionResult EditTeam(int id)
         {
-            var values = _teamService.GetById(id);
-            return View(values);
+
+            var team = _teamService.GetById(id);
+            var model = new TeamAddViewModel
+            {
+                Team = team,
+                GorselYolu = team.FotografYolu
+            };
+
+            return View(model);
         }
         [HttpPost]
         public IActionResult EditTeam(TeamAddViewModel model)

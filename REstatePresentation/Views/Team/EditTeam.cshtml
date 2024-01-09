@@ -6,22 +6,26 @@
 <div class="container-fluid">
     <h1 class="h3 mb-2 text-gray-800">Takım Arkadaşı Kaydı Düzenleme</h1>
     <form method="post">
-        @Html.HiddenFor(x=>x.TeamID)
+        @Html.HiddenFor(x=>x.Team.TeamID)
         <div class="form-group">
             @Html.Label("Ad Soyad")
-            <span asp-validation-for="KisiAdi" class="text-danger"></span>
-            <input type="text" asp-for="KisiAdi" class="form-control" />
+            <span asp-validation-for="Team.KisiAdi" class="text-danger"></span>
+            <input type="text" asp-for="Team.KisiAdi" class="form-control" />
         </div><br />
         <div class="form-group">
             @Html.Label("Açıklama")
-            <span asp-validation-for="Aciklama" class="text-danger"></span>
-            <input type="text" asp-for="Aciklama" class="form-control" />
+            <span asp-validation-for="Team.Aciklama" class="text-danger"></span>
+            <input type="text" asp-for="Team.Aciklama" class="form-control" />
+        </div><br />
+        <div>
+            <label>Fotoğraf:</label>
+            <div>
+                <input type="text" asp-for="Team.FotografYolu" class="form-control" />
+<br />
+                <img src="@Url.Content(Model.GorselYolu)" alt="Team Photo" class="img-thumbnail" />
+            </div>
         </div><br />
 
-        <div class="form-group">
-            @Html.Label("Fotograf Yolu")
-            <input type="file" asp-for="Gorsel" class="form-control" multiple />
-        </div><br />
         <button class="btn btn-outline-info">Değişiklikleri Kaydet</button>
     </form>
 </div>

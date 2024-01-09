@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0a0o6VWuIfZOW16BtLTCrY8+fgEWXWILhmFCLw/e6vU=",
+  "Hash": "8gCo7yQ6WAriXiTeVTrGPapwGlz4eYt8Ln8a6Eexg8s=",
   "Source": "REstatePresentation",
   "BasePath": "_content/REstatePresentation",
   "Mode": "Default",
@@ -34034,57 +34034,6 @@
       "OriginalItemSpec": "wwwroot\\templateuser\\slick\\slick-theme.scss"
     },
     {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\05a8b6f3-3ae7-4cc6-8ea1-5f2240a6809e_02.jpg",
-      "SourceId": "REstatePresentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
-      "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/05a8b6f3-3ae7-4cc6-8ea1-5f2240a6809e_02.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\05a8b6f3-3ae7-4cc6-8ea1-5f2240a6809e_02.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\06571f58-e00b-4eab-bc49-555a70f3f57d_01.jpg",
-      "SourceId": "REstatePresentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
-      "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/06571f58-e00b-4eab-bc49-555a70f3f57d_01.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\06571f58-e00b-4eab-bc49-555a70f3f57d_01.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\09d9cfc7-232f-434e-8192-9c4dcc03fd4e_indir.jpeg",
-      "SourceId": "REstatePresentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
-      "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/09d9cfc7-232f-434e-8192-9c4dcc03fd4e_indir.jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\09d9cfc7-232f-434e-8192-9c4dcc03fd4e_indir.jpeg"
-    },
-    {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\1bec098b-144a-40eb-aa9f-c2c6f39bae56_Picture3.png",
       "SourceId": "REstatePresentation",
       "SourceType": "Discovered",
@@ -34119,6 +34068,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\1ea28bb9-2e30-4943-b533-7076f67d523f_Picture1.png"
     },
     {
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\20d9334d-2a9d-4e80-af8a-cb5cda418d58_adfsfd.jpg",
+      "SourceId": "REstatePresentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
+      "BasePath": "_content/REstatePresentation",
+      "RelativePath": "uploads/20d9334d-2a9d-4e80-af8a-cb5cda418d58_adfsfd.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\20d9334d-2a9d-4e80-af8a-cb5cda418d58_adfsfd.jpg"
+    },
+    {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\2534f666-11aa-4c0d-9961-3c3393c9d86b_Buzkaan_gayrimenkul.png",
       "SourceId": "REstatePresentation",
       "SourceType": "Discovered",
@@ -34134,6 +34100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\2534f666-11aa-4c0d-9961-3c3393c9d86b_Buzkaan_gayrimenkul.png"
+    },
+    {
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\3c3a3962-a475-472f-83f5-6797b9b4a70e_4656.jpg",
+      "SourceId": "REstatePresentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
+      "BasePath": "_content/REstatePresentation",
+      "RelativePath": "uploads/3c3a3962-a475-472f-83f5-6797b9b4a70e_4656.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\3c3a3962-a475-472f-83f5-6797b9b4a70e_4656.jpg"
     },
     {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\467ede85-28b5-44f8-98cc-1a78f68031ed_Picture2.png",
@@ -34153,6 +34136,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\467ede85-28b5-44f8-98cc-1a78f68031ed_Picture2.png"
     },
     {
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\4b5bfd61-9245-4da8-b6fe-41e2162d3a43_backbone-visuals-p9TgKEDOaAg-unsplash.jpg",
+      "SourceId": "REstatePresentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
+      "BasePath": "_content/REstatePresentation",
+      "RelativePath": "uploads/4b5bfd61-9245-4da8-b6fe-41e2162d3a43_backbone-visuals-p9TgKEDOaAg-unsplash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\4b5bfd61-9245-4da8-b6fe-41e2162d3a43_backbone-visuals-p9TgKEDOaAg-unsplash.jpg"
+    },
+    {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\4e0df012-a530-42fe-9ce4-67286b293c02_Picture7.png",
       "SourceId": "REstatePresentation",
       "SourceType": "Discovered",
@@ -34168,6 +34168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\4e0df012-a530-42fe-9ce4-67286b293c02_Picture7.png"
+    },
+    {
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\4ff98a4b-5535-479c-acd8-56062d3e7a41_krystal-black-V5OEpF12pzw-unsplash.jpg",
+      "SourceId": "REstatePresentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
+      "BasePath": "_content/REstatePresentation",
+      "RelativePath": "uploads/4ff98a4b-5535-479c-acd8-56062d3e7a41_krystal-black-V5OEpF12pzw-unsplash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\4ff98a4b-5535-479c-acd8-56062d3e7a41_krystal-black-V5OEpF12pzw-unsplash.jpg"
     },
     {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\51a46357-2718-4b95-bf45-f17bd5ed64af_Picture10.png",
@@ -34204,23 +34221,6 @@
       "OriginalItemSpec": "wwwroot\\uploads\\6c9176ce-11fd-4745-af4e-96ddfc30d7b1_Picture9.png"
     },
     {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\791c2c2c-4d29-403f-9576-8866fcfc6503_indir.jpeg",
-      "SourceId": "REstatePresentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
-      "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/791c2c2c-4d29-403f-9576-8866fcfc6503_indir.jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\791c2c2c-4d29-403f-9576-8866fcfc6503_indir.jpeg"
-    },
-    {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\85962681-caa4-4ba2-9703-b899a71f6ca5_Picture1.png",
       "SourceId": "REstatePresentation",
       "SourceType": "Discovered",
@@ -34236,40 +34236,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\85962681-caa4-4ba2-9703-b899a71f6ca5_Picture1.png"
-    },
-    {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\905b8598-ec6c-4dc7-867a-eac16f51897f_adfsfd.jpg",
-      "SourceId": "REstatePresentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
-      "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/905b8598-ec6c-4dc7-867a-eac16f51897f_adfsfd.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\905b8598-ec6c-4dc7-867a-eac16f51897f_adfsfd.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\934292ee-3ef6-4baf-811c-4b3cdc0640ac_20201119_161022.jpg",
-      "SourceId": "REstatePresentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
-      "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/934292ee-3ef6-4baf-811c-4b3cdc0640ac_20201119_161022.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\934292ee-3ef6-4baf-811c-4b3cdc0640ac_20201119_161022.jpg"
     },
     {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\93bb013c-ad24-4b97-859b-b669d443928c_Picture5.png",
@@ -34289,40 +34255,6 @@
       "OriginalItemSpec": "wwwroot\\uploads\\93bb013c-ad24-4b97-859b-b669d443928c_Picture5.png"
     },
     {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\9db25a17-77ad-44f4-8838-4759411bf2b2_01.jpg",
-      "SourceId": "REstatePresentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
-      "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/9db25a17-77ad-44f4-8838-4759411bf2b2_01.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\9db25a17-77ad-44f4-8838-4759411bf2b2_01.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\a0288900-9567-4075-b30a-0f0289a4fcfc_20201111_084727.jpg",
-      "SourceId": "REstatePresentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
-      "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/a0288900-9567-4075-b30a-0f0289a4fcfc_20201111_084727.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\a0288900-9567-4075-b30a-0f0289a4fcfc_20201111_084727.jpg"
-    },
-    {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\a3e4fd72-d4cd-42cd-8aae-9b07e42c990f_Picture9.png",
       "SourceId": "REstatePresentation",
       "SourceType": "Discovered",
@@ -34340,12 +34272,12 @@
       "OriginalItemSpec": "wwwroot\\uploads\\a3e4fd72-d4cd-42cd-8aae-9b07e42c990f_Picture9.png"
     },
     {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\a7a2be89-7d29-4656-824b-0dab7f2da0ec_01.jpg",
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\a71f76aa-1f28-4eb8-85cf-73528a4f56e0_indir.jpeg",
       "SourceId": "REstatePresentation",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
       "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/a7a2be89-7d29-4656-824b-0dab7f2da0ec_01.jpg",
+      "RelativePath": "uploads/a71f76aa-1f28-4eb8-85cf-73528a4f56e0_indir.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -34354,7 +34286,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\a7a2be89-7d29-4656-824b-0dab7f2da0ec_01.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\a71f76aa-1f28-4eb8-85cf-73528a4f56e0_indir.jpeg"
     },
     {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\b1cbdc7a-3ade-4e99-b54b-6d9817c3a55d_Picture7.png",
@@ -34442,12 +34374,12 @@
       "OriginalItemSpec": "wwwroot\\uploads\\c6a549de-dc11-4e13-adfe-d3c6f954779e_Picture4.png"
     },
     {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\db32ce19-b37d-4f66-9e5e-702ea58f6e28_indir.jpeg",
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\ca7e8a6c-e38c-47a9-bbf2-ffd0f7e4a212_testimonial-img-02.jpg",
       "SourceId": "REstatePresentation",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
       "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/db32ce19-b37d-4f66-9e5e-702ea58f6e28_indir.jpeg",
+      "RelativePath": "uploads/ca7e8a6c-e38c-47a9-bbf2-ffd0f7e4a212_testimonial-img-02.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -34456,7 +34388,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\db32ce19-b37d-4f66-9e5e-702ea58f6e28_indir.jpeg"
+      "OriginalItemSpec": "wwwroot\\uploads\\ca7e8a6c-e38c-47a9-bbf2-ffd0f7e4a212_testimonial-img-02.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\cd3d0081-2232-45da-9b00-fd6a551fef7e_minh-pham-OtXADkUh3-I-unsplash.jpg",
+      "SourceId": "REstatePresentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
+      "BasePath": "_content/REstatePresentation",
+      "RelativePath": "uploads/cd3d0081-2232-45da-9b00-fd6a551fef7e_minh-pham-OtXADkUh3-I-unsplash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cd3d0081-2232-45da-9b00-fd6a551fef7e_minh-pham-OtXADkUh3-I-unsplash.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\d73ec87e-36f2-43c5-b162-be7184661230_breno-assis-r3WAWU5Fi5Q-unsplash.jpg",
+      "SourceId": "REstatePresentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
+      "BasePath": "_content/REstatePresentation",
+      "RelativePath": "uploads/d73ec87e-36f2-43c5-b162-be7184661230_breno-assis-r3WAWU5Fi5Q-unsplash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\d73ec87e-36f2-43c5-b162-be7184661230_breno-assis-r3WAWU5Fi5Q-unsplash.jpg"
     },
     {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\deba52d4-e298-4528-94f7-5d66c7243ec7_gallery-img-01.jpg",
@@ -34474,23 +34440,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\deba52d4-e298-4528-94f7-5d66c7243ec7_gallery-img-01.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\df2dbd36-2a5e-4f47-92ec-f2571231879e_02.jpg",
-      "SourceId": "REstatePresentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
-      "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/df2dbd36-2a5e-4f47-92ec-f2571231879e_02.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\df2dbd36-2a5e-4f47-92ec-f2571231879e_02.jpg"
     },
     {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\e117abac-1289-4bc5-ba67-ecda927bfd6f_Picture5.png",
@@ -34525,6 +34474,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\e1f735b9-5c3a-45da-a0d2-86f320df5ffc_Picture8.png"
+    },
+    {
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\e4127aeb-42f8-46e8-8f28-9743aa54e0ad_john-fornander-Id7u0EkTjBE-unsplash.jpg",
+      "SourceId": "REstatePresentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
+      "BasePath": "_content/REstatePresentation",
+      "RelativePath": "uploads/e4127aeb-42f8-46e8-8f28-9743aa54e0ad_john-fornander-Id7u0EkTjBE-unsplash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\e4127aeb-42f8-46e8-8f28-9743aa54e0ad_john-fornander-Id7u0EkTjBE-unsplash.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\ee9efd96-8dee-4f6b-a0c2-eb2738f3ee4d_avi-werde-hHz4yrvxwlA-unsplash_(1).jpg",
+      "SourceId": "REstatePresentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
+      "BasePath": "_content/REstatePresentation",
+      "RelativePath": "uploads/ee9efd96-8dee-4f6b-a0c2-eb2738f3ee4d_avi-werde-hHz4yrvxwlA-unsplash_(1).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ee9efd96-8dee-4f6b-a0c2-eb2738f3ee4d_avi-werde-hHz4yrvxwlA-unsplash_(1).jpg"
     },
     {
       "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\f00b4823-6576-4606-bef0-27e6014d19fb_Picture6.png",
@@ -34576,23 +34559,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\f67f5218-fffb-4abe-b72b-2395e5b6ce77_Picture4.png"
-    },
-    {
-      "Identity": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\uploads\\ff9a5ac0-eed5-4bc9-9d1b-0b37f5971964_02.jpg",
-      "SourceId": "REstatePresentation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\abdbz\\Desktop\\İNTERNET PROGRAMLAMA PROJE\\REstatePresentation\\wwwroot\\",
-      "BasePath": "_content/REstatePresentation",
-      "RelativePath": "uploads/ff9a5ac0-eed5-4bc9-9d1b-0b37f5971964_02.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\ff9a5ac0-eed5-4bc9-9d1b-0b37f5971964_02.jpg"
     }
   ]
 }
