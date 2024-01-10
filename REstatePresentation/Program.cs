@@ -39,8 +39,6 @@ builder.Services.AddScoped<IAboutUsService, AboutUsManager>();
 builder.Services.AddScoped<IAboutUsDal, EfAboutUsDal>();
 builder.Services.AddScoped<IGalleryService, GalleryManager>();
 builder.Services.AddScoped<IGalleryDal, EfGalleryDal>();
-builder.Services.AddScoped<IAdminService, AdminManager>();
-builder.Services.AddScoped<IAdminDal, EfAdminDal>();
 builder.Services.AddScoped<IVisitorCounterService, VisitorCounterManager>();
 builder.Services.AddScoped<IVisitorCounterDal, EfVisitorCounterDal>();
 

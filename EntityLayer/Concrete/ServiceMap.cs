@@ -12,10 +12,10 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int ServiceMapID { get; set; }
-        public string Mahalle { get; set; }
-        public string Koy { get; set; }
-        public string Ilce { get; set; }
-        public string Il { get; set; }
+        public string? Mahalle { get; set; }
+        public string? Koy { get; set; }
+        public string? Ilce { get; set; }
+        public string? Il { get; set; }
 
         public virtual ICollection<ServiceHousing> ServiceHousings { get; set; }
         public virtual ICollection<ServiceTerrain> ServiceTerrains { get; set; }

@@ -61,15 +61,9 @@ namespace REstatePresentation.Controllers
             if (model.Photos == null || !model.Photos.Any())
             {
                 ModelState.AddModelError("Photos", "En az bir fotoğraf seçmelisiniz.");
-                return View(model); // Hata durumunda aynı view'i tekrar göster
+                return View(model);
             }
-            //if (model.Gorsel == null || model.Gorsel.Length == 0)
-            //{
-            //    ModelState.AddModelError("Gorsel", "Bir görüntü seçmelisiniz.");
-            //    return View(model);
-            //}
-
-
+       
             _serviceMapService.Insert(model.ServiceMap);
 
             newServiceInfo = new ServiceInfo
@@ -173,7 +167,7 @@ namespace REstatePresentation.Controllers
             var serviceMap = _serviceMapService.GetById(serviceTerrain.ServiceMapId ?? 0);
             var serviceInfo = _serviceInfoService.GetById(serviceTerrain.ServiceInfoId ?? 0);
             var servicePhotos = _servicePhotoService.GetByServiceTerrainId(serviceTerrain.ServiceTerrainID);
-            var photoPaths = servicePhotos.Select(photo => photo.FotografYolu).ToList();
+            var photoPaths = servicePhotos.Where(photo => photo.ServiceHousingId == null).Where(photo => photo.ServiceTerrainId == id).Select(photo => photo.FotografYolu).ToList();
 
             var model = new ServiceTerrainAddViewModel
             {

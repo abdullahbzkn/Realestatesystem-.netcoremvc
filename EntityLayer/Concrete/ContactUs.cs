@@ -11,6 +11,6 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int ContactUsID { get; set; }
-        public string IletisimMetni { get; set; }
+        public string? IletisimMetni { get; set; }
     }
 }

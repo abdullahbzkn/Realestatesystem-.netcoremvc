@@ -11,8 +11,8 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int EntranceID { get; set; }
-        public string Aciklama1 { get; set; }
-        public string Aciklama2 { get; set; }
-        public string Aciklama3 { get; set; }
+        public string? Aciklama1 { get; set; }
+        public string? Aciklama2 { get; set; }
+        public string? Aciklama3 { get; set; }
     }
 }

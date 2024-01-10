@@ -65,15 +65,15 @@ namespace REstatePresentation.Controllers
             var serviceHousing = _serviceHousingService.GetById(id);
             var serviceMap = _serviceMapService.GetById(serviceHousing.ServiceMapId ?? 0);
             var serviceInfo = _serviceInfoService.GetById(serviceHousing.ServiceInfoId ?? 0);
-            var servicePhotos = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
-            var photoPaths = servicePhotos.Select(photo => photo.FotografYolu).ToList();
+            var servicePhotoss = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
+            var photoPathss = servicePhotoss.Where(photo => photo.ServiceTerrainId == null).Where(photo => photo.ServiceHousingId == id).Select(photo => photo.FotografYolu).ToList();
 
             var model = new ServiceHousingAddViewModel
             {
                 ServiceHousing = serviceHousing,
                 ServiceMap = serviceMap,
                 ServiceInfo = serviceInfo,
-                PhotoPaths = photoPaths,
+                PhotoPaths = photoPathss,
                 GorselYolu = serviceHousing.Gorsel
             };
 

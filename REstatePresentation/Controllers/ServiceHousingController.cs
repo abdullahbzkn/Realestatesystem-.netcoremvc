@@ -20,7 +20,7 @@ namespace REstatePresentation.Controllers
         private readonly IServiceMapService _serviceMapService;
         private readonly IServiceInfoService _serviceInfoService;
         private readonly IServiceHousingService _serviceHousingService;
-        private readonly IServicePhotoService _servicePhotoService;
+        private readonly IServicePhotoService _sservicePhotoService;
         private readonly REstateContext _context;
         private ServiceInfo newServiceInfo;
         private readonly IWebHostEnvironment _webHostEnvironment;
@@ -38,7 +38,7 @@ namespace REstatePresentation.Controllers
             _serviceMapService = serviceMapService;
             _serviceInfoService = serviceInfoService;
             _serviceHousingService = serviceHousingService;
-            _servicePhotoService = servicePhotoService;
+            _sservicePhotoService = servicePhotoService;
             _context = rEstateContext;
             _webHostEnvironment = webHostEnvironment;
         }
@@ -79,29 +79,29 @@ namespace REstatePresentation.Controllers
 
             _serviceHousingService.Insert(model.ServiceHousing);
 
-            var photoPaths = new List<string>();
+            var photoPathss = new List<string>();
 
             foreach (var photo in model.Photos)
             {
                 if (photo.Length > 0)
                 {
-                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                    var uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(photo.FileName);
-                    uniqueFileName = uniqueFileName.Replace(" ", "_");
-                    uniqueFileName = Uri.EscapeDataString(uniqueFileName);
-                    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                    photo.CopyTo(new FileStream(filePath, FileMode.Create));
-                    var servicePhoto = new ServicePhoto
+                    var uploadFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+                    var uniquFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(photo.FileName);
+                    uniquFileName = uniquFileName.Replace(" ", "_");
+                    uniquFileName = Uri.EscapeDataString(uniquFileName);
+                    var filPath = Path.Combine(uploadFolder, uniquFileName);
+                    photo.CopyTo(new FileStream(filPath, FileMode.Create));
+                    var servicPhoto = new ServicePhoto
                     {
-                        FotografYolu = "/uploads/" + uniqueFileName,
+                        FotografYolu = "/uploads/" + uniquFileName,
                         ServiceHousingId = model.ServiceHousing.ServiceHousingID
                     };
 
-                    _servicePhotoService.Insert(servicePhoto);
-                    photoPaths.Add("/uploads/" + uniqueFileName);
+                    _sservicePhotoService.Insert(servicPhoto);
+                    photoPathss.Add("/uploads/" + uniquFileName);
                 }
             }
-            var firstPhoto = photoPaths[0];
+            var firstPhoto = photoPathss[0];
             model.ServiceHousing.Gorsel = firstPhoto;
             _serviceHousingService.Update(model.ServiceHousing);
             return RedirectToAction("Index");
@@ -112,7 +112,7 @@ namespace REstatePresentation.Controllers
             var serviceHousing = _serviceHousingService.GetById(id);
             var serviceMap = _serviceMapService.GetById(serviceHousing.ServiceMapId ?? 0);
             var serviceInfo = _serviceInfoService.GetById(serviceHousing.ServiceInfoId ?? 0);
-            var servicePhotos = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
+            var servicePhotos = _sservicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
             if (serviceHousing == null)
             {
                 return NotFound();
@@ -134,7 +134,7 @@ namespace REstatePresentation.Controllers
                     System.IO.File.Delete(photoPath);
                 }
 
-                _servicePhotoService.Delete(photo);
+                _sservicePhotoService.Delete(photo);
             }
 
             _serviceHousingService.Delete(serviceHousing);
@@ -158,15 +158,15 @@ namespace REstatePresentation.Controllers
             var serviceHousing = _serviceHousingService.GetById(id);
             var serviceMap = _serviceMapService.GetById(serviceHousing.ServiceMapId ?? 0);
             var serviceInfo = _serviceInfoService.GetById(serviceHousing.ServiceInfoId ?? 0);
-            var servicePhotos = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
-            var photoPaths = servicePhotos.Select(photo => photo.FotografYolu).ToList();
+            var servicePhotoss = _sservicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
+            var photoPathss = servicePhotoss.Where(photo => photo.ServiceTerrainId == null).Where(photo => photo.ServiceHousingId == id).Select(photo => photo.FotografYolu).ToList();
 
             var model = new ServiceHousingAddViewModel
             {
                 ServiceHousing = serviceHousing,
                 ServiceMap = serviceMap,
                 ServiceInfo = serviceInfo,
-                PhotoPaths = photoPaths,
+                PhotoPaths = photoPathss,
                 GorselYolu = serviceHousing.Gorsel
             };
 

@@ -183,17 +183,21 @@
             @Html.Label("GuncellenmeTarihi")
             <input type="datetime" asp-for="ServiceInfo.GuncellenmeTarihi" class="form-control" readonly />
         </div>
-
+        <div>
+            @foreach (var item in Model.PhotoPaths)
+            {
+                <img src="@Url.Content(item)" alt="Service Photo" class="img-thumbnail" />
+            }
+        </div>
         <div>
             <label>Fotoğraflar:</label>
             <div>
-                @foreach (var photoPath in Model.PhotoPaths)
+                @foreach (var item in Model.PhotoPaths)
                 {
-                    <img src="@Url.Content(photoPath)" alt="Service Photo" class="img-thumbnail" />
+                    <img src="@Url.Content(item)" alt="Service Photo" class="img-thumbnail" />
                 }
             </div>
         </div>
-
         <button class="btn btn-outline-info">Değişiklikleri Kaydet</button>
     </form>
 </div>

@@ -11,9 +11,9 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int AdressID { get; set; }
-        public string Mail { get; set; }
-        public string HaritaLink { get; set; }
-        public string Tel { get; set; }
+        public string? Mail { get; set; }
+        public string? HaritaLink { get; set; }
+        public string? Tel { get; set; }
         
     }
 }
