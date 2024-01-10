@@ -20,7 +20,7 @@ namespace REstatePresentation.Controllers
         private readonly IServiceMapService _serviceMapService;
         private readonly IServiceInfoService _serviceInfoService;
         private readonly IServiceHousingService _serviceHousingService;
-        private readonly IServicePhotoService _sservicePhotoService;
+        private readonly IServiceHousingPhotoService _sservicePhotoService;
         private readonly REstateContext _context;
         private ServiceInfo newServiceInfo;
         private readonly IWebHostEnvironment _webHostEnvironment;
@@ -30,7 +30,7 @@ namespace REstatePresentation.Controllers
             IServiceMapService serviceMapService,
             IServiceInfoService serviceInfoService,
             IServiceHousingService serviceHousingService,
-            IServicePhotoService servicePhotoService,
+            IServiceHousingPhotoService servicePhotoService,
             REstateContext rEstateContext,
             IWebHostEnvironment webHostEnvironment
             )
@@ -47,7 +47,7 @@ namespace REstatePresentation.Controllers
 
         public IActionResult Index()
         {
-            return View(_context.ServiceHousings.Include(c => c.ServiceInfo).Include(c => c.ServicePhotos).Include(c => c.ServiceMap).ToList());
+            return View(_context.ServiceHousings.Include(c => c.ServiceInfo).Include(c => c.ServiceHousingPhotos).Include(c => c.ServiceMap).ToList());
         }
 
         [HttpGet]
@@ -91,7 +91,7 @@ namespace REstatePresentation.Controllers
                     uniquFileName = Uri.EscapeDataString(uniquFileName);
                     var filPath = Path.Combine(uploadFolder, uniquFileName);
                     photo.CopyTo(new FileStream(filPath, FileMode.Create));
-                    var servicPhoto = new ServicePhoto
+                    var servicPhoto = new ServiceHousingPhoto
                     {
                         FotografYolu = "/uploads/" + uniquFileName,
                         ServiceHousingId = model.ServiceHousing.ServiceHousingID
@@ -159,7 +159,7 @@ namespace REstatePresentation.Controllers
             var serviceMap = _serviceMapService.GetById(serviceHousing.ServiceMapId ?? 0);
             var serviceInfo = _serviceInfoService.GetById(serviceHousing.ServiceInfoId ?? 0);
             var servicePhotoss = _sservicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
-            var photoPathss = servicePhotoss.Where(photo => photo.ServiceTerrainId == null).Where(photo => photo.ServiceHousingId == id).Select(photo => photo.FotografYolu).ToList();
+            var photoPathss = servicePhotoss.Where(photo => photo.ServiceHousingId == id).Select(photo => photo.FotografYolu).ToList();
 
             var model = new ServiceHousingAddViewModel
             {

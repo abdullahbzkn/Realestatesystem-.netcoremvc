@@ -13,12 +13,12 @@ namespace BusinessLayer.Concrete
     public class ServiceHousingManager : IServiceHousingService
     {
         private readonly IServiceHousingDal _serviceHousingDal;
-        private readonly IServicePhotoService _servicePhotoService; 
+        private readonly IServiceHousingPhotoService _servicePhotoService; 
 
         private readonly REstateContext _context;
 
 
-        public ServiceHousingManager(IServiceHousingDal serviceHousingDal, IServicePhotoService servicePhotoService, REstateContext context)
+        public ServiceHousingManager(IServiceHousingDal serviceHousingDal, IServiceHousingPhotoService servicePhotoService, REstateContext context)
         {
             _serviceHousingDal = serviceHousingDal;
             _servicePhotoService = servicePhotoService;

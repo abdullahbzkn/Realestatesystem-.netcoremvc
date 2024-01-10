@@ -14,11 +14,11 @@ namespace BusinessLayer.Concrete
     public class ServiceTerrainManager : IServiceTerrainService
     {
         private readonly IServiceTerrainDal _serviceTerrainDal;
-        private readonly IServicePhotoService _servicePhotoService;
+        private readonly IServiceHousingPhotoService _servicePhotoService;
 
         private readonly REstateContext _context;
 
-        public ServiceTerrainManager(IServiceTerrainDal serviceTerrainDal,IServicePhotoService servicePhotoService, REstateContext context)
+        public ServiceTerrainManager(IServiceTerrainDal serviceTerrainDal,IServiceHousingPhotoService servicePhotoService, REstateContext context)
         {
             _serviceTerrainDal = serviceTerrainDal;
             _servicePhotoService = servicePhotoService;

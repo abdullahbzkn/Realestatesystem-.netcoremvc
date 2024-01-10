@@ -17,7 +17,7 @@ namespace REstatePresentation.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            return View(_context.ServiceTerrains.Include(c => c.ServiceInfo).Include(c => c.ServicePhotos).Include(c => c.ServiceMap).Where(r => r.Status == true).ToList());
+            return View(_context.ServiceTerrains.Include(c => c.ServiceInfo).Include(c => c.ServiceTerrainPhotos).Include(c => c.ServiceMap).Where(r => r.Status == true).ToList());
         }
     }
 }

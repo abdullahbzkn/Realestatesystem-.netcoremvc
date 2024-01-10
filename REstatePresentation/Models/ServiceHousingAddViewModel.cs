@@ -7,7 +7,7 @@ namespace REstatePresentation.Models
     public class ServiceHousingAddViewModel
     {
         public ServiceHousing ServiceHousing { get; set; }
-        public ServicePhoto ServicePhoto { get; set; }
+        public ServiceHousingPhoto ServiceHousingPhoto { get; set; }
         public ServiceMap ServiceMap { get; set; }
         public ServiceInfo ServiceInfo { get; set; }
         [NotMapped]

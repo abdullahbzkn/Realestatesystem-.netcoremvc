@@ -243,6 +243,27 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("ServiceHousings");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.ServiceHousingPhoto", b =>
+                {
+                    b.Property<int>("ServiceHousingPhotoID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ServiceHousingPhotoID"), 1L, 1);
+
+                    b.Property<string>("FotografYolu")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ServiceHousingId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ServiceHousingPhotoID");
+
+                    b.HasIndex("ServiceHousingId");
+
+                    b.ToTable("ServiceHousingPhotos");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.ServiceInfo", b =>
                 {
                     b.Property<int>("ServiceInfoID")
@@ -285,32 +306,6 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("ServiceMapID");
 
                     b.ToTable("ServiceMaps");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.ServicePhoto", b =>
-                {
-                    b.Property<int>("ServicePhotoID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ServicePhotoID"), 1L, 1);
-
-                    b.Property<string>("FotografYolu")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ServiceHousingId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ServiceTerrainId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ServicePhotoID");
-
-                    b.HasIndex("ServiceHousingId");
-
-                    b.HasIndex("ServiceTerrainId");
-
-                    b.ToTable("ServicePhotos");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.ServiceTerrain", b =>
@@ -395,6 +390,27 @@ namespace DataAccessLayer.Migrations
                     b.HasIndex("ServiceMapId");
 
                     b.ToTable("ServiceTerrains");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.ServiceTerrainPhoto", b =>
+                {
+                    b.Property<int>("ServiceTerrainPhotoID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ServiceTerrainPhotoID"), 1L, 1);
+
+                    b.Property<string>("FotografYolu")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ServiceTerrainId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ServiceTerrainPhotoID");
+
+                    b.HasIndex("ServiceTerrainId");
+
+                    b.ToTable("ServiceTerrainPhotos");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Team", b =>
@@ -664,19 +680,13 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("ServiceMap");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concrete.ServicePhoto", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.ServiceHousingPhoto", b =>
                 {
                     b.HasOne("EntityLayer.Concrete.ServiceHousing", "ServiceHousing")
-                        .WithMany("ServicePhotos")
+                        .WithMany("ServiceHousingPhotos")
                         .HasForeignKey("ServiceHousingId");
 
-                    b.HasOne("EntityLayer.Concrete.ServiceTerrain", "ServiceTerrain")
-                        .WithMany("ServicePhotos")
-                        .HasForeignKey("ServiceTerrainId");
-
                     b.Navigation("ServiceHousing");
-
-                    b.Navigation("ServiceTerrain");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.ServiceTerrain", b =>
@@ -694,9 +704,18 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("ServiceMap");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.ServiceTerrainPhoto", b =>
+                {
+                    b.HasOne("EntityLayer.Concrete.ServiceTerrain", "ServiceTerrain")
+                        .WithMany("ServiceTerrainPhotos")
+                        .HasForeignKey("ServiceTerrainId");
+
+                    b.Navigation("ServiceTerrain");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.ServiceHousing", b =>
                 {
-                    b.Navigation("ServicePhotos");
+                    b.Navigation("ServiceHousingPhotos");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.ServiceInfo", b =>
@@ -715,7 +734,7 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.ServiceTerrain", b =>
                 {
-                    b.Navigation("ServicePhotos");
+                    b.Navigation("ServiceTerrainPhotos");
                 });
 #pragma warning restore 612, 618
         }

@@ -28,7 +28,8 @@ namespace DataAccessLayer.Contexts
         public DbSet<ServiceTerrain> ServiceTerrains { get; set; }
         public DbSet<ServiceInfo> ServiceInfos { get; set; }
         public DbSet<ServiceMap> ServiceMaps { get; set; }
-        public DbSet<ServicePhoto> ServicePhotos { get; set; }
+        public DbSet<ServiceHousingPhoto> ServiceHousingPhotos { get; set; }
+        public DbSet<ServiceTerrainPhoto> ServiceTerrainPhotos { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<WhatWeDo> WhatWeDos { get; set; }
         public DbSet<VisitorCounter> VisitorCounters { get; set; }

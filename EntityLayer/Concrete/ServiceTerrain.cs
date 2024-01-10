@@ -41,6 +41,6 @@ namespace EntityLayer.Concrete
         public int? ServiceInfoId { get; set; }
         public virtual ServiceInfo ServiceInfo { get; set; }
 
-        public virtual ICollection<ServicePhoto> ServicePhotos { get; set; }
+        public virtual ICollection<ServiceTerrainPhoto> ServiceTerrainPhotos { get; set; }
     }
 }

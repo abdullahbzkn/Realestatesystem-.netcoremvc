@@ -20,7 +20,7 @@ namespace REstatePresentation.Controllers
         private readonly IServiceMapService _serviceMapService;
         private readonly IServiceInfoService _serviceInfoService;
         private readonly IServiceTerrainService _serviceTerrainService;
-        private readonly IServicePhotoService _servicePhotoService;
+        private readonly IServiceTerrainPhotoService _servicePhotoService;
         private readonly REstateContext _context;
         private ServiceInfo newServiceInfo;
         private readonly IWebHostEnvironment _webHostEnvironment;
@@ -30,7 +30,7 @@ namespace REstatePresentation.Controllers
             IServiceMapService serviceMapService,
             IServiceInfoService serviceInfoService,
             IServiceTerrainService serviceTerrainService,
-            IServicePhotoService servicePhotoService,
+            IServiceTerrainPhotoService serviceTerrainPhotoService,
             REstateContext rEstateContext,
             IWebHostEnvironment webHostEnvironment
             )
@@ -38,7 +38,7 @@ namespace REstatePresentation.Controllers
             _serviceMapService = serviceMapService;
             _serviceInfoService = serviceInfoService;
             _serviceTerrainService = serviceTerrainService;
-            _servicePhotoService = servicePhotoService;
+            _servicePhotoService = serviceTerrainPhotoService;
             _context = rEstateContext;
             _webHostEnvironment = webHostEnvironment;
         }
@@ -47,7 +47,7 @@ namespace REstatePresentation.Controllers
 
         public IActionResult Index()
         {
-            return View(_context.ServiceTerrains.Include(c => c.ServiceInfo).Include(c => c.ServicePhotos).Include(c => c.ServiceMap).ToList());
+            return View(_context.ServiceTerrains.Include(c => c.ServiceInfo).Include(c => c.ServiceTerrainPhotos).Include(c => c.ServiceMap).ToList());
         }
 
         [HttpGet]
@@ -99,7 +99,7 @@ namespace REstatePresentation.Controllers
                     uniqueFileName = Uri.EscapeDataString(uniqueFileName); 
                     var filePath = Path.Combine(uploadsFolder, uniqueFileName);
                     photo.CopyTo(new FileStream(filePath, FileMode.Create));
-                    var servicePhoto = new ServicePhoto
+                    var servicePhoto = new ServiceTerrainPhoto
                     {
                         FotografYolu = "/uploads/" + uniqueFileName,
                         ServiceTerrainId = model.ServiceTerrain.ServiceTerrainID
@@ -167,7 +167,7 @@ namespace REstatePresentation.Controllers
             var serviceMap = _serviceMapService.GetById(serviceTerrain.ServiceMapId ?? 0);
             var serviceInfo = _serviceInfoService.GetById(serviceTerrain.ServiceInfoId ?? 0);
             var servicePhotos = _servicePhotoService.GetByServiceTerrainId(serviceTerrain.ServiceTerrainID);
-            var photoPaths = servicePhotos.Where(photo => photo.ServiceHousingId == null).Where(photo => photo.ServiceTerrainId == id).Select(photo => photo.FotografYolu).ToList();
+            var photoPaths = servicePhotos.Where(photo => photo.ServiceTerrainId == id).Select(photo => photo.FotografYolu).ToList();
 
             var model = new ServiceTerrainAddViewModel
             {

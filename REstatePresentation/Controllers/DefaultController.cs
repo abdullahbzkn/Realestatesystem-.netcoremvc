@@ -17,7 +17,8 @@ namespace REstatePresentation.Controllers
         private readonly IServiceInfoService _serviceInfoService;
         private readonly IServiceHousingService _serviceHousingService;
         private readonly IServiceTerrainService _serviceTerrainService;
-        private readonly IServicePhotoService _servicePhotoService;
+        private readonly IServiceHousingPhotoService _servicePhotoService;
+        private readonly IServiceTerrainPhotoService _serviceTerrainPhotoService;
         private ServiceInfo newServiceInfo;
         private readonly IContactService _contactService;
         private readonly REstateContext _context;
@@ -27,7 +28,8 @@ namespace REstatePresentation.Controllers
             IServiceInfoService serviceInfoService,
             IServiceHousingService serviceHousingService,
             IServiceTerrainService serviceTerrainService,
-            IServicePhotoService servicePhotoService,
+            IServiceHousingPhotoService servicePhotoService,
+            IServiceTerrainPhotoService serviceTerrainPhotoService,
             IContactService contactService,
             REstateContext context)
         {
@@ -36,6 +38,7 @@ namespace REstatePresentation.Controllers
             _serviceHousingService = serviceHousingService;
             _serviceTerrainService = serviceTerrainService;
             _servicePhotoService = servicePhotoService;
+            _serviceTerrainPhotoService = serviceTerrainPhotoService;
             _contactService = contactService;
             _context = context;
         }
@@ -66,7 +69,7 @@ namespace REstatePresentation.Controllers
             var serviceMap = _serviceMapService.GetById(serviceHousing.ServiceMapId ?? 0);
             var serviceInfo = _serviceInfoService.GetById(serviceHousing.ServiceInfoId ?? 0);
             var servicePhotoss = _servicePhotoService.GetByServiceHousingId(serviceHousing.ServiceHousingID);
-            var photoPathss = servicePhotoss.Where(photo => photo.ServiceTerrainId == null).Where(photo => photo.ServiceHousingId == id).Select(photo => photo.FotografYolu).ToList();
+            var photoPathss = servicePhotoss.Where(photo => photo.ServiceHousingId == id).Select(photo => photo.FotografYolu).ToList();
 
             var model = new ServiceHousingAddViewModel
             {
@@ -85,7 +88,7 @@ namespace REstatePresentation.Controllers
             var serviceTerrain = _serviceTerrainService.GetById(id);
             var serviceMap = _serviceMapService.GetById(serviceTerrain.ServiceMapId ?? 0);
             var serviceInfo = _serviceInfoService.GetById(serviceTerrain.ServiceInfoId ?? 0);
-            var servicePhotos = _servicePhotoService.GetByServiceTerrainId(serviceTerrain.ServiceTerrainID);
+            var servicePhotos = _serviceTerrainPhotoService.GetByServiceTerrainId(serviceTerrain.ServiceTerrainID);
             var photoPaths = servicePhotos.Select(photo => photo.FotografYolu).ToList();
 
             var model = new ServiceTerrainAddViewModel
