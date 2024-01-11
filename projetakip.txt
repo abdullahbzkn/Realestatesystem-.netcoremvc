@@ -19,8 +19,7 @@ UPLOADS KISMINDAN SİLİNMEME SORUNU HALLEDİLİCEK
 Günlük Görüntüleme Grafik Eklenicek
 Identity tamamlandı giriş çıkış tamamlandı beni hatırla kısmı halledilicek
 profile controller da sayfa iyileştirilicek tüm inputlar zorunlu hale getirilcek.
-Validation Rules kalanlar yazılıcak 
+Validation Rules kalanlar yazılıcak
 Rapor Yaz
-Birsürü fotoğraf bulunup ilan eklenicek mesaj kısmı doldur
 ---------------------
 25.12/07.01

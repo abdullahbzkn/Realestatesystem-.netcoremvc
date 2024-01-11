@@ -7,7 +7,11 @@
                           <figure class="effect-honey tm-gallery-item">
                             <img src="@Url.Content(item.Gorsel)" alt="Image 1" class="img-fluid">
                             <figcaption>
-                                <h2><i>@item.Baslik<br />@item.Fiyat</i></h2>
+                                <h2>
+                                    <i>
+                                        @item.Baslik<br /><p>@string.Format("{0:N0}", item.Fiyat) ₺ </p>
+                                    </i>
+                                </h2>
                             </figcaption>
                         </figure>
                     </a>

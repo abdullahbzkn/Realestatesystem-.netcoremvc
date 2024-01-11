@@ -27,8 +27,8 @@
             <input type="text" asp-for="ServiceHousing.Gorsel" class="form-control" readonly />
         </div>
         <div>
-            <div>
-                <img src="@Url.Content(Model.ServiceHousing.Gorsel)" alt="Service Photo" class="img-thumbnail" />
+            <div style ="max-width: 450px;">
+                <img src="@Url.Content(Model.ServiceHousing.Gorsel)" alt="Service Photo" class="img-thumbnail" style="width: 100%; height: auto;" />
             </div>
         </div><br />
 
@@ -184,19 +184,13 @@
             <input type="datetime" asp-for="ServiceInfo.GuncellenmeTarihi" class="form-control" readonly />
         </div>
         <div>
-            @foreach (var item in Model.PhotoPaths)
-            {
-                <img src="@Url.Content(item)" alt="Service Photo" class="img-thumbnail" />
-            }
-        </div>
-        <div>
             <label>Fotoğraflar:</label>
-            <div>
                 @foreach (var item in Model.PhotoPaths)
                 {
-                    <img src="@Url.Content(item)" alt="Service Photo" class="img-thumbnail" />
+                    <div style="max-width: 450px;">
+                    <img src="@Url.Content(item)" alt="Service Photo" class="img-thumbnail" style="width: 100%; height: auto;" />
+                    </div>
                 }
-            </div>
         </div>
         <button class="btn btn-outline-info">Değişiklikleri Kaydet</button>
     </form>

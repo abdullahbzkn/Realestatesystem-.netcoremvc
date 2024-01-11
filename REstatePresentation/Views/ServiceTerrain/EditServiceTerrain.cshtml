@@ -26,13 +26,13 @@
             <input type="text" asp-for="ServiceTerrain.Gorsel" class="form-control" readonly/>
         </div>
         <div>
-            <div>
-                    <img src="@Url.Content(Model.ServiceTerrain.Gorsel)" alt="Service Photo" class="img-thumbnail" />
+            <div style="max-width: 450px;">
+                <img src="@Url.Content(Model.ServiceTerrain.Gorsel)" alt="Service Photo" class="img-thumbnail" style="width: 100%; height: auto;" />
             </div>
         </div><br />
         <div class="form-group">
             @Html.Label("Fiyat")
-            <span asp-validation-for="ServiceTerrain.Fiyat" class="text-danger"></span>
+            <span asp-validation-for="ServiceTerrain.Fiyat" class="text-danger"></span> 
             <input type="number" asp-for="ServiceTerrain.Fiyat" class="form-control" />
         </div><br />
         <div class="form-group">
@@ -166,10 +166,10 @@
 
         <div>
             <label>Fotoğraflar:</label>
-            <div>
+            <div style="max-width: 450px;">
                 @foreach (var photoPath in Model.PhotoPaths)
                 {
-                    <img src="@Url.Content(photoPath)" alt="Service Photo" class="img-thumbnail" />
+                    <img src="@Url.Content(photoPath)" alt="Service Photo" class="img-thumbnail" style="width: 100%; height: auto;" />
                 }
             </div>
         </div>

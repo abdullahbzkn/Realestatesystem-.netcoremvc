@@ -28,7 +28,10 @@
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                             TOPLAM İLAN SATIŞ DEĞERI
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.price ₺</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            <p>@string.Format("{0:N0}", ViewBag.price) ₺ </p>
+                        </div>   
+
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
