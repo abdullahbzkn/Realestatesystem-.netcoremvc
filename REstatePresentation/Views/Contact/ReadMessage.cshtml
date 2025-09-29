@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "ReadMessage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Mesaj Görüntüleme Sayfası</h1>
+    <form method="post">
+        @Html.HiddenFor(x=>x.ContactID)
+
+        <div class="form-group">
+            @Html.Label("Kişi")
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <input type="text" asp-for="Name" class="form-control" readonly/>
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Mail")
+            <span asp-validation-for="Mail" class="text-danger"></span>
+            <input type="email" asp-for="Mail" class="form-control" readonly />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Mesaj")
+            <span asp-validation-for="Mesaj" class="text-danger"></span>
+            <input type="text" asp-for="Mesaj" class="form-control"  readonly/>
+        </div><br />
+      
+        <div class="form-group">
+            @Html.Label("Mesaj Alınma Tarihi")
+            <input type="datetime" asp-for="Date" class="form-control" readonly />
+        </div>
+    </form>
+</div>

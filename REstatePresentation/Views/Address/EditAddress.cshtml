@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Address
+@{
+    ViewData["Title"] = "EditWhatWeDo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Emlak Bilgileri Bölümü Düzenleme</h1>
+    <form method="post">
+        @Html.HiddenFor(x=>x.AdressID)
+        <div class="form-group">
+            @Html.Label("Mail")
+            <span asp-validation-for="Mail" class="text-danger"></span>
+            <input type="email" asp-for="Mail" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Harita Linki")
+            <span asp-validation-for="HaritaLink" class="text-danger"></span>
+            <input type="text" asp-for="HaritaLink" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Telefon")
+            <span asp-validation-for="Tel" class="text-danger"></span>
+            <input type="tel" asp-for="Tel" class="form-control" />
+        </div><br />
+        <button class="btn btn-outline-info">Değişiklikleri Kaydet</button>
+    </form>
+</div>

@@ -1,0 +1,38 @@
+﻿@model REstatePresentation.Models.UserEditViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Admin Profil Düzenleme</h1>
+    <form method="post">
+        <div class="form-group">
+            @Html.Label("Kullanıcı Adı")
+            <span asp-validation-for="UserName" class="text-danger"></span>
+            <input type="text" asp-for="UserName" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Mail")
+            <span asp-validation-for="Mail" class="text-danger"></span>
+            <input type="email" asp-for="Mail" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Telefon Numarası")
+            <span asp-validation-for="Phone" class="text-danger"></span>
+            <input type="tel" asp-for="Phone" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Yeni Şifre")
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <input type="password" asp-for="Password" class="form-control" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Yeni Şifre Tekrar")
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            <input type="password" asp-for="ConfirmPassword" class="form-control" />
+        </div><br />
+        <button class="btn btn-outline-info">Değişiklikleri Kaydet</button>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+﻿@model EntityLayer.Concrete.ContactUs
+@{
+    ViewData["Title"] = "AddAboutUs";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">İletişim Bölümü Metni Ekleme Sayfası</h1>
+    <form method="post">
+        <div class="form-group">
+            @Html.Label("IletisimMetni")
+            <span asp-validation-for="IletisimMetni" class="text-danger"></span>
+            <input type="text" asp-for="IletisimMetni" class="form-control" placeholder="Metin giriniz" />
+        </div><br />
+        <button class="btn btn-outline-info">Ekle</button>
+    </form>
+</div>

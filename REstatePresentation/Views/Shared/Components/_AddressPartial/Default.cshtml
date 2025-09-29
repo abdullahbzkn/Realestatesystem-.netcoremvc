@@ -1,0 +1,30 @@
+﻿@using EntityLayer.Concrete
+@model List<Address>
+
+@foreach (var item in Model)
+{
+    <div class="col-sm-12 col-md-6">
+        <br>
+        <div class="contact-item">
+            <a rel="nofollow" href="mailto:@item.Mail" class="item-link">
+                <i class="far fa-2x fa-envelope mr-4"></i>
+                <span class="mb-0">@item.Mail</span>
+            </a>
+        </div>
+        <br />
+        <div class="contact-item">
+            <a rel="nofollow" href="@item.HaritaLink" class="item-link">
+                <i class="fas fa-2x fa-map-marker-alt mr-4"></i>
+                <span class="mb-0">Konumumuz</span>
+            </a>
+        </div>
+        <br />
+        <div class="contact-item">
+            <a rel="nofollow" href="tel:@item.Tel" class="item-link">
+                <i class="fas fa-2x fa-phone-square mr-4"></i>
+                <span class="mb-0">@item.Tel</span>
+            </a>
+        </div>
+        <div class="contact-item">&nbsp;</div>
+    </div>
+}

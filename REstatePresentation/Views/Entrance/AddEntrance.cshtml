@@ -1,0 +1,26 @@
+﻿@model EntityLayer.Concrete.Entrance
+@{
+    ViewData["Title"] = "AddEntrance";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Ne Yapıyoruz Bölümü Ekleme Sayfası</h1>
+    <form method="post">
+        <div class="form-group">
+            @Html.Label("Açıklama 1")
+            <span asp-validation-for="Aciklama1" class="text-danger"></span>
+            <input type="text" asp-for="Aciklama1" class="form-control" placeholder="Açıklama giriniz" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Açıklama 2")
+            <span asp-validation-for="Aciklama2" class="text-danger"></span>
+            <input type="text" asp-for="Aciklama2" class="form-control" placeholder="Açıklama giriniz" />
+        </div><br />
+        <div class="form-group">
+            @Html.Label("Açıklama 3")
+            <span asp-validation-for="Aciklama3" class="text-danger"></span>
+            <input type="text" asp-for="Aciklama3" class="form-control" placeholder="Açıklama giriniz" />
+        </div><br />
+        <button class="btn btn-outline-info">Ekle</button>
+    </form>
+</div>

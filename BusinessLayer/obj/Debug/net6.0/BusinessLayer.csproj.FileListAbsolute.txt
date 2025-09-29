@@ -1,0 +1,17 @@
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\bin\Debug\net6.0\BusinessLayer.deps.json
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\bin\Debug\net6.0\BusinessLayer.dll
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\bin\Debug\net6.0\BusinessLayer.pdb
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\bin\Debug\net6.0\EntityLayer.dll
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\bin\Debug\net6.0\EntityLayer.pdb
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\obj\Debug\net6.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.CopyComplete
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\obj\Debug\net6.0\BusinessLayer.dll
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\obj\Debug\net6.0\refint\BusinessLayer.dll
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\obj\Debug\net6.0\BusinessLayer.pdb
+C:\Users\abdbz\Desktop\İNTERNET PROGRAMLAMA PROJE\BusinessLayer\obj\Debug\net6.0\ref\BusinessLayer.dll

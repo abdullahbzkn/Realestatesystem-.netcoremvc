@@ -1,0 +1,12 @@
+﻿@using EntityLayer.Concrete
+@model List<ContactUs>
+
+<div class="text-center col-12">
+    <h2 class="tm-section-title mb-4">Bizimle İrtibata Geçin</h2>
+    @foreach(var item in Model)
+    {
+        <p class="mb-5">
+            @item.IletisimMetni
+        </p><br>
+    }
+</div>

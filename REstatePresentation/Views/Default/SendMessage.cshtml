@@ -1,0 +1,11 @@
+﻿@model EntityLayer.Concrete.Contact
+
+<div class="col-sm-12 col-md-6">
+    @using (Html.BeginForm("SendMessage", "Default", FormMethod.Post))
+    {
+        <input id="name" asp-for="Name" type="text" placeholder="Adınız Soyadınız" class="tm-input" required />
+        <input id="email" asp-for="Mail" type="email" placeholder="Mail Adresiniz" class="tm-input" required />
+        <textarea id="message" asp-for="Mesaj" rows="8" placeholder="Mesajınız" class="tm-input" required></textarea>
+        <button type="submit" class="btn tm-btn-submit">Gönder</button>
+    }
+</div>

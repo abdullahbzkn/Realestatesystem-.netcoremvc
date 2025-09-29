@@ -1,0 +1,52 @@
+﻿@using EntityLayer.Concrete
+@model List<Entrance>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+
+    <h1 class="h3 mb-2 text-gray-800">Ne Yapıyoruz Bölümü</h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Ne Yapıyoruz Bölümü</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Açıklama 1</th>
+                            <th>Açıklama 2</th>
+                            <th>Açıklama 3</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Aciklama1</td>
+                                <td>@item.Aciklama2</td>
+                                <td>@item.Aciklama3</td>
+                                <td>
+                                    <a href="/Entrance/DeleteEntrance/@item.EntranceID" class="btn btn-danger btn-circle">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/Entrance/EditEntrance/@item.EntranceID" class="btn btn-info btn-circle">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <a href="/Entrance/AddEntrance" class="btn btn-outline-info">Yeni Giriş Bölümü Ekleme</a>
+            </div>
+        </div>
+    </div>
+</div>

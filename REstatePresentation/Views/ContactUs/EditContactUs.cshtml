@@ -1,0 +1,17 @@
+﻿@model EntityLayer.Concrete.ContactUs
+@{
+    ViewData["Title"] = "EditAboutUs";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">İletişim Bölümü Metni Düzenleme</h1>
+    <form method="post">
+        @Html.HiddenFor(x=>x.ContactUsID)
+        <div class="form-group">
+            @Html.Label("IletisimMetni")
+            <span asp-validation-for="IletisimMetni" class="text-danger"></span>
+            <input type="text" asp-for="IletisimMetni" class="form-control" />
+        </div><br />
+        <button class="btn btn-outline-info">Değişiklikleri Kaydet</button>
+    </form>
+</div>

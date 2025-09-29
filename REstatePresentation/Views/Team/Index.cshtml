@@ -1,0 +1,61 @@
+﻿@using EntityLayer.Concrete
+@model List<Team>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+
+    <h1 class="h3 mb-2 text-gray-800">Takım Listesi</h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Takım Listesi</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Fotoğraf</th>
+                            <th>Kişi</th>
+                            <th>Açıklama</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Fotoğraf</th>
+                            <th>Kişi</th>
+                            <th>Açıklama</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td><img style="width:110px" src="@item.FotografYolu" alt="fotograf" /></td>
+                                <td>@item.KisiAdi</td>
+                                <td>@item.Aciklama</td>
+                                <td>
+                                    <a href="/Team/DeleteTeam/@item.TeamID" class="btn btn-danger btn-circle">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/Team/EditTeam/@item.TeamID" class="btn btn-info btn-circle">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <a href="/Team/AddTeam" class="btn btn-outline-info">Yeni Takım Arkadaşı Girişi</a>
+            </div>
+        </div>
+    </div>
+</div>
